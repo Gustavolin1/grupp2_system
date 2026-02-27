@@ -34,7 +34,7 @@ public class InfoFoodController {
 
     @FXML
     public void openHomeScene(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Startpage.fxml"));
         Scene chosenScene = new Scene(loader.load(),800, 600);
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();

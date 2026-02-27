@@ -9,9 +9,8 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Stack;
 
-public class HelloController {
+public class Startpage {
     @FXML
     private Label welcomeText;
 
