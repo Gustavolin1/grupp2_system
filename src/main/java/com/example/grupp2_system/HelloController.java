@@ -34,4 +34,20 @@ public class HelloController {
         window.show();
     }
 
+
+
+    @FXML
+    public void openEventinfoScene(ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("EventInformation.fxml"));
+        Scene chosenScene = new Scene(loader.load(),800, 600);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(chosenScene);
+        window.show();
+    }
+
+
+
 }
+
+
