@@ -3,29 +3,31 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.InfoFoodController">
    <children>
-      <Label fx:id="lblMatpaket" layoutX="101.0" layoutY="33.0" text="Matpaket">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8e8e8e" height="122.0" layoutX="1.0" layoutY="-3.0" stroke="#8e8e8e" strokeType="INSIDE" width="802.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label fx:id="lblMatpaket" layoutX="300.0" layoutY="23.0" text="Matpaket">
          <font>
-            <Font size="32.0" />
+            <Font size="48.0" />
          </font>
       </Label>
-      <Text fx:id="txtbudgetmat" layoutX="43.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Budget 1: Samtliga måltider under resan intas på MarsDonalds.&#10;Budget 2: All frukost och lunch intas på MarsDonalds medan mellanmål och midddagar intas på Marsian Buffé&#10;Budget 3: Samtliga måltider under redan intas på Marsian Buffé&#10;" wrappingWidth="270.82293701171875">
+      <Text fx:id="txtbudgetmat" layoutX="25.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Budget 1: &#10;Samtliga måltider under resan intas på MarsDonalds.&#10;Budget 2: &#10;All frukost och lunch intas på MarsDonalds medan mellanmål och midddagar intas på Marsian Buffé&#10;Budget 3: &#10;Samtliga måltider under redan intas på Marsian Buffé&#10;" textAlignment="CENTER" wrappingWidth="230.8229217529297">
          <font>
-            <Font size="16.0" />
+            <Font size="14.0" />
          </font>
       </Text>
-      <Text fx:id="txtmellanmat" layoutX="342.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mellan 1: All frukost intas på MarsDonalds, mellanmål och lunch på Marsian Buffé medan middagar intas på Tellus Home&#10;Mellan 2: Alla måltider förutom middag intas på Marsian Buffé. Middagar intas på Tellus Home.&#10;Mellan 3: Samtliga måltider intas på Tellus Home" wrappingWidth="270.82293701171875">
+      <Text fx:id="txtmellanmat" layoutX="286.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mellan 1: &#10;All frukost intas på MarsDonalds, mellanmål och lunch på Marsian Buffé medan middagar intas på Tellus Home&#10;Mellan 2: &#10;Alla måltider förutom middag intas på Marsian Buffé. Middagar intas på Tellus Home.&#10;Mellan 3: &#10;Samtliga måltider intas på Tellus Home" textAlignment="CENTER" wrappingWidth="196.82296752929688">
          <font>
-            <Font size="16.0" />
+            <Font size="14.0" />
          </font>
       </Text>
-      <Text fx:id="txtlyxmat" layoutX="630.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lyx 1: All måltider förutom middag intas på Tellus Home medan middagarna intas på&#10;SpaceView.&#10;Lyx 2: Frukost och mellanmål intas på Tellus Home medan lunch och middag intas på&#10;SpaceView&#10;Lyx 3: Samtliga måltider intas på SpaceView. För de som valt hyttalternativet Svit serveras&#10;frukosten i hytten från SpaceView." wrappingWidth="293.04180908203125">
+      <Text fx:id="txtlyxmat" layoutX="483.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lyx 1: &#10;All måltider förutom middag intas på Tellus Home medan middagarna intas på&#10;SpaceView.&#10;Lyx 2: &#10;Frukost och mellanmål intas på Tellus Home medan lunch och middag intas på&#10;SpaceView&#10;Lyx 3: &#10;Samtliga måltider intas på SpaceView. För de som valt hyttalternativet Svit serveras&#10;frukosten i hytten från SpaceView." textAlignment="CENTER" wrappingWidth="293.04180908203125">
          <font>
-            <Font size="16.0" />
+            <Font size="14.0" />
          </font>
       </Text>
       <Text fx:id="txtprislistamat" layoutX="45.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prislista Matpaket ombord (enkelresa)&#10;Budget 1: 27 000 kr/pers&#10;Budget 2: 40 000 kr/pers&#10;Budget 3: 54 000 kr/pers&#10;Mellan 1: 76 000 kr/pers&#10;Mellan 2: 90 000 kr/pers&#10;Mellan 3: 100 000 kr/pers&#10;Lyx 1: 120 000 kr/pers&#10;Lyx 2: 150 000 kr/pers&#10;Lyx 3: 200 000 kr/pers">
@@ -33,6 +35,9 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <Button fx:id="btntillbaka" layoutX="401.0" layoutY="431.0" mnemonicParsing="false" onAction="#openHomeScene" prefHeight="72.0" prefWidth="151.0" text="Tillbaka" />
+      <Button fx:id="btntillbaka" layoutX="563.0" layoutY="452.0" mnemonicParsing="false" onAction="#openHomeScene" prefHeight="72.0" prefWidth="151.0" text="Tillbaka">
+         <font>
+            <Font size="30.0" />
+         </font></Button>
    </children>
 </AnchorPane>
