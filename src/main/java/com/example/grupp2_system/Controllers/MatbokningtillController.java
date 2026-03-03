@@ -1,19 +1,23 @@
 package com.example.grupp2_system.Controllers;
 
+import com.example.grupp2_system.SceneManager.SceneManager;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
-import java.io.InputStream;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.io.InputStream;
 
 
-public class EventController implements Initializable {
+public class MatbokningtillController implements Initializable {
 
     @FXML
     private Menu mnbarEvenmang;
@@ -31,25 +35,39 @@ public class EventController implements Initializable {
     private Text txtEvenemangInfo;
 
     @FXML
-    private ImageView cinemaImage;
+    private ImageView BORGIRImage;
+
+    @FXML
+    private Button btnBackaMatBokning;
+
+    @FXML
+    private Button btnMatpaketInfo;
+
+    @FXML
+    private Button btnNästaMatpaket;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
             // Set the image path or URL
-            String imagePath = "cinemaphotoman.jpg"; // Assuming the image is in the resources folder
+            String imagePath = "BORGIR.jpg"; // Assuming the image is in the resources folder
 
             // Load the image and set it to the ImageView
             InputStream inputStream = getClass().getResourceAsStream(imagePath);
             if (inputStream != null) {
                 Image image = new Image(inputStream);
-                cinemaImage.setImage(image);
+                BORGIRImage.setImage(image);
             } else {
                 System.out.println("Failed to load the image: " + imagePath);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void openInformation(ActionEvent event) throws IOException {
+
+        SceneManager.switchScene("InformationPage.fxml");
     }
 
 
