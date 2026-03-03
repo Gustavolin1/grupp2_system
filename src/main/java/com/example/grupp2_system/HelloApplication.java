@@ -9,11 +9,20 @@ import java.io.IOException;
 
 public class HelloApplication extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
+    public void start(Stage stage) throws Exception {
+
+        SceneManager.setStage(stage);
+
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource(
+                        "/com/example/grupp2_system/Startpage.fxml"));
+
+        stage.setScene(new Scene(loader.load()));
+        stage.setTitle("Bokningssystem");
         stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
     }
 }
