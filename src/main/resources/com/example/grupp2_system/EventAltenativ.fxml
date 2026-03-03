@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.grupp2_system.EventAltenativ"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.EventAltenativ">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a9bfd4" height="400.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <MenuButton layoutX="42.0" layoutY="70.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Teater">
+        <items>
+          <MenuItem mnemonicParsing="false" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <MenuButton layoutX="42.0" layoutY="174.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Filmer(Allaround)">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Action 1" />
+            <MenuItem mnemonicParsing="false" text="Action 2" />
+         </items>
+      </MenuButton>
+      <MenuButton layoutX="42.0" layoutY="227.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Filmer(Premiärer)">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Action 1" />
+            <MenuItem mnemonicParsing="false" text="Action 2" />
+         </items>
+      </MenuButton>
+      <MenuButton layoutX="42.0" layoutY="123.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Koncert">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Action 1" />
+            <MenuItem mnemonicParsing="false" text="Action 2" />
+         </items>
+      </MenuButton>
+   </children>
 </AnchorPane>
