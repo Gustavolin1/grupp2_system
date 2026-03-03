@@ -19,7 +19,7 @@
          </font>
       </Label>
       <Circle layoutX="300.0" layoutY="174.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
-      <Button fx:id="btnBack" layoutX="36.0" layoutY="327.0" mnemonicParsing="false" onAction="#back" text="Gå tillbaka" />
+      <Button fx:id="btnBack" layoutX="36.0" layoutY="327.0" mnemonicParsing="false" onAction="#cancelBooking" text="Avbryt bokning? " />
       <Button fx:id="btnForward" layoutX="521.0" layoutY="327.0" mnemonicParsing="false" onAction="#next" text="Gå Vidare" />
       <Button layoutX="236.0" layoutY="339.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Infromation" />
    </children>

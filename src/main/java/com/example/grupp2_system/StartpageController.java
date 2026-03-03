@@ -13,6 +13,9 @@ public class StartpageController {
     private Button BtnBook;
 
     @FXML
+    private Button btnSearch;
+
+    @FXML
     private Button BtnInf;
 
     @FXML
@@ -23,8 +26,9 @@ public class StartpageController {
 
             Booking booking = new Booking();
 
-           // SceneManager.setCurrentBooking(booking);
+            SceneManager.setCurrentBooking(booking);
             SceneManager.switchScene("TravelDateAlternativ.fxml");
+        System.out.println(booking.getBookingId());
 
     }
     @FXML
@@ -36,5 +40,11 @@ public class StartpageController {
     public void openTempMat(ActionEvent event) throws IOException{
 
         SceneManager.switchScene("BokaMatpaket.fxml");
+    }
+
+    @FXML
+    public void setBtnSearch(ActionEvent event) throws IOException{
+
+        SceneManager.switchScene("SearchBookingView.fxml");
     }
 }

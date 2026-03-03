@@ -20,5 +20,6 @@
          </font>
       </Label>
       <Button fx:id="btnBack" layoutX="55.0" layoutY="341.0" mnemonicParsing="false" onAction="#back" text="Gå tillbaka" />
+      <Button fx:id="btninfo" layoutX="261.0" layoutY="342.0" mnemonicParsing="false" onAction="#info" text="Mer info..." />
    </children>
 </AnchorPane>

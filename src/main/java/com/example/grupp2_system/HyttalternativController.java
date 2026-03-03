@@ -30,6 +30,9 @@ public class HyttalternativController {
     private Label lblHytt;
 
     @FXML
+    private Button btninfo;
+
+    @FXML
     private void Initialize()
     {
         chHytt.setValue("Svit");
@@ -50,6 +53,13 @@ public class HyttalternativController {
     {
         SceneManager.goBack();
     }
+
+    @FXML
+    public void info(ActionEvent event) throws IOException
+    {
+        SceneManager.switchScene("Hyttinformation.fxml");
+    }
+
 
 
 }

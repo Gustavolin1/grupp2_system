@@ -76,6 +76,13 @@ public class MatbokningtillController implements Initializable {
     }
 
 
+    @FXML
+    public void next(ActionEvent event) throws  IOException
+    {
+        SceneManager.switchScene("CheckData.fxml");
+    }
+
+
 
 }
 

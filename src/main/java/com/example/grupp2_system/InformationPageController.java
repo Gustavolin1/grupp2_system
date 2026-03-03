@@ -22,22 +22,24 @@ public class InformationPageController {
     @FXML
     private Button btnMat;
 
-    public void BtnBack(ActionEvent actionEvent) {
-    }
-
-    public void BtnEvent(ActionEvent actionEvent) {
-
-    }
-
+    @FXML
     public void openEvent(ActionEvent event) throws IOException
     {
     SceneManager.switchScene("EventInformation.fxml");
     }
+    @FXML
     public void openFoodInfo(ActionEvent event) throws IOException
     {
     SceneManager.switchScene("food-info-view.fxml");
 
     }
+    @FXML
+    public void cabinInfo(ActionEvent event)throws IOException
+    {
+        SceneManager.switchScene("Hyttinformation.fxml");
+    }
+
+    @FXML
     public void backPage(ActionEvent event) throws IOException
     {
         SceneManager.goBack();
