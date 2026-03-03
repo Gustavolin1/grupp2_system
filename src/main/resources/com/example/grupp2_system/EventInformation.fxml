@@ -20,14 +20,14 @@
                <items>
                   <MenuItem fx:id="mnbuttonHome" mnemonicParsing="false" onAction="#openHomeScene" text="HomeButton" />
                </items></Menu>
-          <Menu mnemonicParsing="false" text="Information">
+          <Menu mnemonicParsing="false" onAction="#openHomeScene" text="Information">
             <items>
               <MenuItem fx:id="mnbuttonTillgängliga" mnemonicParsing="false" onAction="#openHomeScene" text="Tillgängliga för alla" />
                   <MenuItem fx:id="mnbuttonBokningsbara" mnemonicParsing="false" text="Bokningsbara Event" />
                   <MenuItem fx:id="mnbuttonEvent" mnemonicParsing="false" text="Event?" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Kontakt" />
+          <Menu mnemonicParsing="false" onAction="#openHomeScene" text="Kontakt" />
         </menus>
       </MenuBar>
       <SplitPane layoutX="114.0" layoutY="42.0" prefHeight="115.0" prefWidth="800.0" style="-fx-background-color: #8e8e8e;" AnchorPane.bottomAnchor="443.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="42.0">
