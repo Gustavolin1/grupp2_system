@@ -50,7 +50,7 @@
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="529.0" prefWidth="827.0">
                 <children>
-                <ImageView fx:id="cinemaImageView" fitHeight="339.0" fitWidth="500.0" layoutX="-247.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <ImageView fx:id="cinemaImageView" layoutX="-247.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                         <image>
                             <Image url="@images/cinemaphotoman.jpg" />
                         </image>
