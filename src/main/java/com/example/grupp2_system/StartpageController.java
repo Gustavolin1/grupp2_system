@@ -18,21 +18,21 @@ public class StartpageController {
     @FXML
     private Button BtnBook1;
 
-
+    @FXML
     public void startBooking(ActionEvent event) throws IOException{
 
             Booking booking = new Booking();
 
-            SceneManager.setCurrentBooking(booking);
-            SceneManager.switchScene("TravelDateAltenativ.fxml");
+           // SceneManager.setCurrentBooking(booking);
+            SceneManager.switchScene("TravelDateAlternativ.fxml");
 
     }
-
+    @FXML
     public void openInformation(ActionEvent event) throws IOException{
 
     SceneManager.switchScene("InformationPage.fxml");
     }
-
+    @FXML
     public void openTempMat(ActionEvent event) throws IOException{
 
         SceneManager.switchScene("BokaMatpaket.fxml");

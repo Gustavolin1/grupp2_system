@@ -58,7 +58,7 @@
                   <TextField alignment="CENTER" layoutX="376.0" layoutY="35.0" prefHeight="26.0" prefWidth="110.0" text="Budget 2" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="370.0" AnchorPane.topAnchor="35.0" />
                   <TextField alignment="CENTER" layoutX="373.0" layoutY="109.0" prefHeight="26.0" prefWidth="110.0" text="Mellan 2" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="370.0" />
                   <TextField alignment="CENTER" layoutX="373.0" layoutY="183.0" prefHeight="26.0" prefWidth="110.0" text="Lux 2" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="370.0" />
-                  <Button fx:id="btnBackaMatBokning" layoutX="110.0" layoutY="242.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="110.0" text="Backa" AnchorPane.leftAnchor="75.0">
+                  <Button fx:id="btnBackaMatBokning" layoutX="110.0" layoutY="242.0" mnemonicParsing="false" onAction="#back" prefHeight="42.0" prefWidth="110.0" text="Backa" AnchorPane.leftAnchor="75.0">
                      <font>
                         <Font size="16.0" />
                      </font>
