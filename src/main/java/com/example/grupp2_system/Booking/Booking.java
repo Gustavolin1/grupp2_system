@@ -97,4 +97,47 @@ public class Booking {
     public LocalDate getDateHome() { return dateHome; }
     public double getCardAmount() { return cardAmount; }
     public boolean hasTravelInsurance() { return travelInsurance; }
+
+
+    //setter
+
+    public void setBookingId(String bookingId) {
+        this.bookingId = bookingId;
+    }
+
+    public void setCabinThere(String cabinThere) {
+        this.cabinThere = cabinThere;
+    }
+
+    public void setFoodThere(String foodThere) {
+        this.foodThere = foodThere;
+    }
+
+    public void setDateThere(LocalDate dateThere) {
+        this.dateThere = dateThere;
+    }
+
+    public void setHotelChoice(String hotelChoice) {
+        this.hotelChoice = hotelChoice;
+    }
+
+    public void setCabinHome(String cabinHome) {
+        this.cabinHome = cabinHome;
+    }
+
+    public void setFoodHome(String foodHome) {
+        this.foodHome = foodHome;
+    }
+
+    public void setDateHome(LocalDate dateHome) {
+        this.dateHome = dateHome;
+    }
+
+    public void setCardAmount(double cardAmount) {
+        this.cardAmount = cardAmount;
+    }
+
+    public void setTravelInsurance(boolean travelInsurance) {
+        this.travelInsurance = travelInsurance;
+    }
 }

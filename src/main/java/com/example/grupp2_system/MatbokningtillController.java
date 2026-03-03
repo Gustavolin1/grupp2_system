@@ -64,10 +64,15 @@ public class MatbokningtillController implements Initializable {
             e.printStackTrace();
         }
     }
-
+    @FXML
     public void openInformation(ActionEvent event) throws IOException {
 
         SceneManager.switchScene("InformationPage.fxml");
+    }
+    @FXML
+    public void back(ActionEvent event) throws  IOException
+    {
+        SceneManager.goBack();
     }
 
 
