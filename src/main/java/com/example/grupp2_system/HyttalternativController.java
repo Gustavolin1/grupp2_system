@@ -1,4 +1,4 @@
-package com.example.grupp2_system.Controllers;
+package com.example.grupp2_system;
 
 import com.example.grupp2_system.Booking.Booking;
 import com.example.grupp2_system.SceneManager.SceneManager;

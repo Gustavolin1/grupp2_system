@@ -1,4 +1,4 @@
-package com.example.grupp2_system.Controllers;
+package com.example.grupp2_system;
 
 import com.example.grupp2_system.Booking.Booking;
 import com.example.grupp2_system.SceneManager.SceneManager;
@@ -15,6 +15,9 @@ public class StartpageController {
     @FXML
     private Button BtnInf;
 
+    @FXML
+    private Button BtnBook1;
+
 
     public void startBooking(ActionEvent event) throws IOException{
 
@@ -28,5 +31,10 @@ public class StartpageController {
     public void openInformation(ActionEvent event) throws IOException{
 
     SceneManager.switchScene("InformationPage.fxml");
+    }
+
+    public void openTempMat(ActionEvent event) throws IOException{
+
+        SceneManager.switchScene("BokaMatpaket.fxml");
     }
 }
