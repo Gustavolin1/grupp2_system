@@ -9,6 +9,7 @@ import java.io.IOException;
 
 public class InformationPageController {
 
+
     @FXML
     private Button BtnBack;
 
