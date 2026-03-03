@@ -1,4 +1,4 @@
-package com.example.grupp2_system;
+package com.example.grupp2_system.Booking;
 
 import java.time.LocalDate;
 import java.util.UUID;

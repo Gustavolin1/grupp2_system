@@ -1,5 +1,7 @@
-package com.example.grupp2_system;
+package com.example.grupp2_system.Controllers;
 
+import com.example.grupp2_system.Booking.Booking;
+import com.example.grupp2_system.Booking.BookingManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;

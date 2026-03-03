@@ -1,4 +1,4 @@
-package com.example.grupp2_system;
+package com.example.grupp2_system.SceneManager;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

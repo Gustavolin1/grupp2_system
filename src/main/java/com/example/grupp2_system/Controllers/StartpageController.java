@@ -1,13 +1,9 @@
-package com.example.grupp2_system;
+package com.example.grupp2_system.Controllers;
 
+import com.example.grupp2_system.SceneManager.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 
