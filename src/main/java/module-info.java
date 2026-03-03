@@ -6,7 +6,6 @@ module com.example.grupp2_system {
 
 
     opens com.example.grupp2_system to javafx.fxml;
-    exports com.example.grupp2_system;
     exports com.example.grupp2_system.Booking;
     opens com.example.grupp2_system.Booking to javafx.fxml;
     exports com.example.grupp2_system.Controllers;

@@ -1,4 +1,5 @@
 package com.example.grupp2_system.SceneManager;
+import com.example.grupp2_system.Booking.Booking;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -6,7 +7,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Stack;
 
+
+
+
     public class SceneManager {
+
+        private static Booking currentBooking;
 
         private static Stage stage;
         private static final Stack<Scene> history = new Stack<>();
@@ -36,6 +42,14 @@ import java.util.Stack;
             if (!history.isEmpty()) {
                 stage.setScene(history.pop());
             }
+        }
+
+        public static void setCurrentBooking(Booking booking) {
+            currentBooking = booking;
+        }
+
+        public static Booking getCurrentBooking() {
+            return currentBooking;
         }
     }
 

@@ -43,6 +43,10 @@ public class Booking {
         this.travelInsurance = travelInsurance;
     }
 
+    public Booking() {
+        this.bookingId = UUID.randomUUID().toString();
+    }
+
     // Constructor used when loading from file
     public Booking(String bookingId,
                    String cabinThere, String foodThere, LocalDate dateThere,
@@ -65,6 +69,8 @@ public class Booking {
         this.cardAmount = cardAmount;
         this.travelInsurance = travelInsurance;
     }
+
+
 
     // Convert object to one line for text file
     public String toFileString() {

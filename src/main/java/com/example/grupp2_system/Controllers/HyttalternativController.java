@@ -1,5 +1,7 @@
 package com.example.grupp2_system.Controllers;
 
+import com.example.grupp2_system.Booking.Booking;
+import com.example.grupp2_system.SceneManager.SceneManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -8,6 +10,8 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 
 public class HyttalternativController {
+
+    Booking booking = SceneManager.getCurrentBooking();
 
     private  ObservableList<String> HyttItems = FXCollections.observableArrayList("Svit", "Ekonomi", "Sovkapsel");
     @FXML
@@ -28,4 +32,8 @@ public class HyttalternativController {
         chHytt.setValue("Svit");
         chHytt.setItems(HyttItems);
     }
+
+
+
+
 }

@@ -7,3 +7,5 @@ b4e98510-67a3-44cd-b9d4-68bcd8e5ed26;Economy;Budget2;2026-06-01;HotelDeimos;Spac
 9fc40b2c-6469-46ef-b2eb-e7a31bf34398;Economy;Vegetarian;2026-06-01;Hilton Hotel;Business;Standard;2026-06-14;5000.0;true
 fd0ccc56-2d45-4516-9d94-1a365331708d;Economy;Budget2;2026-06-01;HotelDeimos;Spaceside;Lyx1;2026-06-14;50000.0;true
 925e5ad1-0dbb-44d2-8113-b540668abcc7;Economy;Vegetarian;2026-06-01;Hilton Hotel;Business;Standard;2026-06-14;5000.0;true
+fe32f313-d4c6-4178-8329-f80ac81aadd3;Economy;Budget2;2026-06-01;HotelDeimos;Spaceside;Lyx1;2026-06-14;50000.0;true
+4878bf6d-274a-4a69-88aa-f507923afe16;Economy;Vegetarian;2026-06-01;Hilton Hotel;Business;Standard;2026-06-14;5000.0;true
