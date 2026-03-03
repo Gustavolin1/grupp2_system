@@ -1,12 +1,17 @@
 package com.example.grupp2_system.Controllers;
 
+import com.example.grupp2_system.SceneManager.SceneManager;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.io.InputStream;
@@ -32,6 +37,15 @@ public class MatbokningtillController implements Initializable {
     @FXML
     private ImageView BORGIRImage;
 
+    @FXML
+    private Button btnBackaMatBokning;
+
+    @FXML
+    private Button btnMatpaketInfo;
+
+    @FXML
+    private Button btnNästaMatpaket;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -50,6 +64,13 @@ public class MatbokningtillController implements Initializable {
             e.printStackTrace();
         }
     }
+
+    public void openInformation(ActionEvent event) throws IOException {
+
+        SceneManager.switchScene("InformationPage.fxml");
+    }
+
+
 
 }
 
