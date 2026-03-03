@@ -8,7 +8,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #cdeaf8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.Controllers.InformationPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #cdeaf8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.InformationPageController">
    <children>
       <Button fx:id="BtnBack" layoutX="618.0" layoutY="480.0" mnemonicParsing="false" onAction="#backPage" prefHeight="57.0" prefWidth="126.0" style="-fx-background-radius: 100; -fx-background-color: #5c96c6;" text="Tillbaka" textFill="WHITE">
          <font>
@@ -32,7 +32,7 @@
                </color>
             </InnerShadow>
          </effect></Button>
-      <Button fx:id="btnHytt" layoutX="290.0" layoutY="212.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="220.0" style="-fx-background-radius: 100; -fx-background-color: #5c96c6;" text="Hytt" textFill="#f5f5f5" underline="true">
+      <Button fx:id="btnHytt" layoutX="290.0" layoutY="212.0" mnemonicParsing="false" onAction="#cabinInfo" prefHeight="67.0" prefWidth="220.0" style="-fx-background-radius: 100; -fx-background-color: #5c96c6;" text="Hytt" textFill="#f5f5f5" underline="true">
          <font>
             <Font name="Hannotate SC Bold" size="25.0" />
          </font>

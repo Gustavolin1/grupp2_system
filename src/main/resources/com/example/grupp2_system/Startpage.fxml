@@ -8,5 +8,6 @@
       <Button fx:id="BtnBook" layoutX="301.0" layoutY="213.0" mnemonicParsing="false" onAction="#startBooking" prefHeight="68.0" prefWidth="158.0" text="Starta bokning" />
       <Button fx:id="BtnInf" layoutX="341.0" layoutY="317.0" mnemonicParsing="false" onAction="#openInformation" text="Information" />
       <Button fx:id="BtnBook1" layoutX="207.0" layoutY="404.0" mnemonicParsing="false" onAction="#openTempMat" prefHeight="68.0" prefWidth="158.0" text="Temp matval" />
+      <Button fx:id="btnSearch" layoutX="438.0" layoutY="431.0" mnemonicParsing="false" onAction="#setBtnSearch" text="Sök efter bokningsnummer" />
    </children>
 </AnchorPane>

@@ -1,9 +1,12 @@
 package com.example.grupp2_system.Booking;
 
 import java.time.LocalDate;
+import java.util.Random;
 import java.util.UUID;
 
 public class Booking {
+
+    private static final Random random = new Random();
 
     private String bookingId;
 //"There" is for choices on the way there
@@ -22,31 +25,16 @@ public class Booking {
     private boolean travelInsurance;
 
     // Constructor for new booking
-    public Booking(String cabinThere, String foodThere, LocalDate dateThere,
-                   String hotelChoice,
-                   String cabinHome, String foodHome, LocalDate dateHome,
-                   double cardAmount, boolean travelInsurance) {
-
-        this.bookingId = UUID.randomUUID().toString();
-
-        this.cabinThere = cabinThere;
-        this.foodThere = foodThere;
-        this.dateThere = dateThere;
-
-        this.hotelChoice = hotelChoice;
-
-        this.cabinHome = cabinHome;
-        this.foodHome = foodHome;
-        this.dateHome = dateHome;
-
-        this.cardAmount = cardAmount;
-        this.travelInsurance = travelInsurance;
-    }
 
     public Booking() {
-        this.bookingId = UUID.randomUUID().toString();
+        this.bookingId = generateBookingid();
     }
 
+    private String generateBookingid()
+    {
+        int number = 10000 + random.nextInt(90000);
+        return  "BK-" + number;
+    }
     // Constructor used when loading from file
     public Booking(String bookingId,
                    String cabinThere, String foodThere, LocalDate dateThere,
