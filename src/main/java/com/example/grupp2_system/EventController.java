@@ -1,9 +1,12 @@
 package com.example.grupp2_system;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.text.Text;
+
+import java.io.IOException;
 
 public class EventController {
 
@@ -22,4 +25,8 @@ public class EventController {
     @FXML
     private Text txtEvenemangInfo;
 
+    @FXML
+    public void openHomeScene(ActionEvent event) throws IOException {
+        SceneManager.goBack();
+    }
 }

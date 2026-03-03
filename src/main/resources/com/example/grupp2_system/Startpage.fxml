@@ -5,7 +5,7 @@
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.StartpageController">
    <children>
-      <Button fx:id="BtnBook" layoutX="332.0" layoutY="258.0" mnemonicParsing="false" onAction="#startBooking" text="Starta bokning" />
+      <Button fx:id="BtnBook" layoutX="301.0" layoutY="213.0" mnemonicParsing="false" onAction="#startBooking" prefHeight="68.0" prefWidth="158.0" text="Starta bokning" />
       <Button fx:id="BtnInf" layoutX="341.0" layoutY="317.0" mnemonicParsing="false" onAction="#openInformation" text="Information" />
    </children>
 </AnchorPane>
