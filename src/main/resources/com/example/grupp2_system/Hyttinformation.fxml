@@ -1,8 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.Controllers.HyttInformationController">
-
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.HyttInformationController">
+   <children>
+      <Label layoutX="270.0" layoutY="47.0" prefHeight="35.0" prefWidth="267.0" text="HYTTINFORMATION">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="132.0" fitWidth="618.0" layoutX="85.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/5hyttalternativ.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="85.0" layoutY="263.0" prefHeight="232.0" prefWidth="618.0">
+         <children>
+            <VBox prefHeight="250.0" prefWidth="118.0">
+               <children>
+                  <Label prefHeight="167.0" prefWidth="118.0" text="Insideshytt med 4 bäddar (två under- och överbäddar) därunderbäddarna kan ändras till soffa dagtid. Dusch finns till hytten, men toaletterfinns i korridoren." wrapText="true" />
+               </children>
+            </VBox>
+            <VBox prefHeight="250.0" prefWidth="122.0">
+               <children>
+                  <Label prefHeight="131.0" prefWidth="122.0" text="Hytt med utsikt över rymden, separat vardags- och sovrum inklusivedubbelsäng. Dessutom skärm med stort utbud av film, serier, musik och spel." wrapText="true" />
+               </children>
+            </VBox>
+            <VBox prefHeight="250.0" prefWidth="126.0">
+               <children>
+                  <Label prefHeight="242.0" prefWidth="126.0" text="Våra specialdesignade kapslar låter dig vila tryggt i mikrogravitation medan du svävar bland stjärnorna. Ergonomiska, ljudisolerade och temperaturkontrollerade för maximal komfort – en unik rymdupplevelse du aldrig glömmer." wrapText="true" />
+               </children>
+            </VBox>
+            <VBox prefHeight="250.0" prefWidth="129.0">
+               <children>
+                  <Label prefHeight="98.0" prefWidth="122.0" text="Insideshytt med två underbäddar som kan ändras till soffa dagtid.Badrum med dusch och toalett." wrapText="true" />
+               </children>
+            </VBox>
+            <VBox prefHeight="250.0" prefWidth="113.0">
+               <children>
+                  <Label prefHeight="148.0" prefWidth="114.0" text="Hytt med utsikt över rymden, dubbelsäng. Dessutom skärm med stortutbud av film, serier, musik och spel. Badrum med dusch och toalett." wrapText="true" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="88.0" layoutY="88.0" prefHeight="49.0" prefWidth="642.0">
+         <children>
+            <Label prefHeight="46.0" prefWidth="117.0" text="   ECONOMY" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="46.0" prefWidth="122.0" text="         SVIT">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="52.0" prefWidth="134.0" text="   SÖMNKAPSEL">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="48.0" prefWidth="131.0" text="  SPACESIDE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="50.0" prefWidth="134.0" text="       INSIDE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="73.0" layoutY="239.0" prefHeight="35.0" prefWidth="642.0">
+         <children>
+            <VBox prefHeight="35.0" prefWidth="135.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="127.0" text="  180 000 kr/person">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="50.0" prefWidth="119.0">
+               <children>
+                  <Label prefHeight="24.0" prefWidth="116.0" text="1 200 000 kr/person">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="50.0" prefWidth="134.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="126.0" text=" 2 500 000 kr/person">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="35.0" prefWidth="124.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="106.0" text="700 000 kr/person">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="35.0" prefWidth="130.0">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="126.0" text=" 300 000 kr/person" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="73.0" layoutY="219.0" prefHeight="26.0" prefWidth="629.0">
+         <children>
+            <Label>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Button fx:id="btnTillbakaHyttInfo" layoutX="595.0" layoutY="504.0" mnemonicParsing="false" text="Tillbaka" />
+   </children>
 </AnchorPane>
