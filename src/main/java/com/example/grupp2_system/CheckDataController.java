@@ -17,6 +17,8 @@ public class CheckDataController {
     @FXML
     private Button btnSave;
 
+
+
     @FXML
     public void setBtnBack(ActionEvent event)throws IOException
     {
