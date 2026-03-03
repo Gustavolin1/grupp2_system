@@ -1,19 +1,19 @@
 package com.example.grupp2_system.Controllers;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
+
+import java.io.InputStream;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 
-import java.io.IOException;
-
-public class EventController {
+public class EventController implements Initializable {
 
     @FXML
     private Menu mnbarEvenmang;
@@ -31,13 +31,28 @@ public class EventController {
     private Text txtEvenemangInfo;
 
     @FXML
-    public void openHomeScene(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
-        Scene chosenScene = new Scene(loader.load(),800,600);
+    private ImageView cinemaImage;
 
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(chosenScene);
-        window.show();
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        try {
+            // Set the image path or URL
+            String imagePath = "cinemaphotoman.jpg"; // Assuming the image is in the resources folder
 
+            // Load the image and set it to the ImageView
+            InputStream inputStream = getClass().getResourceAsStream(imagePath);
+            if (inputStream != null) {
+                Image image = new Image(inputStream);
+                cinemaImage.setImage(image);
+            } else {
+                System.out.println("Failed to load the image: " + imagePath);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+
+
+
 }
+

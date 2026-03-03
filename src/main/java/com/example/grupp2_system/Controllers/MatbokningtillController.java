@@ -1,4 +1,4 @@
-package com.example.grupp2_system;
+package com.example.grupp2_system.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -9,10 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.io.IOException;
 import java.io.InputStream;
-
-import java.util.Objects;
 
 
 public class MatbokningtillController implements Initializable {
