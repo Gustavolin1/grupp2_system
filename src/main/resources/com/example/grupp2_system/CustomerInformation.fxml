@@ -4,11 +4,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="259.0" layoutY="252.0" mnemonicParsing="false" text="Gå vidare" />
-      <Button layoutX="254.0" layoutY="308.0" mnemonicParsing="false" text="Gå tillbaka" />
+      <Button layoutX="491.0" layoutY="320.0" mnemonicParsing="false" text="Gå vidare" />
+      <Button fx:id="btnBack" layoutX="37.0" layoutY="320.0" mnemonicParsing="false" text="Gå tillbaka" />
       <Label layoutX="248.0" layoutY="50.0" text="Kundinformation" />
    </children>
 </AnchorPane>
