@@ -6,6 +6,7 @@ import com.example.grupp2_system.SceneManager.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
 import java.io.IOException;
 
@@ -19,6 +20,30 @@ public class CheckDataController {
 
 
 
+    @FXML
+    private Label lblDatefrom;
+
+    @FXML
+    private Label lblID;
+
+    @FXML
+    private Label lblcabin;
+
+    @FXML
+    private Label lbldateto;
+
+    @FXML
+    private Label lblfoodoption;
+
+    @FXML
+    public void initialize()
+    {
+        Booking booking = SceneManager.getCurrentBooking();
+        lblID.setText(booking.getBookingId());
+        lblfoodoption.setText(booking.getFoodThere());
+        lblcabin.setText(booking.getCabinThere());
+
+    }
     @FXML
     public void setBtnBack(ActionEvent event)throws IOException
     {
