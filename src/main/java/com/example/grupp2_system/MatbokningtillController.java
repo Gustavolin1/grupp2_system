@@ -1,4 +1,4 @@
-package com.example.grupp2_system.Controllers;
+package com.example.grupp2_system;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
