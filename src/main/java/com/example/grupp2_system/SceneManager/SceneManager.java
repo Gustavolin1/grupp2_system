@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayDeque;
 import java.util.Stack;
 
 
@@ -15,7 +16,7 @@ import java.util.Stack;
         private static Booking currentBooking;
 
         private static Stage stage;
-        private static final Stack<Scene> history = new Stack<>();
+        private static final ArrayDeque<Scene> history = new ArrayDeque<>();
 
         // sätts en gång när appen startar
         public static void setStage(Stage primaryStage) {
