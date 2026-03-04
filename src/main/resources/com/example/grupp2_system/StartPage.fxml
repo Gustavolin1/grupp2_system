@@ -42,7 +42,7 @@
                </color>
             </InnerShadow>
          </effect></Button>
-      <Button fx:id="btnSearch" layoutX="336.0" layoutY="383.0" mnemonicParsing="false" onAction="#setBtnSearch" prefHeight="60.0" prefWidth="174.0" style="-fx-background-color: #5c96c6; -fx-background-radius: 100;" text="Sök efter bokning" textFill="WHITE">
+      <Button fx:id="btnSearch" layoutX="336.0" layoutY="383.0" mnemonicParsing="false" onAction="#setBtnSearch" prefHeight="60.0" prefWidth="174.0" style="-fx-background-color: #5c96c6; -fx-background-radius: 100;" text="Sök bokning" textFill="WHITE">
          <font>
             <Font name="Hannotate SC Bold" size="18.0" />
          </font>
