@@ -15,7 +15,7 @@ public class HyttalternativController {
 
 
 
-    private  ObservableList<String> HyttItems = FXCollections.observableArrayList("Svit", "Ekonomi", "Sovkapsel");
+
     @FXML
     private Button btnBack;
 
@@ -30,6 +30,9 @@ public class HyttalternativController {
 
     @FXML
     private Button btnCancel;
+
+    @FXML
+    private RadioButton radbtnSleep;
 
     @FXML
     private ToggleGroup grpOption;
@@ -51,10 +54,15 @@ public class HyttalternativController {
 
             return;
         }
-
         booking.setCabinThere(selectedCabin.getText());
 
-        SceneManager.switchScene("BokaMatpaket.fxml");
+        if (selectedCabin == radbtnSleep)
+        {
+            SceneManager.switchScene("CheckData.fxml");
+        }
+        else {
+            SceneManager.switchScene("BokaMatpaket.fxml");
+        }
 
     }
     @FXML
