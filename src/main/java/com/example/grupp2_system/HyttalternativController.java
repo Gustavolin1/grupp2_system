@@ -6,9 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 
 import java.io.IOException;
 
@@ -24,26 +22,26 @@ public class HyttalternativController {
     private Button btnSave;
 
     @FXML
-    private ChoiceBox<String> chHytt;
-
-    @FXML
     private Label lblHytt;
 
     @FXML
     private Button btninfo;
 
     @FXML
+    private ToggleGroup grpOption;
+
+    @FXML
     private void Initialize()
     {
-        chHytt.setValue("Svit");
-        chHytt.setItems(HyttItems);
     }
     @FXML
     public void next(ActionEvent event) throws IOException
     {
         Booking booking = SceneManager.getCurrentBooking();
 
-        booking.setCabinThere(chHytt.getValue());
+        RadioButton selectedCabin = (RadioButton) grpOption.getSelectedToggle();
+
+        booking.setCabinThere(selectedCabin.getText());
 
         SceneManager.switchScene("BokaMatpaket.fxml");
 

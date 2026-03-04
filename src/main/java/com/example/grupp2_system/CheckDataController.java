@@ -40,8 +40,12 @@ public class CheckDataController {
     {
         Booking booking = SceneManager.getCurrentBooking();
         lblID.setText(booking.getBookingId());
-        lblfoodoption.setText(booking.getFoodThere());
+        lbldateto.setText(booking.getDateThere().toString());
+        lblDatefrom.setText(booking.getDateHome().toString());
         lblcabin.setText(booking.getCabinThere());
+        lblfoodoption.setText(booking.getFoodThere());
+
+
 
     }
     @FXML
