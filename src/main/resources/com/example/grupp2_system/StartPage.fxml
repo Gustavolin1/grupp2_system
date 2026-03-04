@@ -53,7 +53,7 @@
                </color>
             </InnerShadow>
          </effect></Button>
-      <Label layoutX="266.0" layoutY="39.0" text="Mars Travel" textFill="#5c96c6">
+      <Label layoutX="297.0" layoutY="32.0" text="Mars Travel" textFill="#de7621">
          <font>
             <Font name="Kodchasan SemiBold" size="46.0" />
          </font>

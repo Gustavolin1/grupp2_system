@@ -19,6 +19,7 @@ public class BookingManager {
     }
 
     public static List<Booking> loadBookings() {
+
         List<Booking> bookings = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
@@ -28,7 +29,7 @@ public class BookingManager {
             while ((line = reader.readLine()) != null) {
 
                 if (line.trim().isEmpty()) {
-                    continue; // skip empty lines
+                    continue;
                 }
 
                 String[] parts = line.split(";");
@@ -37,12 +38,13 @@ public class BookingManager {
                     System.out.println("Skipping invalid line: " + line);
                     continue;
                 }
-                List<String> events;
 
-                if (parts[8] == null || parts[8].isBlank()) {
+                // EVENTS are at index 9
+                List<String> events;
+                if (parts[9] == null || parts[9].isBlank()) {
                     events = new ArrayList<>();
                 } else {
-                    events = new ArrayList<>(List.of(parts[8].split(",")));
+                    events = new ArrayList<>(List.of(parts[9].split(",")));
                 }
 
                 Booking booking = new Booking(
@@ -55,8 +57,9 @@ public class BookingManager {
                         parts[6],
                         LocalDate.parse(parts[7]),
                         events,
-                        Double.parseDouble(parts[9]),
-                        Boolean.parseBoolean(parts[10]));
+                        Double.parseDouble(parts[8]),   // FIXED
+                        Boolean.parseBoolean(parts[10])
+                );
 
                 bookings.add(booking);
             }
