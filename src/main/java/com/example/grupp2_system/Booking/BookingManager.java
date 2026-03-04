@@ -33,9 +33,16 @@ public class BookingManager {
 
                 String[] parts = line.split(";");
 
-                if (parts.length < 10) {
+                if (parts.length < 11) {
                     System.out.println("Skipping invalid line: " + line);
                     continue;
+                }
+                List<String> events;
+
+                if (parts[8] == null || parts[8].isBlank()) {
+                    events = new ArrayList<>();
+                } else {
+                    events = new ArrayList<>(List.of(parts[8].split(",")));
                 }
 
                 Booking booking = new Booking(
@@ -47,9 +54,9 @@ public class BookingManager {
                         parts[5],
                         parts[6],
                         LocalDate.parse(parts[7]),
-                        Double.parseDouble(parts[8]),
-                        Boolean.parseBoolean(parts[9])
-                );
+                        events,
+                        Double.parseDouble(parts[9]),
+                        Boolean.parseBoolean(parts[10]));
 
                 bookings.add(booking);
             }

@@ -39,32 +39,35 @@ public class Booking {
     }
     // Constructor used when loading from file
     public Booking(String bookingId,
-                   String cabinThere, String foodThere, LocalDate dateThere,
+                   String cabinThere,
+                   String foodThere,
+                   LocalDate dateThere,
                    String hotelChoice,
-                   String cabinHome, String foodHome, LocalDate dateHome,
-                   double cardAmount, boolean travelInsurance) {
+                   String cabinHome,
+                   String foodHome,
+                   LocalDate dateHome,
+                   List<String> events,
+                   double cardAmount,
+                   boolean travelInsurance) {
 
         this.bookingId = bookingId;
-
         this.cabinThere = cabinThere;
         this.foodThere = foodThere;
         this.dateThere = dateThere;
-
         this.hotelChoice = hotelChoice;
-
         this.cabinHome = cabinHome;
         this.foodHome = foodHome;
         this.dateHome = dateHome;
-
+        this.events = events;
         this.cardAmount = cardAmount;
         this.travelInsurance = travelInsurance;
-        this.events = events;
     }
 
 
 
     // Convert object to one line for text file
     public String toFileString() {
+        String eventsString = String.join(",", events);
         return bookingId + ";" +
                 cabinThere + ";" +
                 foodThere + ";" +
@@ -74,6 +77,7 @@ public class Booking {
                 foodHome + ";" +
                 dateHome + ";" +
                 cardAmount + ";" +
+                eventsString +";" +
                 travelInsurance;
     }
 
@@ -88,10 +92,7 @@ public class Booking {
     public LocalDate getDateHome() { return dateHome; }
     public double getCardAmount() { return cardAmount; }
     public boolean hasTravelInsurance() { return travelInsurance; }
-
-    public List<String> getEvents() {
-        return events;
-    }
+    public List<String> getEvents() {return events;}
     //setter
 
     public void setBookingId(String bookingId) {
