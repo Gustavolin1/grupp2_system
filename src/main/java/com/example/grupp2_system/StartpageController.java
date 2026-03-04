@@ -29,7 +29,7 @@ public class StartpageController {
 
             SceneManager.setCurrentBooking(booking);
             SceneManager.switchScene("TravelDateAlternativ.fxml");
-        System.out.println(booking.getBookingId());
+
 
     }
     @FXML

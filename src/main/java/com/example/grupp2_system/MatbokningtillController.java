@@ -69,7 +69,7 @@ public class MatbokningtillController implements Initializable {
     @FXML
     public void openInformation(ActionEvent event) throws IOException {
 
-        SceneManager.switchScene("InformationPage.fxml");
+        SceneManager.switchScene("food-info-view.fxml");
     }
     @FXML
     public void back(ActionEvent event) throws  IOException
