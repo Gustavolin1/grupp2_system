@@ -14,7 +14,7 @@ public class HelloApplication extends Application {
 
         FXMLLoader loader = new FXMLLoader(
                 getClass().getResource(
-                        "/com/example/grupp2_system/Startpage.fxml"));
+                        "/com/example/grupp2_system/StartPage.fxml"));
 
         stage.setScene(new Scene(loader.load()));
         stage.setTitle("Bokningssystem");

@@ -49,7 +49,7 @@ public class TravelDateController {
 
             SceneManager.setCurrentBooking(null);
 
-            SceneManager.switchScene("Startpage.fxml");
+            SceneManager.switchScene("StartPage.fxml");
         }
     }
 
