@@ -2,7 +2,6 @@ package com.example.grupp2_system.Booking;
 
 import java.time.LocalDate;
 import java.util.Random;
-import java.util.UUID;
 
 public class Booking {
 

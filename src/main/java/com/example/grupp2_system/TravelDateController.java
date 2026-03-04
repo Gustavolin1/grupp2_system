@@ -31,6 +31,9 @@ public class TravelDateController {
     {
         Booking booking = SceneManager.getCurrentBooking();
 
+        booking.setDateThere(dtpTur.getValue());
+        booking.setDateHome(dtpRetur.getValue());
+
 
         SceneManager.switchScene("Hyttalternativ.fxml");
     }
