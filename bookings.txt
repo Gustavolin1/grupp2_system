@@ -2,3 +2,5 @@
 BK-60391;Svit;Mellan 2;2026-03-11;null;null;null;2026-03-20;0.0;false
 BK-32308;Svit;Budget 2;2026-03-04;null;null;null;2026-03-06;0.0;false
 BK-63020;Svit;Mellan  1;2026-03-04;null;null;null;2026-03-11;0.0;false
+BK-16120;Svit;Mellan  1;2026-03-03;null;null;null;2026-03-06;0.0;false
+BK-58700;Svit;Lyx 3;2026-03-04;null;null;null;2026-03-05;0.0;false

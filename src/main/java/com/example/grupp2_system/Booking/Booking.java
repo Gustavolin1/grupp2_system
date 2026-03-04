@@ -1,6 +1,8 @@
 package com.example.grupp2_system.Booking;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Booking {
@@ -22,6 +24,7 @@ public class Booking {
     private double cardAmount;
 //travelInsurance bool where 1 means they want insurance and 0 meant they don't want it
     private boolean travelInsurance;
+    private List<String> events = new ArrayList<>();
 
     // Constructor for new booking
 
@@ -55,6 +58,7 @@ public class Booking {
 
         this.cardAmount = cardAmount;
         this.travelInsurance = travelInsurance;
+        this.events = events;
     }
 
 
@@ -85,7 +89,9 @@ public class Booking {
     public double getCardAmount() { return cardAmount; }
     public boolean hasTravelInsurance() { return travelInsurance; }
 
-
+    public List<String> getEvents() {
+        return events;
+    }
     //setter
 
     public void setBookingId(String bookingId) {
@@ -126,5 +132,13 @@ public class Booking {
 
     public void setTravelInsurance(boolean travelInsurance) {
         this.travelInsurance = travelInsurance;
+    }
+
+    public void setEvents(List<String> events) {
+        this.events = events;
+    }
+
+    public void addEvent(String event){
+        events.add(event);
     }
 }

@@ -13,5 +13,6 @@
       <Label fx:id="lbldateto" layoutX="285.0" layoutY="96.0" text="Label" />
       <Label fx:id="lblcabin" layoutX="285.0" layoutY="151.0" text="Label" />
       <Label fx:id="lblfoodoption" layoutX="285.0" layoutY="183.0" text="Label" />
+      <Label fx:id="lblEvents" layoutX="285.0" layoutY="212.0" text="Label" />
    </children>
 </AnchorPane>

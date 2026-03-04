@@ -97,8 +97,7 @@ public class MatbokningtillController implements Initializable {
         }
 
         booking.setFoodThere(selectedFood.getText());
-
-        SceneManager.switchScene("CheckData.fxml");
+        SceneManager.switchScene("EventAlternativ.fxml");
     }
 
 }

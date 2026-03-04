@@ -29,6 +29,7 @@ import java.util.Stack;
                     new FXMLLoader(SceneManager.class.getResource(
                             "/com/example/grupp2_system/" + fxml));
 
+
             Scene newScene = new Scene(loader.load(), 800, 600);
 
             // spara nuvarande scen

@@ -18,7 +18,8 @@ public class CheckDataController {
     @FXML
     private Button btnSave;
 
-
+    @FXML
+    private Label lblEvents;
 
     @FXML
     private Label lblDatefrom;
@@ -44,6 +45,7 @@ public class CheckDataController {
         lblDatefrom.setText(booking.getDateHome().toString());
         lblcabin.setText(booking.getCabinThere());
         lblfoodoption.setText(booking.getFoodThere());
+        lblEvents.setText(String.join(", ", booking.getEvents()));
 
 
 
