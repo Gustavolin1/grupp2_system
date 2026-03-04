@@ -42,9 +42,5 @@
          <font>
             <Font size="20.0" />
          </font></Button>
-      <Button layoutX="348.0" layoutY="480.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #2685b9;" text="Infromation" textFill="WHITE">
-         <font>
-            <Font size="19.0" />
-         </font></Button>
    </children>
 </AnchorPane>
