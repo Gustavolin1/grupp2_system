@@ -80,15 +80,13 @@ public class EventAlternativController {
 
         lstSelectedEvents.setOnMouseClicked(e -> {
 
-            if (e.getClickCount() == 2) {
-
+            if (e.getClickCount() == 2)
+            {
                 String selected = lstSelectedEvents.getSelectionModel().getSelectedItem();
-
-                if (selected != null) {
-
+                if (selected != null)
+                {
                     SceneManager.getCurrentBooking().getEvents().remove(selected);
                     lstSelectedEvents.getItems().remove(selected);
-
                 }
             }
         });

@@ -64,6 +64,8 @@
         <Button fx:id="btnBack" layoutX="18.0" layoutY="351.0" mnemonicParsing="false" onAction="#setBtnBack" text="Tillbaka" />
         <Button fx:id="btnNext" layoutX="519.0" layoutY="351.0" mnemonicParsing="false" onAction="#setBtnNext" text="Nästa" />
       <ListView fx:id="lstSelectedEvents" layoutX="290.0" layoutY="48.0" prefHeight="265.0" prefWidth="200.0" />
+      <Label layoutX="355.0" layoutY="14.0" text="Valda Event: " />
+      <Label layoutX="314.0" layoutY="326.0" text="Dubbelklicka för att ta bort event" />
 
     </children>
 </AnchorPane>
