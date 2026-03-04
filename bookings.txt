@@ -1,2 +1,2 @@
 
-BK-60391;Svit;Mellan 2;2026-03-11;null;null;null;2026-03-20;0.0;false
+B123;Economy;Standard;2026-04-15;Grand Hotel;Business;Premium;2026-04-22;3499.99;true

@@ -27,7 +27,16 @@ public class BookingManager {
 
             while ((line = reader.readLine()) != null) {
 
+                if (line.trim().isEmpty()) {
+                    continue; // skip empty lines
+                }
+
                 String[] parts = line.split(";");
+
+                if (parts.length < 10) {
+                    System.out.println("Skipping invalid line: " + line);
+                    continue;
+                }
 
                 Booking booking = new Booking(
                         parts[0],

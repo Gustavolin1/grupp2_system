@@ -2,9 +2,13 @@ package com.example.grupp2_system;
 
 import com.example.grupp2_system.Booking.Booking;
 import com.example.grupp2_system.Booking.BookingManager;
+import com.example.grupp2_system.SceneManager.SceneManager;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+
+import java.io.IOException;
 
 public class SearchBookingController {
 
@@ -50,5 +54,11 @@ public class SearchBookingController {
                 (booking.hasTravelInsurance() ? "Yes" : "No");
 
         resultArea.setText(info);
+    }
+
+    @FXML
+    public void backPage(ActionEvent event) throws IOException
+    {
+        SceneManager.goBack();
     }
 }
