@@ -9,7 +9,8 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.InfoFoodController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8db6ce" height="122.0" layoutX="1.0" layoutY="-3.0" stroke="#8e8e8e" strokeType="INSIDE" width="802.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdeaf8" height="485.0" layoutY="117.0" stroke="BLACK" strokeType="INSIDE" width="803.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5c96c6" height="122.0" layoutX="1.0" layoutY="-3.0" stroke="#8e8e8e" strokeType="INSIDE" width="803.0" AnchorPane.bottomAnchor="483.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
       <Label fx:id="lblMatpaket" layoutX="300.0" layoutY="23.0" text="Matpaket">
          <font>
             <Font size="48.0" />
@@ -35,7 +36,7 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <Button fx:id="btntillbaka" layoutX="580.0" layoutY="461.0" mnemonicParsing="false" onAction="#openHomeScene" prefHeight="63.0" prefWidth="134.0" text="Tillbaka">
+      <Button fx:id="btntillbaka" layoutX="567.0" layoutY="461.0" mnemonicParsing="false" onAction="#openHomeScene" prefHeight="65.0" prefWidth="147.0" style="-fx-background-color: #5c96c6;" text="Tillbaka">
          <font>
             <Font size="30.0" />
          </font></Button>

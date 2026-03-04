@@ -28,40 +28,40 @@
         <AnchorPane layoutX="358.0" layoutY="139.0" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
         <SplitPane layoutX="338.0" layoutY="156.0" orientation="VERTICAL" prefHeight="444.0" prefWidth="864.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="156.0">
             <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="529.0" prefWidth="827.0">
+                <AnchorPane blendMode="SRC_ATOP" minHeight="0.0" minWidth="0.0" prefHeight="529.0" prefWidth="827.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdf3ff" height="86.0" layoutX="-40.0" layoutY="328.0" stroke="BLACK" strokeType="INSIDE" width="925.0" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff171" height="214.0" layoutX="637.0" layoutY="81.0" stroke="BLACK" strokeType="INSIDE" width="134.0" AnchorPane.bottomAnchor="151.33333333333331" AnchorPane.leftAnchor="637.0" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dadee2" height="214.0" layoutX="354.0" layoutY="86.0" stroke="BLACK" strokeType="INSIDE" width="134.0" AnchorPane.bottomAnchor="151.33333333333331" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fdbb50" height="214.0" layoutX="85.0" layoutY="80.0" stroke="#1d68b3" strokeType="INSIDE" width="134.0" AnchorPane.bottomAnchor="151.0" />
-                  <Button fx:id="btnBackaMatBokning" layoutX="76.0" layoutY="355.0" mnemonicParsing="false" onAction="#back" prefHeight="42.0" prefWidth="110.0" style="-fx-background-color: #1d68b3;" text="Backa" textFill="#f6f5f5" AnchorPane.leftAnchor="76.0">
+                  <Button fx:id="btnBackaMatBokning" layoutX="76.0" layoutY="355.0" mnemonicParsing="false" onAction="#back" prefHeight="42.0" prefWidth="110.0" style="-fx-background-color: #1d68b3;" text="Backa" textFill="#f6f5f5" AnchorPane.bottomAnchor="47.0" AnchorPane.topAnchor="353.0">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnNästaMatpaket" layoutX="677.0" layoutY="352.0" mnemonicParsing="false" onAction="#next" prefHeight="42.0" prefWidth="110.0" style="-fx-background-color: #1d68b3;" text="Nästa" textFill="#f6eeee">
+                  <Button fx:id="btnNästaMatpaket" layoutX="677.0" layoutY="352.0" mnemonicParsing="false" onAction="#next" prefHeight="42.0" prefWidth="110.0" style="-fx-background-color: #1d68b3;" text="Nästa" textFill="#f6eeee" AnchorPane.bottomAnchor="47.0" AnchorPane.topAnchor="353.0">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnMatpaketInfo" layoutX="328.0" layoutY="353.0" mnemonicParsing="false" onAction="#openInformation" prefHeight="42.0" prefWidth="186.0" style="-fx-background-color: #1d68b3;" text="Matpaketinformation" textFill="#f2eeee" AnchorPane.leftAnchor="328.0" AnchorPane.rightAnchor="342.6666666666665">
+                  <Button fx:id="btnMatpaketInfo" layoutX="328.0" layoutY="353.0" mnemonicParsing="false" onAction="#openInformation" prefHeight="42.0" prefWidth="186.0" style="-fx-background-color: #1d68b3;" text="Matpaketinformation" textFill="#f2eeee" AnchorPane.bottomAnchor="47.0" AnchorPane.topAnchor="353.0">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <RadioButton layoutX="120.0" layoutY="124.0" mnemonicParsing="false" text="Budget 1" AnchorPane.bottomAnchor="298.0" AnchorPane.leftAnchor="119.0">
+                  <RadioButton layoutX="113.0" layoutY="118.0" mnemonicParsing="false" text="Budget 1">
                      <toggleGroup>
                         <ToggleGroup fx:id="grpFood" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton layoutX="123.0" layoutY="90.0" mnemonicParsing="false" text="Budget 2" toggleGroup="$grpFood" AnchorPane.bottomAnchor="252.0" AnchorPane.leftAnchor="119.0" />
-                  <RadioButton layoutX="114.0" layoutY="212.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="91.0" text="Budget 3" toggleGroup="$grpFood" AnchorPane.bottomAnchor="209.0" AnchorPane.leftAnchor="119.0" AnchorPane.topAnchor="212.0" />
-                  <RadioButton layoutX="383.0" layoutY="210.0" mnemonicParsing="false" text="Mellan 2" toggleGroup="$grpFood" AnchorPane.bottomAnchor="252.0" AnchorPane.leftAnchor="383.0" AnchorPane.rightAnchor="411.6666666666667" />
-                  <RadioButton layoutX="391.0" layoutY="47.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="83.0" text="Mellan  1" toggleGroup="$grpFood" AnchorPane.bottomAnchor="298.0" AnchorPane.leftAnchor="383.0" AnchorPane.rightAnchor="388.0" />
-                  <RadioButton layoutX="373.0" layoutY="219.33333333333334" mnemonicParsing="false" prefHeight="13.0" prefWidth="82.0" text="Mellan 3" toggleGroup="$grpFood" AnchorPane.bottomAnchor="209.0" AnchorPane.leftAnchor="383.0" AnchorPane.rightAnchor="407.0" AnchorPane.topAnchor="219.0" />
-                  <RadioButton layoutX="678.0" layoutY="126.0" mnemonicParsing="false" text="Lyx 1" toggleGroup="$grpFood" AnchorPane.bottomAnchor="298.0" AnchorPane.leftAnchor="678.0" />
-                  <RadioButton layoutX="676.0" layoutY="172.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="69.0" text="Lyx 2" toggleGroup="$grpFood" AnchorPane.bottomAnchor="252.0" AnchorPane.leftAnchor="678.0" AnchorPane.rightAnchor="115.0" />
-                  <RadioButton layoutX="676.0" layoutY="215.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="69.0" text="Lyx 3" toggleGroup="$grpFood" AnchorPane.bottomAnchor="209.0" AnchorPane.leftAnchor="678.0" AnchorPane.rightAnchor="115.0" />
+                  <RadioButton layoutX="113.0" layoutY="170.0" mnemonicParsing="false" text="Budget 2" toggleGroup="$grpFood" />
+                  <RadioButton layoutX="113.0" layoutY="220.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="91.0" text="Budget 3" toggleGroup="$grpFood" />
+                  <RadioButton layoutX="379.0" layoutY="170.0" mnemonicParsing="false" text="Mellan 2" toggleGroup="$grpFood" />
+                  <RadioButton layoutX="379.0" layoutY="118.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="83.0" text="Mellan  1" toggleGroup="$grpFood" />
+                  <RadioButton layoutX="379.0" layoutY="220.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="82.0" text="Mellan 3" toggleGroup="$grpFood" />
+                  <RadioButton layoutX="676.0" layoutY="118.0" mnemonicParsing="false" text="Lyx 1" toggleGroup="$grpFood" />
+                  <RadioButton layoutX="676.0" layoutY="170.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="69.0" text="Lyx 2" toggleGroup="$grpFood" />
+                  <RadioButton layoutX="676.0" layoutY="220.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="69.0" text="Lyx 3" toggleGroup="$grpFood" />
                   <Text layoutX="135.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bronz" AnchorPane.bottomAnchor="380.3333333333333" />
                   <Text layoutX="406.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Silver" AnchorPane.bottomAnchor="380.3333333333333" />
                   <Text layoutX="689.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guld" AnchorPane.bottomAnchor="380.3333333333333" />

@@ -30,7 +30,7 @@
                         <Font name="Hannotate SC Regular" size="13.0" />
                      </font>
                   </Text>
-                  <Button fx:id="btnBack" layoutX="340.0" layoutY="378.0" mnemonicParsing="false" onAction="#back" prefHeight="41.0" prefWidth="74.0" style="-fx-background-color: #5c96c6;" text="Tillbaka" textFill="WHITE">
+                  <Button fx:id="btnBack" layoutX="298.0" layoutY="376.0" mnemonicParsing="false" onAction="#back" prefHeight="41.0" prefWidth="76.0" style="-fx-background-color: #5c96c6;" text="Tillbaka" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -39,7 +39,7 @@
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="529.0" prefWidth="827.0">
                 <children>
-                <ImageView fx:id="cinemaImageView" layoutX="-247.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <ImageView fx:id="cinemaImageView" layoutY="-6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="-6.0">
                         <image>
                             <Image url="@images/cinemaphotoman.jpg" />
                         </image>

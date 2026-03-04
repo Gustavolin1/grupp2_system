@@ -53,8 +53,15 @@
         <!-- Result Area -->
         <TextArea fx:id="resultArea" editable="false" layoutX="170.0" layoutY="151.0" prefHeight="403.0" prefWidth="317.0" style="-fx-background-radius: 20;" wrapText="true" />
 
+        <!-- Decorative Stars (a few for consistency) -->
+        <Circle fill="WHITE" layoutX="120.0" layoutY="90.0" radius="3.0">
+            <effect>
+                <DropShadow color="WHITE" radius="14" spread="0.8" />
+            </effect>
+        </Circle>
+
         <!-- Back Button -->
-        <Button fx:id="btntillbaka" layoutX="604.0" layoutY="486.0" onAction="#backPage" prefHeight="67.0" prefWidth="131.0" style="-fx-background-color: #5c96c6; -fx-background-radius: 100;" text="Tillbaka" textFill="WHITE">
+        <Button fx:id="btntillbaka" layoutX="604.0" layoutY="486.0" onAction="#backPage" prefHeight="67.0" prefWidth="134.0" style="-fx-background-color: #5c96c6; -fx-background-radius: 100;" text="Tillbaka" textFill="WHITE">
             <font>
                 <Font size="28.0" />
             </font>
@@ -66,13 +73,6 @@
                 </InnerShadow>
             </effect>
         </Button>
-
-        <!-- Decorative Stars (a few for consistency) -->
-        <Circle fill="WHITE" layoutX="120.0" layoutY="90.0" radius="3.0">
-            <effect>
-                <DropShadow color="WHITE" radius="14" spread="0.8" />
-            </effect>
-        </Circle>
 
         <Circle fill="WHITE" layoutX="700.0" layoutY="120.0" radius="3.0">
             <effect>
