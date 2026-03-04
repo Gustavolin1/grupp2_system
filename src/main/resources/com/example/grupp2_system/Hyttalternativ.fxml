@@ -50,10 +50,10 @@
          <font>
             <Font size="17.0" />
          </font></RadioButton>
-      <CheckBox fx:id="btnCancel" layoutX="40.0" layoutY="33.0" mnemonicParsing="false" onAction="#cancelBooking" text="Avbryt bokning" textFill="#3b82b2">
+      <Button fx:id="btnCancel" layoutX="40.0" layoutY="33.0" mnemonicParsing="false" onAction="#cancelBooking" text="Avbryt bokning" textFill="#3b82b2">
          <font>
             <Font size="17.0" />
-         </font></CheckBox>
+         </font></Button>
       <Text fill="#3b82b2" layoutX="186.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Svit med utsikt över rymden, separat vardags- och sovrum med dubbelsäng, plus skärm med film, serier, musik och spel." wrappingWidth="148.0">
          <font>
             <Font size="15.0" />

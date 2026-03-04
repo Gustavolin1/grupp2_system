@@ -31,10 +31,28 @@ public class TravelDateController {
     {
         Booking booking = SceneManager.getCurrentBooking();
 
+        if(dtpTur.getValue() == null || dtpRetur.getValue() == null)
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Fel!");
+            alert.setHeaderText("Val saknas");
+            alert.setContentText("Du måste välja datum för både tur och retur");
+            alert.showAndWait();
+            return;
+        }
+
+        if (dtpTur.getValue().isAfter(dtpRetur.getValue()))
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Fel!");
+            alert.setHeaderText("Fel datum vald");
+            alert.setContentText("Tur datum är efter returdatum");
+            alert.showAndWait();
+            return;
+        }
+
         booking.setDateThere(dtpTur.getValue());
         booking.setDateHome(dtpRetur.getValue());
-
-
         SceneManager.switchScene("Hyttalternativ.fxml");
     }
 

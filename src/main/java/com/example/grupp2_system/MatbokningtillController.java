@@ -1,12 +1,11 @@
 package com.example.grupp2_system;
 
+import com.example.grupp2_system.Booking.Booking;
 import com.example.grupp2_system.SceneManager.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
@@ -46,6 +45,9 @@ public class MatbokningtillController implements Initializable {
     @FXML
     private Button btnNästaMatpaket;
 
+    @FXML
+    private ToggleGroup grpFood;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -79,10 +81,25 @@ public class MatbokningtillController implements Initializable {
     @FXML
     public void next(ActionEvent event) throws  IOException
     {
+        Booking booking = SceneManager.getCurrentBooking();
+
+        RadioButton selectedFood = (RadioButton) grpFood.getSelectedToggle();
+
+        if (selectedFood == null) {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Fel");
+            alert.setHeaderText("Val saknas");
+            alert.setContentText("Du måste välja ett matalternativ");
+            alert.showAndWait();
+
+            return;
+        }
+
+        booking.setFoodThere(selectedFood.getText());
+
         SceneManager.switchScene("CheckData.fxml");
     }
-
-
 
 }
 
