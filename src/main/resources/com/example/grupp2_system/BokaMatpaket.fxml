@@ -4,8 +4,9 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -55,9 +56,6 @@
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="529.0" prefWidth="827.0">
                <children>
-                  <TextField alignment="CENTER" layoutX="376.0" layoutY="35.0" prefHeight="26.0" prefWidth="110.0" text="Budget 2" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="370.0" AnchorPane.topAnchor="35.0" />
-                  <TextField alignment="CENTER" layoutX="373.0" layoutY="109.0" prefHeight="26.0" prefWidth="110.0" text="Mellan 2" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="370.0" />
-                  <TextField alignment="CENTER" layoutX="373.0" layoutY="183.0" prefHeight="26.0" prefWidth="110.0" text="Lux 2" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="370.0" />
                   <Button fx:id="btnBackaMatBokning" layoutX="110.0" layoutY="242.0" mnemonicParsing="false" onAction="#back" prefHeight="42.0" prefWidth="110.0" text="Backa" AnchorPane.leftAnchor="75.0">
                      <font>
                         <Font size="16.0" />
@@ -73,12 +71,19 @@
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <TextField alignment="CENTER" layoutX="678.0" layoutY="35.0" prefHeight="26.0" prefWidth="110.0" text="Budget 3" AnchorPane.rightAnchor="76.0" AnchorPane.topAnchor="35.0" />
-                  <TextField alignment="CENTER" layoutX="675.0" layoutY="109.0" prefHeight="26.0" prefWidth="110.0" text="Mellan 3" AnchorPane.rightAnchor="76.0" />
-                  <TextField alignment="CENTER" layoutX="675.0" layoutY="183.0" prefHeight="26.0" prefWidth="110.0" text="Lux 3" AnchorPane.rightAnchor="76.0" />
-                  <TextField alignment="CENTER" layoutX="76.0" layoutY="35.0" prefHeight="26.0" prefWidth="110.0" text="Budget 1" AnchorPane.leftAnchor="76.0" AnchorPane.topAnchor="35.0" />
-                  <TextField alignment="CENTER" layoutX="73.0" layoutY="109.0" prefHeight="26.0" prefWidth="110.0" text="Mellan 1" />
-                  <TextField alignment="CENTER" layoutX="73.0" layoutY="183.0" prefHeight="26.0" prefWidth="110.0" text="Lux 1" />
+                  <RadioButton layoutX="112.0" layoutY="51.0" mnemonicParsing="false" text="Budget 1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="grpFood" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton layoutX="112.0" layoutY="107.0" mnemonicParsing="false" text="Budget 2" toggleGroup="$grpFood" />
+                  <RadioButton layoutX="112.0" layoutY="170.0" mnemonicParsing="false" text="Budget 3" toggleGroup="$grpFood" />
+                  <RadioButton layoutX="322.0" layoutY="116.0" mnemonicParsing="false" text="Mellan 2" toggleGroup="$grpFood" />
+                  <RadioButton layoutX="322.0" layoutY="51.0" mnemonicParsing="false" text="Mellan  1" toggleGroup="$grpFood" />
+                  <RadioButton layoutX="322.0" layoutY="179.0" mnemonicParsing="false" text="Mellan 3" toggleGroup="$grpFood" />
+                  <RadioButton layoutX="504.0" layoutY="51.0" mnemonicParsing="false" text="Lyx 1" toggleGroup="$grpFood" />
+                  <RadioButton layoutX="505.0" layoutY="116.0" mnemonicParsing="false" text="Lyx 2" toggleGroup="$grpFood" />
+                  <RadioButton layoutX="495.0" layoutY="179.0" mnemonicParsing="false" text="Lyx 3" toggleGroup="$grpFood" />
                </children>
                 </AnchorPane>
             </items>

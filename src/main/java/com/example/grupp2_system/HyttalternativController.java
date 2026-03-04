@@ -41,6 +41,17 @@ public class HyttalternativController {
 
         RadioButton selectedCabin = (RadioButton) grpOption.getSelectedToggle();
 
+        if (selectedCabin == null) {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Fel");
+            alert.setHeaderText("Val saknas");
+            alert.setContentText("Du måste välja ett hyttalternativ");
+            alert.showAndWait();
+
+            return;
+        }
+
         booking.setCabinThere(selectedCabin.getText());
 
         SceneManager.switchScene("BokaMatpaket.fxml");
