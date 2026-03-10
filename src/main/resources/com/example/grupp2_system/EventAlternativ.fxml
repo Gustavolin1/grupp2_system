@@ -9,7 +9,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <Scene xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.EventAltenativ">
    <root>
       <AnchorPane prefHeight="400.0" prefWidth="600.0">
@@ -17,29 +16,26 @@
             <AnchorPane layoutY="-18.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7baddb" height="418.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-                  <MenuButton fx:id="btnMovieNR" layoutX="43.0" layoutY="227.0" mnemonicParsing="false" text="Film(Allaround)">
+                  <MenuButton fx:id="btnMovieNR" layoutX="43.0" layoutY="209.0" mnemonicParsing="false" text=" Film                ">
                      <items>
-                        <MenuItem fx:id="altJhonW" mnemonicParsing="false" text="John Wick 4" />
-                        <MenuItem fx:id="altAvg" mnemonicParsing="false" text="Avengers" />
-                        <MenuItem fx:id="altBarbie" mnemonicParsing="false" text="Barbie" />
-                        <MenuItem fx:id="altStarw" mnemonicParsing="false" text="Star Wars" />
+                        <MenuItem fx:id="altJhonW" mnemonicParsing="false" text="0" />
+                        <MenuItem fx:id="altAvg" mnemonicParsing="false" text="1" />
+                        <MenuItem fx:id="altBarbie" mnemonicParsing="false" text="2" />
+                        <MenuItem fx:id="altStarw" mnemonicParsing="false" text="3" />
+                        <MenuItem fx:id="altMG" mnemonicParsing="false" text="4" />
+                        <MenuItem fx:id="altAv6" mnemonicParsing="false" text="5" />
+                        <MenuItem fx:id="FB6" mnemonicParsing="false" text="6" />
                      </items>
                   </MenuButton>
-                  <MenuButton fx:id="btnMovie" layoutX="43.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Film(Nya)">
+                  <MenuButton fx:id="btnConcert" layoutX="45.0" layoutY="156.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Koncert">
                      <items>
-                        <MenuItem fx:id="altMG" mnemonicParsing="false" text="Mandalorian &amp; Groggu" />
-                        <MenuItem fx:id="altAv6" mnemonicParsing="false" text="Avengers 6" />
+                        <MenuItem fx:id="altZL" mnemonicParsing="false" text="0" />
+                        <MenuItem fx:id="altMadonna" mnemonicParsing="false" text="1" />
+                        <MenuItem fx:id="altAbba" mnemonicParsing="false" text="2" />
+                        <MenuItem fx:id="altImGB" mnemonicParsing="false" text="3" />
                      </items>
                   </MenuButton>
-                  <MenuButton fx:id="btnConcert" layoutX="43.0" layoutY="142.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Koncert">
-                     <items>
-                        <MenuItem fx:id="altZL" mnemonicParsing="false" text="Zara Larsson" />
-                        <MenuItem fx:id="altMadonna" mnemonicParsing="false" text="Madonna" />
-                        <MenuItem fx:id="altAbba" mnemonicParsing="false" text="ABBA" />
-                        <MenuItem fx:id="altImGB" mnemonicParsing="false" text="Im a gummy bear" />
-                     </items>
-                  </MenuButton>
-                  <Label layoutX="36.0" layoutY="45.0" text="Välj evenemang">
+                  <Label layoutX="7.0" layoutY="33.0" prefHeight="33.0" prefWidth="341.0" text="Välj antal eventbilljetter">
                      <font>
                         <Font name="System Italic" size="18.0" />
                      </font>
@@ -48,10 +44,10 @@
             </AnchorPane>
             <MenuButton fx:id="btnTeater" layoutX="44.0" layoutY="86.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Teater">
               <items>
-                <MenuItem fx:id="altCats" mnemonicParsing="false" text="Cats 7" />
-                <MenuItem fx:id="altWicked" mnemonicParsing="false" text="Wicked 3" />
-                  <MenuItem fx:id="altAlien" mnemonicParsing="false" text="Aliens live Action" />
-                  <MenuItem fx:id="altSpiderman" mnemonicParsing="false" text="Spirderman live action" />
+                <MenuItem fx:id="altCats" mnemonicParsing="false" text="0" />
+                <MenuItem fx:id="altWicked" mnemonicParsing="false" text="1" />
+                  <MenuItem fx:id="altAlien" mnemonicParsing="false" text="2" />
+                  <MenuItem fx:id="altSpiderman" mnemonicParsing="false" text="3" />
               </items>
             </MenuButton>
             <Button fx:id="btnBack" layoutX="18.0" layoutY="351.0" mnemonicParsing="false" text="Tillbaka" />

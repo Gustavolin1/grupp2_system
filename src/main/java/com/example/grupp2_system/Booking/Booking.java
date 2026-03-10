@@ -22,6 +22,11 @@ public class Booking {
     private double cardAmount;
 //travelInsurance bool where 1 means they want insurance and 0 meant they don't want it
     private boolean travelInsurance;
+// Event controller objekts
+    private int antalFilm;
+    private int antalConcert;
+    private int antalTeater;
+
 
     // Constructor for new booking
 
@@ -70,7 +75,10 @@ public class Booking {
                 foodHome + ";" +
                 dateHome + ";" +
                 cardAmount + ";" +
-                travelInsurance;
+                travelInsurance +";" +
+                antalFilm + ";" +
+                antalConcert + ";" +
+                antalTeater;
     }
 
     // Getters
@@ -84,8 +92,9 @@ public class Booking {
     public LocalDate getDateHome() { return dateHome; }
     public double getCardAmount() { return cardAmount; }
     public boolean hasTravelInsurance() { return travelInsurance; }
-
-
+    public int getAntalFilm(){return antalFilm;}
+    public int getAntalConcert(){return antalConcert;}
+    public int getAntalTeater(){return antalTeater;}
     //setter
 
     public void setBookingId(String bookingId) {
@@ -127,4 +136,11 @@ public class Booking {
     public void setTravelInsurance(boolean travelInsurance) {
         this.travelInsurance = travelInsurance;
     }
+
+    public void setAntalFilmer(int antalFilm){this.antalFilm = antalFilm;}
+    public void setAntalConcert(int antalConcert){this.antalConcert = antalConcert;}
+    public void setAntalTeater(int antalTeater){this.antalTeater = antalTeater;}
+
+
+
 }
