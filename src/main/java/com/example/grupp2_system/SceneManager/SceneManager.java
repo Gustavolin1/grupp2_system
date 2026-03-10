@@ -1,15 +1,22 @@
-package com.example.grupp2_system;
+package com.example.grupp2_system.SceneManager;
+import com.example.grupp2_system.Booking.Booking;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayDeque;
 import java.util.Stack;
+
+
+
 
     public class SceneManager {
 
+        private static Booking currentBooking;
+
         private static Stage stage;
-        private static final Stack<Scene> history = new Stack<>();
+        private static final ArrayDeque<Scene> history = new ArrayDeque<>();
 
         // sätts en gång när appen startar
         public static void setStage(Stage primaryStage) {
@@ -21,6 +28,7 @@ import java.util.Stack;
             FXMLLoader loader =
                     new FXMLLoader(SceneManager.class.getResource(
                             "/com/example/grupp2_system/" + fxml));
+
 
             Scene newScene = new Scene(loader.load(), 800, 600);
 
@@ -36,6 +44,14 @@ import java.util.Stack;
             if (!history.isEmpty()) {
                 stage.setScene(history.pop());
             }
+        }
+
+        public static void setCurrentBooking(Booking booking) {
+            currentBooking = booking;
+        }
+
+        public static Booking getCurrentBooking() {
+            return currentBooking;
         }
     }
 

@@ -1,11 +1,10 @@
-package com.example.grupp2_system;
+package com.example.grupp2_system.App;
 
+import com.example.grupp2_system.SceneManager.SceneManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class HelloApplication extends Application {
     @Override
@@ -15,7 +14,7 @@ public class HelloApplication extends Application {
 
         FXMLLoader loader = new FXMLLoader(
                 getClass().getResource(
-                        "/com/example/grupp2_system/Startpage.fxml"));
+                        "/com/example/grupp2_system/StartPage.fxml"));
 
         stage.setScene(new Scene(loader.load()));
         stage.setTitle("Bokningssystem");
