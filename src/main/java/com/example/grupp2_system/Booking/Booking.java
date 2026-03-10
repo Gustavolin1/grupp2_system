@@ -48,7 +48,8 @@ public class Booking {
                    LocalDate dateHome,
                    List<String> events,
                    double cardAmount,
-                   boolean travelInsurance) {
+                   boolean travelInsurance)
+    {
 
         this.bookingId = bookingId;
         this.cabinThere = cabinThere;
