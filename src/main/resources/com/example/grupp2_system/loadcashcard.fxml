@@ -7,16 +7,43 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.loadcashcardcontroller">
-   <children>
-      <Label layoutX="57.0" layoutY="39.0" text="Välj summa som du vill ladda ditt betalkort med:">
-         <font>
-            <Font size="22.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtfieldsum" layoutX="217.0" layoutY="118.0" />
-      <Text layoutX="57.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Minsta tillåtna summa: 20 000 kr)" />
-      <Button fx:id="btnback" layoutX="57.0" layoutY="314.0" mnemonicParsing="false" onAction="#btnback" text="Tillbaka" />
-      <Button fx:id="btnnext" layoutX="502.0" layoutY="314.0" mnemonicParsing="false" onAction="#btnnext" text="Nästa" />
-   </children>
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #cdeaf8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.loadcashcardcontroller">
+
+    <children>
+
+        <!-- Title -->
+        <Label layoutX="213.0" layoutY="35.0" prefHeight="79.0" prefWidth="373.0" text="Ladda ditt betalkort inför resan" textFill="#2685b9">
+            <font>
+                <Font name="Hannotate SC Bold" size="27.0" />
+            </font>
+        </Label>
+
+        <!-- Instruction -->
+        <Label layoutX="220.0" layoutY="147.0" text="Välj summa som du vill ladda kortet med:" textFill="#2685b9">
+            <font>
+                <Font name="Hannotate SC Bold" size="20.0" />
+            </font>
+        </Label>
+
+        <!-- Minimum info -->
+        <Text fill="#2685b9" layoutX="310.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Minsta tillåtna summa: 20 000 kr)" />
+
+        <!-- Input -->
+        <TextField fx:id="txtfieldsum" layoutX="285.0" layoutY="230.0" prefHeight="36.0" prefWidth="230.0" style="-fx-background-color: #2685b9; -fx-text-fill: white;" />
+
+        <!-- Back button -->
+        <Button fx:id="btnback" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#btnback" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #2685b9;" text="Tillbaka" textFill="WHITE">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+
+        <!-- Next button -->
+        <Button fx:id="btnnext" layoutX="600.0" layoutY="480.0" mnemonicParsing="false" onAction="#btnnext" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #2685b9;" text="Nästa" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+
+    </children>
 </AnchorPane>
