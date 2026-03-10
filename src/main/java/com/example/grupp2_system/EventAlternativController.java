@@ -101,7 +101,7 @@ public class EventAlternativController {
     public void setBtnNext(ActionEvent event) throws IOException
     {
         Booking booking = SceneManager.getCurrentBooking();
-        SceneManager.switchScene("CheckData.fxml");
+        SceneManager.switchScene("loadcashcard.fxml");
 
     }
 
