@@ -6,6 +6,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ButtonType;
+import java.util.Optional;
 
 import java.io.IOException;
 
@@ -67,5 +69,22 @@ public class loadcashcardcontroller {
         alert.setContentText(message);
 
         alert.showAndWait();
+    }
+    @FXML
+    private void handleClose() throws IOException {
+        // Create a confirmation dialog
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Avbryt bokning");
+        alert.setHeaderText(null);
+        alert.setContentText("Är du säker på att du vill avbryta bokningen?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && result.get() == ButtonType.OK) {
+            // Clear current booking
+            SceneManager.setCurrentBooking(null);
+
+            // Go back to start page
+            SceneManager.switchScene("Startpage.fxml");
+        }
     }
 }

@@ -10,6 +10,11 @@
 <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #cdeaf8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.loadcashcardcontroller">
 
     <children>
+        <!-- Close Button -->
+        <Button fx:id="btnClose" layoutX="740.0" layoutY="20.0" prefWidth="40.0" prefHeight="40.0"
+                text="X"
+                style="-fx-background-color: #dd6738; -fx-text-fill: white; -fx-font-weight: bold;"
+                onAction="#handleClose"/>
 
         <!-- Title -->
         <Label layoutX="213.0" layoutY="35.0" prefHeight="79.0" prefWidth="373.0" text="Ladda ditt betalkort inför resan" textFill="#2685b9">

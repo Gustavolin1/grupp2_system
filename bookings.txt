@@ -22,3 +22,5 @@ BK-96555;Svit;Mellan 3;2026-03-21;null;null;null;2030-03-20;0.0;;false
 BK-76987;Svit;Budget 1;2026-03-12;null;null;null;2031-03-19;53000.0;;false
 BK-45715;Svit;Mellan 2;2026-03-21;null;null;null;2030-03-15;3.942080328E9;;false
 BK-40549;Inside;Mellan 3;2026-03-12;null;null;null;2026-03-22;3.9482392E7;;false
+BK-10579;SpaceSide;Mellan 2;2026-03-14;null;null;null;2026-03-22;3.4873848378E10;;false
+BK-28995;Svit;Mellan 2;2026-03-12;null;null;null;2026-03-27;3.2847938274E10;;false
