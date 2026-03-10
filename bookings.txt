@@ -1,0 +1,20 @@
+BK-60391;Svit;Mellan 2;2026-03-11;null;null;null;2026-03-20;0.0;false
+BK-32308;Svit;Budget 2;2026-03-04;null;null;null;2026-03-06;0.0;false
+BK-63020;Svit;Mellan  1;2026-03-04;null;null;null;2026-03-11;0.0;false
+BK-16120;Svit;Mellan  1;2026-03-03;null;null;null;2026-03-06;0.0;false
+BK-58700;Svit;Lyx 3;2026-03-04;null;null;null;2026-03-05;0.0;false
+BK-85803;Svit;Budget 1;2026-03-04;null;null;null;2026-03-05;0.0;false
+BK-81855;Svit;Mellan 2;2026-03-04;null;null;null;2026-03-05;0.0;Wicked 3,Madonna,Mandalorian & Groggu,Avengers;false
+BK-83613;Svit;Mellan 2;2026-03-12;null;null;null;2026-04-15;0.0;Wicked 3,Madonna,John Wick 4;false
+BK-47163;Inside;Budget 2;2026-03-05;null;null;null;2026-03-06;0.0;Madonna,Cats 7,Mandalorian & Groggu;false
+BK-54344;Svit;Mellan 2;2026-03-19;null;null;null;2029-03-08;0.0;Wicked 3,Mandalorian & Groggu;false
+BK-58583;Svit;Budget 2;2026-03-05;null;null;null;2026-03-12;0.0;Cats 7,Mandalorian & Groggu;false
+BK-66150;Economy;Lyx 3;2026-03-13;null;null;null;2028-03-16;0.0;Zara Larsson;false
+BK-52790;Sömnkapsel;null;2026-03-20;null;null;null;2026-03-23;0.0;;false
+BK-82766;Svit;Mellan 2;2026-03-26;null;null;null;2026-03-27;0.0;Avengers 6;false
+BK-61766;Svit;Budget 1;2027-03-19;null;null;null;2028-03-24;0.0;Barbie;false
+BK-85165;Svit;Mellan 3;2026-03-12;null;null;null;2030-03-20;0.0;;false
+BK-90625;Economy;Lyx 1;2026-03-14;null;null;null;2026-03-20;0.0;Star Wars;false
+BK-69590;Inside;Mellan 3;2026-03-09;null;null;null;2029-03-22;0.0;;false
+BK-41265;Svit;Budget 3;2026-03-20;null;null;null;2026-03-31;0.0;Aliens live Action;false
+BK-76672;Sömnkapsel;null;2026-03-14;null;null;null;2029-03-27;0.0;;false
