@@ -28,7 +28,7 @@ public class StartpageController {
             Booking booking = new Booking();
 
             SceneManager.setCurrentBooking(booking);
-            SceneManager.switchScene("TravelDateAlternativ.fxml");
+            SceneManager.switchScene("MarsHotel.fxml");
 
 
     }
