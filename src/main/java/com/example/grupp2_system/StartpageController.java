@@ -7,6 +7,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
 import java.io.IOException;
+import java.time.Month;
+import java.time.Year;
+import java.util.ArrayList;
+import java.util.List;
 
 public class StartpageController {
 
@@ -25,7 +29,20 @@ public class StartpageController {
     @FXML
     public void startBooking(ActionEvent event) throws IOException{
 
-            Booking booking = new Booking();
+        String[] parts = {"BK-12345", "CabinA", "Veg", "JANUARY", "2026", "HotelX", "CabinB", "", "0.0", "false"};
+        List<String> events = new ArrayList<>(); // or parse from parts[8] if needed
+
+        Booking booking = new Booking(
+                parts[1],                   // cabinThere
+                parts[2],                   // foodThere
+                Month.valueOf(parts[3]),    // dateThere
+                Year.of(Integer.parseInt(parts[4])), // yearThere
+                parts[5],                   // hotelChoice
+                parts[6],                   // cabinHome
+                events,
+                Double.parseDouble(parts[8]),   // cardAmount
+                Boolean.parseBoolean(parts[9])  // travelInsurance
+        );
 
             SceneManager.setCurrentBooking(booking);
             SceneManager.switchScene("TravelDateAlternativ.fxml");

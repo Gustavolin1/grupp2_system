@@ -1,7 +1,8 @@
 package com.example.grupp2_system.Booking;
 
 import java.io.*;
-import java.time.LocalDate;
+import java.time.Month;
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class BookingManager {
 
                 String[] parts = line.split(";");
 
-                if (parts.length < 11) {
+                if (parts.length < 10) {
                     System.out.println("Skipping invalid line: " + line);
                     continue;
                 }
@@ -48,18 +49,18 @@ public class BookingManager {
                 }
 
                 Booking booking = new Booking(
-                        parts[0],
                         parts[1],
                         parts[2],
-                        LocalDate.parse(parts[3]),
-                        parts[4],
+                        Month.valueOf(parts[4]),
+                        Year.of(Integer.parseInt(parts[3])),
                         parts[5],
                         parts[6],
-                        LocalDate.parse(parts[7]),
+                        parts[7],
                         events,
                         Double.parseDouble(parts[8]),   // FIXED
                         Boolean.parseBoolean(parts[10])
                 );
+                booking.setBookingId(parts[0]);
 
                 bookings.add(booking);
             }

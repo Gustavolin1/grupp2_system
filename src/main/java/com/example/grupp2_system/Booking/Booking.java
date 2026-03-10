@@ -1,6 +1,8 @@
 package com.example.grupp2_system.Booking;
 
-import java.time.LocalDate;
+
+import java.time.Month;
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -13,13 +15,13 @@ public class Booking {
 //"There" is for choices on the way there
     private String cabinThere;
     private String foodThere;
-    private LocalDate dateThere;
+    private Month dateThere;
+    private Year yearThere;
 
     private String hotelChoice;
 //"Home" is for choices in the way home
     private String cabinHome;
     private String foodHome;
-    private LocalDate dateHome;
 //cardAmount is the amount of money loaded to the card
     private double cardAmount;
 //travelInsurance bool where 1 means they want insurance and 0 meant they don't want it
@@ -28,7 +30,7 @@ public class Booking {
 
     // Constructor for new booking
 
-    public Booking() {
+    public Booking(String part, String s, Month month, Year year, String part1, String s1, List<String> events, double v, boolean b) {
         this.bookingId = generateBookingid();
     }
 
@@ -38,26 +40,25 @@ public class Booking {
         return  "BK-" + number;
     }
     // Constructor used when loading from file
-    public Booking(String bookingId,
-                   String cabinThere,
+    public Booking(String cabinThere,
                    String foodThere,
-                   LocalDate dateThere,
+                   Month dateThere,
+                   Year yearThere,
                    String hotelChoice,
                    String cabinHome,
                    String foodHome,
-                   LocalDate dateHome,
                    List<String> events,
                    double cardAmount,
                    boolean travelInsurance) {
 
-        this.bookingId = bookingId;
+        this.bookingId = generateBookingid(); // generate new ID
         this.cabinThere = cabinThere;
         this.foodThere = foodThere;
         this.dateThere = dateThere;
+        this.yearThere = yearThere;
         this.hotelChoice = hotelChoice;
         this.cabinHome = cabinHome;
         this.foodHome = foodHome;
-        this.dateHome = dateHome;
         this.events = events;
         this.cardAmount = cardAmount;
         this.travelInsurance = travelInsurance;
@@ -71,11 +72,11 @@ public class Booking {
         return bookingId + ";" +
                 cabinThere + ";" +
                 foodThere + ";" +
+                yearThere + ";" +
                 dateThere + ";" +
                 hotelChoice + ";" +
                 cabinHome + ";" +
                 foodHome + ";" +
-                dateHome + ";" +
                 cardAmount + ";" +
                 eventsString +";" +
                 travelInsurance;
@@ -85,11 +86,11 @@ public class Booking {
     public String getBookingId() { return bookingId; }
     public String getCabinThere() { return cabinThere; }
     public String getFoodThere() { return foodThere; }
-    public LocalDate getDateThere() { return dateThere; }
+    public Year getYearThere() { return yearThere; }
+    public Month getDateThere() { return dateThere; }
     public String getHotelChoice() { return hotelChoice; }
     public String getCabinHome() { return cabinHome; }
     public String getFoodHome() { return foodHome; }
-    public LocalDate getDateHome() { return dateHome; }
     public double getCardAmount() { return cardAmount; }
     public boolean hasTravelInsurance() { return travelInsurance; }
     public List<String> getEvents() {return events;}
@@ -107,7 +108,11 @@ public class Booking {
         this.foodThere = foodThere;
     }
 
-    public void setDateThere(LocalDate dateThere) {
+    public void setYearThere(Year yearThere) {
+        this.yearThere = yearThere;
+    }
+
+    public void setDateThere(Month dateThere) {
         this.dateThere = dateThere;
     }
 
@@ -121,10 +126,6 @@ public class Booking {
 
     public void setFoodHome(String foodHome) {
         this.foodHome = foodHome;
-    }
-
-    public void setDateHome(LocalDate dateHome) {
-        this.dateHome = dateHome;
     }
 
     public void setCardAmount(double cardAmount) {

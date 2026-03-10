@@ -10,6 +10,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 import java.io.IOException;
+import java.time.Month;
+import java.time.format.TextStyle;
+import java.util.Locale;
 
 public class CheckDataController {
 
@@ -23,9 +26,6 @@ public class CheckDataController {
     private Label lblEvents;
 
     @FXML
-    private Label lblDatefrom;
-
-    @FXML
     private Label lblID;
 
     @FXML
@@ -33,6 +33,9 @@ public class CheckDataController {
 
     @FXML
     private Label lbldateto;
+
+    @FXML
+    private Label lblyearto;
 
     @FXML
     private Label lblfoodoption;
@@ -43,8 +46,11 @@ public class CheckDataController {
 
         if (booking != null) {
             lblID.setText("Bokningsnummer: " + booking.getBookingId());
-            lbldateto.setText("Avresa: " + booking.getDateThere().toString());
-            lblDatefrom.setText("Hemresa: " + booking.getDateHome().toString());
+            lblyearto.setText("Avresa År: " + booking.getYearThere().toString());
+            Month month = booking.getDateThere();
+            String swedishMonth = month.getDisplayName(TextStyle.FULL, new Locale("sv", "SE"));
+            swedishMonth = swedishMonth.substring(0, 1).toUpperCase() + swedishMonth.substring(1);
+            lbldateto.setText("Avresa Månad: " + swedishMonth);
             lblcabin.setText("Kabin: " + booking.getCabinThere());
             lblfoodoption.setText("Matval: " + booking.getFoodThere());
             lblEvents.setText("Bokade evenemang: " + String.join(", ", booking.getEvents()));
