@@ -56,7 +56,7 @@ public class CustomerInformationController {
             return;
         }
 
-        // EMAIL VALIDATION
+        // Email validation
         if (!txtfMail.getText().matches("^[A-Za-z0-9+_.-]+@(.+)$")) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Fel email");
@@ -66,7 +66,7 @@ public class CustomerInformationController {
             return;
         }
 
-        // PHONE VALIDATION
+        // phone validation
         if (!txtfTel.getText().matches("^\\+?[0-9]{7,15}$")) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Fel telefonnummer");
@@ -76,7 +76,7 @@ public class CustomerInformationController {
             return;
         }
 
-        // PERSONAL NUMBER VALIDATION
+        //Social security validation
         if (!txtfPersnumber.getText().matches("^\\d{8}-?\\d{4}$")) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Fel personnummer");
