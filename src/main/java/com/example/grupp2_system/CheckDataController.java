@@ -45,6 +45,7 @@ public class CheckDataController {
         Booking booking = SceneManager.getCurrentBooking();
 
         if (booking != null) {
+
             lblID.setText("Bokningsnummer: " + booking.getBookingId());
             lblyearto.setText("Avresa År: " + booking.getYearThere().toString());
             Month month = booking.getDateThere();
