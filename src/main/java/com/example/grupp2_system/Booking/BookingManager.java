@@ -56,7 +56,6 @@ public class BookingManager {
                         parts[5],
                         parts[6],
                         LocalDate.parse(parts[7]),
-                        events,
                         Double.parseDouble(parts[8]),   // FIXED
                         Boolean.parseBoolean(parts[10])
                 );

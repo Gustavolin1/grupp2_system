@@ -39,14 +39,6 @@ public class SearchBookingController {
 
     private void displayBooking(Booking booking) {
 
-        // Format events nicely
-        String eventsText;
-
-        if (booking.getEvents() == null || booking.getEvents().isEmpty()) {
-            eventsText = "No events booked.";
-        } else {
-            eventsText = "• " + String.join("\n• ", booking.getEvents());
-        }
 
         String info = "Booking ID: " + booking.getBookingId() + "\n\n" +
 
@@ -62,8 +54,6 @@ public class SearchBookingController {
                 "  Food: " + booking.getFoodHome() + "\n" +
                 "  Date: " + booking.getDateHome() + "\n\n" +
 
-                "Events:\n" +
-                eventsText + "\n\n" +
 
                 "Card Amount: " + booking.getCardAmount() + " kr\n" +
 

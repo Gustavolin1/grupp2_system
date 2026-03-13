@@ -1,8 +1,6 @@
 package com.example.grupp2_system.Booking;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class Booking {
@@ -24,7 +22,10 @@ public class Booking {
     private double cardAmount;
 //travelInsurance bool where 1 means they want insurance and 0 meant they don't want it
     private boolean travelInsurance;
-    private List<String> events = new ArrayList<>();
+    private int theatreTickets;
+    private int movieTickets;
+    private int concertTickets;
+    private int monthsOnMars;
 
     // Constructor for new booking
 
@@ -46,9 +47,8 @@ public class Booking {
                    String cabinHome,
                    String foodHome,
                    LocalDate dateHome,
-                   List<String> events,
                    double cardAmount,
-                   boolean travelInsurance) {
+                   boolean travelInsurance){
 
         this.bookingId = bookingId;
         this.cabinThere = cabinThere;
@@ -58,7 +58,6 @@ public class Booking {
         this.cabinHome = cabinHome;
         this.foodHome = foodHome;
         this.dateHome = dateHome;
-        this.events = events;
         this.cardAmount = cardAmount;
         this.travelInsurance = travelInsurance;
     }
@@ -67,7 +66,6 @@ public class Booking {
 
     // Convert object to one line for text file
     public String toFileString() {
-        String eventsString = String.join(",", events);
         return bookingId + ";" +
                 cabinThere + ";" +
                 foodThere + ";" +
@@ -77,7 +75,6 @@ public class Booking {
                 foodHome + ";" +
                 dateHome + ";" +
                 cardAmount + ";" +
-                eventsString +";" +
                 travelInsurance;
     }
 
@@ -92,7 +89,10 @@ public class Booking {
     public LocalDate getDateHome() { return dateHome; }
     public double getCardAmount() { return cardAmount; }
     public boolean hasTravelInsurance() { return travelInsurance; }
-    public List<String> getEvents() {return events;}
+    public int getTheatreTickets() {return theatreTickets;}
+    public int getMovieTickets() {return movieTickets;}
+    public int getConcertTickets() {return concertTickets;}
+    public int getMonthsOnMars() {return  monthsOnMars;}
     //setter
 
     public void setBookingId(String bookingId) {
@@ -135,11 +135,14 @@ public class Booking {
         this.travelInsurance = travelInsurance;
     }
 
-    public void setEvents(List<String> events) {
-        this.events = events;
-    }
+    public void setTheatreTickets(int theatreTickets) {theatreTickets = theatreTickets;}
 
-    public void addEvent(String event){
-        events.add(event);
+    public void setMovieTickets(int movieTickets) {movieTickets = movieTickets;}
+
+    public void setConcertTickets(int concertTickets) {
+        this.concertTickets = concertTickets;}
+
+    public void setMonthsOnMars(int monthsOnMars) {
+        this.monthsOnMars = monthsOnMars;
     }
 }

@@ -38,6 +38,18 @@ public class MarsHotellController {
     @FXML
     private Label lblright;
 
+    @FXML
+    private Spinner<Integer> spMonth;
+
+
+    @FXML
+    public void initialize() {
+
+        spMonth.setValueFactory(
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 12, 0));
+    }
+
+
 
     @FXML
     public void next(ActionEvent event) throws IOException {
@@ -55,6 +67,7 @@ public class MarsHotellController {
             return;
         }
         booking.setHotelChoice(selectedHotell.toString());
+        booking.setMonthsOnMars(spMonth.getValue());
         System.out.println(booking.getHotelChoice());
     }
 
