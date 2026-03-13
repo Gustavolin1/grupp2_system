@@ -16,6 +16,7 @@ public class CheckDataController {
     @FXML private Button btnBack;
     @FXML private Button btnSave;
     @FXML private TextArea txtSummary;
+    @FXML private TextArea txtTotalPrice;
 
     private Booking booking;
 
@@ -75,6 +76,12 @@ public class CheckDataController {
                 .append("\n\n");
 
         txtSummary.setText(summary.toString());
+
+        // Calculate total price using PriceCalculator
+        int totalPrice = PriceCalculator.calculateTotalPrice(booking);
+
+        // Display total in the TextField
+        txtTotalPrice.setText(String.format("%,d kr", totalPrice));
     }
 
     @FXML
