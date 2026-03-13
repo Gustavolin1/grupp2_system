@@ -74,7 +74,7 @@ public class HyttAlternativTillbakaController {
     @FXML
     public void info(ActionEvent event) throws IOException
     {
-        SceneManager.switchScene("Hyttinformation.fxml");
+        SceneManager.switchScene("MatAlternativTillbaka.fxml");
     }
 
     @FXML
