@@ -7,11 +7,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-import java.net.URL;
 import java.time.Month;
 import java.time.Year;
-import java.util.ResourceBundle;
-import javafx.fxml.Initializable;
+
 import javafx.collections.FXCollections;
 
 import java.util.Optional;
@@ -119,7 +117,7 @@ public class TravelDateController {
             return;
         }
 
-        booking.setDateThere(MånadAvresa.getValue());
+        booking.setMonthThere(MånadAvresa.getValue());
         booking.setYearThere(Year.of((ÅrAvresa.getValue())));
 
         SceneManager.switchScene("Hyttalternativ.fxml");

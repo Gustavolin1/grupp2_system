@@ -3,7 +3,6 @@ package com.example.grupp2_system.Booking;
 
 import java.time.Month;
 import java.time.Year;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -15,7 +14,7 @@ public class Booking {
 //"There" is for choices on the way there
     private String cabinThere;
     private String foodThere;
-    private Month dateThere;
+    private Month monthThere;
     private Year yearThere;
 
     private String hotelChoice;
@@ -72,7 +71,7 @@ public class Booking {
         return bookingId + ";" +
                 cabinThere + ";" +
                 foodThere + ";" +
-                dateThere + ";" +
+                monthThere + ";" +
                 hotelChoice + ";" +
                 cabinHome + ";" +
                 foodHome + ";" +
@@ -85,7 +84,7 @@ public class Booking {
     public String getCabinThere() { return cabinThere; }
     public String getFoodThere() { return foodThere; }
     public Year getYearThere() { return yearThere; }
-    public Month getDateThere() { return dateThere; }
+    public Month getMonthThere() { return monthThere; }
     public String getHotelChoice() { return hotelChoice; }
     public String getCabinHome() { return cabinHome; }
     public String getFoodHome() { return foodHome; }
@@ -113,8 +112,8 @@ public class Booking {
         this.yearThere = yearThere;
     }
 
-    public void setDateThere(Month dateThere) {
-        this.dateThere = dateThere;
+    public void setMonthThere(Month monthThere) {
+        this.monthThere = monthThere;
     }
 
     public void setHotelChoice(String hotelChoice) {

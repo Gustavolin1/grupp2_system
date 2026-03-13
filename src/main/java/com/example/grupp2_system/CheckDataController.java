@@ -48,11 +48,7 @@ public class CheckDataController {
         Booking booking = SceneManager.getCurrentBooking();
 
         if (booking != null) {
-            lblID.setText("Bokningsnummer: " + booking.getBookingId());
-            Month month = booking.getDateThere().getMonth();
-            String swedishMonth = month.getDisplayName(TextStyle.FULL, new Locale("sv", "SE"));
-            swedishMonth = swedishMonth.substring(0, 1).toUpperCase() + swedishMonth.substring(1);
-            lbldateto.setText("Avresa Månad: " + swedishMonth);
+
             lblcabin.setText("Kabin: " + booking.getCabinThere());
             lblfoodoption.setText("Matval: " + booking.getFoodThere());
         }
