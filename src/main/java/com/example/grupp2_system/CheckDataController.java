@@ -7,48 +7,74 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 
 import java.io.IOException;
 
 public class CheckDataController {
 
-    @FXML
-    private Button btnBack;
+    @FXML private Button btnBack;
+    @FXML private Button btnSave;
+    @FXML private TextArea txtSummary;
 
-    @FXML
-    private Button btnSave;
-
-    @FXML
-    private Label lblEvents;
-
-    @FXML
-    private Label lblDatefrom;
-
-    @FXML
-    private Label lblID;
-
-    @FXML
-    private Label lblcabin;
-
-    @FXML
-    private Label lbldateto;
-
-    @FXML
-    private Label lblfoodoption;
+    private Booking booking;
 
     @FXML
     public void initialize() {
-        Booking booking = SceneManager.getCurrentBooking();
 
-        if (booking != null) {
-            lblID.setText("Bokningsnummer: " + booking.getBookingId());
-            lbldateto.setText("Avresa: " + booking.getDateThere().toString());
-            lblDatefrom.setText("Hemresa: " + booking.getDateHome().toString());
-            lblcabin.setText("Kabin: " + booking.getCabinThere());
-            lblfoodoption.setText("Matval: " + booking.getFoodThere());
-            lblEvents.setText("Bokade evenemang: " + String.join(", ", booking.getEvents()));
-        }
+        booking = SceneManager.getCurrentBooking();
+
+        if (booking == null) return;
+
+        StringBuilder summary = new StringBuilder();
+
+        summary.append("Bokningsnummer: ")
+                .append(booking.getBookingId())
+                .append("\n\n");
+
+        summary.append("=== RESA TILL MARS ===\n");
+        summary.append("Avresa: ")
+                .append(booking.getDateThere())
+                .append("\n");
+
+        summary.append("Kabin: ")
+                .append(booking.getCabinThere())
+                .append("\n");
+
+        summary.append("Matval: ")
+                .append(booking.getFoodThere())
+                .append("\n\n");
+
+        summary.append("=== PÅ MARS ===\n");
+        summary.append("HOTELL\n");
+        summary.append(booking.getHotelChoice())
+                .append("\n\n");
+
+        summary.append("EVENEMANG\n");
+        summary.append(String.join(", ", booking.getEvents()))
+                .append("\n");
+
+        summary.append("BETALKORT\n");
+        summary.append(booking.getCardAmount())
+                .append(" kr\n\n");
+
+        summary.append("RESEFÖRSÄKRING\n");
+        summary.append(booking.hasTravelInsurance() ? "Ja" : "Nej");
+
+        summary.append("\n\n=== RESA HEM FRÅN MARS ===\n");
+        summary.append("Datum: ")
+                .append(booking.getDateHome())
+                .append("\n");
+
+        summary.append("Kabin: ")
+                .append(booking.getCabinHome())
+                .append("\n");
+
+        summary.append("Matval: ")
+                .append(booking.getFoodHome())
+                .append("\n\n");
+
+        txtSummary.setText(summary.toString());
     }
 
     @FXML
@@ -58,28 +84,32 @@ public class CheckDataController {
 
     @FXML
     public void setBtnSave(ActionEvent event) throws IOException {
-        Booking booking = SceneManager.getCurrentBooking();
 
         if (booking == null) {
-            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
-            errorAlert.setTitle("Fel");
-            errorAlert.setHeaderText(null);
-            errorAlert.setContentText("Ingen bokning att spara.");
-            errorAlert.showAndWait();
+            showError("Ingen bokning att spara.");
             return;
         }
 
-        // Spara bokningen
         BookingManager.saveBooking(booking);
 
-        // Visa bekräftelse
-        Alert infoAlert = new Alert(Alert.AlertType.INFORMATION);
-        infoAlert.setTitle("Bokning sparad");
-        infoAlert.setHeaderText(null);
-        infoAlert.setContentText("Din bokning har sparats!");
-        infoAlert.showAndWait();
+        showInfo("Din bokning har sparats!");
 
-        // Gå tillbaka till start sidan
         SceneManager.switchScene("Startpage.fxml");
+    }
+
+    private void showError(String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Fel");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    private void showInfo(String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Bokning sparad");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 }
