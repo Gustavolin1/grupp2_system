@@ -10,6 +10,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 import java.io.IOException;
+import java.time.Month;
+import java.time.format.TextStyle;
+import java.util.Locale;
 
 public class CheckDataController {
 
@@ -35,6 +38,9 @@ public class CheckDataController {
     private Label lbldateto;
 
     @FXML
+    private Label lblyearto;
+
+    @FXML
     private Label lblfoodoption;
 
     @FXML
@@ -42,9 +48,7 @@ public class CheckDataController {
         Booking booking = SceneManager.getCurrentBooking();
 
         if (booking != null) {
-            lblID.setText("Bokningsnummer: " + booking.getBookingId());
-            lbldateto.setText("Avresa: " + booking.getDateThere().toString());
-            lblDatefrom.setText("Hemresa: " + booking.getDateHome().toString());
+
             lblcabin.setText("Kabin: " + booking.getCabinThere());
             lblfoodoption.setText("Matval: " + booking.getFoodThere());
         }

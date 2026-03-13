@@ -1,9 +1,10 @@
 package com.example.grupp2_system.Booking;
 
-import java.time.LocalDate;
-import java.util.Random;
-import java.util.ArrayList;
+
+import java.time.Month;
+import java.time.Year;
 import java.util.List;
+import java.util.Random;
 
 public class Booking {
 
@@ -13,13 +14,13 @@ public class Booking {
 //"There" is for choices on the way there
     private String cabinThere;
     private String foodThere;
-    private LocalDate dateThere;
+    private Month monthThere;
+    private Year yearThere;
 
     private String hotelChoice;
 //"Home" is for choices in the way home
     private String cabinHome;
     private String foodHome;
-    private LocalDate dateHome;
 //cardAmount is the amount of money loaded to the card
     private double cardAmount;
 //travelInsurance bool where 1 means they want insurance and 0 meant they don't want it
@@ -44,23 +45,21 @@ public class Booking {
     public Booking(String bookingId,
                    String cabinThere,
                    String foodThere,
-                   LocalDate dateThere,
+                   Month dateThere,
+                   Year yearThere,
                    String hotelChoice,
                    String cabinHome,
                    String foodHome,
-                   LocalDate dateHome,
+                   List<String> events,
                    double cardAmount,
-                   boolean travelInsurance)
-    {
+                   boolean travelInsurance) {
 
-        this.bookingId = bookingId;
+        this.bookingId = generateBookingid(); // generate new ID
         this.cabinThere = cabinThere;
         this.foodThere = foodThere;
-        this.dateThere = dateThere;
         this.hotelChoice = hotelChoice;
         this.cabinHome = cabinHome;
         this.foodHome = foodHome;
-        this.dateHome = dateHome;
         this.cardAmount = cardAmount;
         this.travelInsurance = travelInsurance;
     }
@@ -72,11 +71,10 @@ public class Booking {
         return bookingId + ";" +
                 cabinThere + ";" +
                 foodThere + ";" +
-                dateThere + ";" +
+                monthThere + ";" +
                 hotelChoice + ";" +
                 cabinHome + ";" +
                 foodHome + ";" +
-                dateHome + ";" +
                 cardAmount + ";" +
                 travelInsurance;
     }
@@ -85,11 +83,11 @@ public class Booking {
     public String getBookingId() { return bookingId; }
     public String getCabinThere() { return cabinThere; }
     public String getFoodThere() { return foodThere; }
-    public LocalDate getDateThere() { return dateThere; }
+    public Year getYearThere() { return yearThere; }
+    public Month getMonthThere() { return monthThere; }
     public String getHotelChoice() { return hotelChoice; }
     public String getCabinHome() { return cabinHome; }
     public String getFoodHome() { return foodHome; }
-    public LocalDate getDateHome() { return dateHome; }
     public double getCardAmount() { return cardAmount; }
     public boolean hasTravelInsurance() { return travelInsurance; }
     public int getTheatreTickets() {return theatreTickets;}
@@ -110,8 +108,12 @@ public class Booking {
         this.foodThere = foodThere;
     }
 
-    public void setDateThere(LocalDate dateThere) {
-        this.dateThere = dateThere;
+    public void setYearThere(Year yearThere) {
+        this.yearThere = yearThere;
+    }
+
+    public void setMonthThere(Month monthThere) {
+        this.monthThere = monthThere;
     }
 
     public void setHotelChoice(String hotelChoice) {
@@ -124,10 +126,6 @@ public class Booking {
 
     public void setFoodHome(String foodHome) {
         this.foodHome = foodHome;
-    }
-
-    public void setDateHome(LocalDate dateHome) {
-        this.dateHome = dateHome;
     }
 
     public void setCardAmount(double cardAmount) {
@@ -148,4 +146,5 @@ public class Booking {
     public void setMonthsOnMars(int monthsOnMars) {
         this.monthsOnMars = monthsOnMars;
     }
+
 }

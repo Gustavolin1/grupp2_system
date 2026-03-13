@@ -1,5 +1,6 @@
 package com.example.grupp2_system.SceneManager;
 import com.example.grupp2_system.Booking.Booking;
+import com.example.grupp2_system.Customer.Customer;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -14,6 +15,7 @@ import java.util.Stack;
     public class SceneManager {
 
         private static Booking currentBooking;
+        private static Customer currentCustomer;
 
         private static Stage stage;
         private static final ArrayDeque<Scene> history = new ArrayDeque<>();
@@ -53,5 +55,8 @@ import java.util.Stack;
         public static Booking getCurrentBooking() {
             return currentBooking;
         }
-    }
 
+        public static void setCurrentCustomer(Customer customer){currentCustomer = customer;}
+
+        public static Customer getCurrentCustomer() {return currentCustomer;}
+    }

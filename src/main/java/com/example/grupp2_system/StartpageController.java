@@ -1,6 +1,7 @@
 package com.example.grupp2_system;
 
 import com.example.grupp2_system.Booking.Booking;
+import com.example.grupp2_system.Customer.Customer;
 import com.example.grupp2_system.SceneManager.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -26,8 +27,10 @@ public class StartpageController {
     public void startBooking(ActionEvent event) throws IOException{
 
             Booking booking = new Booking();
+            Customer customer = new Customer();
 
             SceneManager.setCurrentBooking(booking);
+            SceneManager.setCurrentCustomer(customer);
             SceneManager.switchScene("CustomerInformation.fxml");
 
 
