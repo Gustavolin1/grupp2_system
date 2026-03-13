@@ -69,7 +69,6 @@ public class Booking {
 
     // Convert object to one line for text file
     public String toFileString() {
-        String eventsString = String.join(",", events);
         return bookingId + ";" +
                 cabinThere + ";" +
                 foodThere + ";" +
@@ -79,7 +78,6 @@ public class Booking {
                 foodHome + ";" +
                 dateHome + ";" +
                 cardAmount + ";" +
-                eventsString +";" +
                 travelInsurance;
     }
 
