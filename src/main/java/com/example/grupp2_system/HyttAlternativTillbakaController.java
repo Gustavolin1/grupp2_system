@@ -82,7 +82,7 @@ public class HyttAlternativTillbakaController {
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Avbryt bokning");
-        alert.setHeaderText("Är du säker?");
+        alert.setHeaderText("   Är du säker?");
         alert.setContentText("All information du fyllt i kommer att raderas.");
 
         Optional<ButtonType> result = alert.showAndWait();
