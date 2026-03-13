@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.MarsHotellController">
+   <children>
+      <Button fx:id="btnCancel" layoutX="16.0" layoutY="23.0" mnemonicParsing="false" onAction="#cancelBooking" text="Avbryt Bokning" />
+      <Label fx:id="lblmain" layoutX="319.0" layoutY="104.0" text="Hotell på Mars">
+         <font>
+            <Font name="American Typewriter" size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="10.0" layoutY="141.0" prefHeight="200.0" prefWidth="790.0">
+         <children>
+            <RadioButton layoutX="532.0" layoutY="145.0" mnemonicParsing="false" text="Svit">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grpChoice" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="532.0" layoutY="73.0" mnemonicParsing="false" text="Enkel Lyx" toggleGroup="$grpChoice" />
+            <RadioButton layoutX="29.0" layoutY="82.0" mnemonicParsing="false" text="Polar Lansdorp" toggleGroup="$grpChoice" />
+            <RadioButton layoutX="309.0" layoutY="82.0" mnemonicParsing="false" text="Enkelrum" toggleGroup="$grpChoice" />
+            <RadioButton layoutX="31.0" layoutY="116.0" mnemonicParsing="false" text="Polar Wielders" toggleGroup="$grpChoice" />
+            <RadioButton layoutX="309.0" layoutY="116.0" mnemonicParsing="false" text="Dubbelrum" toggleGroup="$grpChoice" />
+            <RadioButton layoutX="532.0" layoutY="108.0" mnemonicParsing="false" text="Dubbel Lyx" toggleGroup="$grpChoice" />
+            <Label fx:id="lblright" layoutX="575.0" layoutY="44.0" text="Royal City">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblmid" layoutX="309.0" layoutY="34.0" prefHeight="37.0" prefWidth="172.0" text="Hotell Phobos  &amp; Deimos">
+               <font>
+                  <Font name="American Typewriter" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblleft" layoutX="113.0" layoutY="44.0" text="Polar">
+               <font>
+                  <Font name="American Typewriter" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <BorderPane layoutY="512.0" prefHeight="88.0" prefWidth="800.0">
+         <left>
+            <Button fx:id="btnback" mnemonicParsing="false" onAction="#back" text="TIllbaka" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <Button fx:id="btninfo" mnemonicParsing="false" onAction="#info" text="Mer info..." BorderPane.alignment="CENTER" />
+         </center>
+         <right>
+            <Button fx:id="btnforward" mnemonicParsing="false" onAction="#next" text="Gå vidare" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+      <Spinner fx:id="spMonth" layoutX="320.0" layoutY="434.0" />
+      <Label layoutX="349.0" layoutY="406.0" text="Antal månader:">
+         <font>
+            <Font name="American Typewriter" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

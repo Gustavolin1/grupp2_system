@@ -47,7 +47,6 @@ public class CheckDataController {
             lblDatefrom.setText("Hemresa: " + booking.getDateHome().toString());
             lblcabin.setText("Kabin: " + booking.getCabinThere());
             lblfoodoption.setText("Matval: " + booking.getFoodThere());
-            lblEvents.setText("Bokade evenemang: " + String.join(", ", booking.getEvents()));
         }
     }
 
