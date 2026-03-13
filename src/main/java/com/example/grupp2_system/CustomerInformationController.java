@@ -64,6 +64,7 @@ public class CustomerInformationController {
             alert.setContentText("Ange en giltig emailadress.");
             alert.showAndWait();
             return;
+
         }
 
         // phone validation
