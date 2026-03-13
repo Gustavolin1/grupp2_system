@@ -22,7 +22,6 @@ public class Booking {
 //"Home" is for choices in the way home
     private String cabinHome;
     private String foodHome;
-    private LocalDate dateHome;
 //cardAmount is the amount of money loaded to the card
     private double cardAmount;
 //travelInsurance bool where 1 means they want insurance and 0 meant they don't want it
@@ -62,7 +61,6 @@ public class Booking {
         this.hotelChoice = hotelChoice;
         this.cabinHome = cabinHome;
         this.foodHome = foodHome;
-        this.dateHome = dateHome;
         this.cardAmount = cardAmount;
         this.travelInsurance = travelInsurance;
     }
@@ -71,7 +69,6 @@ public class Booking {
 
     // Convert object to one line for text file
     public String toFileString() {
-        String eventsString = String.join(",", events);
         return bookingId + ";" +
                 cabinThere + ";" +
                 foodThere + ";" +
@@ -79,9 +76,7 @@ public class Booking {
                 hotelChoice + ";" +
                 cabinHome + ";" +
                 foodHome + ";" +
-                dateHome + ";" +
                 cardAmount + ";" +
-                eventsString +";" +
                 travelInsurance;
     }
 
@@ -152,4 +147,5 @@ public class Booking {
     public void setMonthsOnMars(int monthsOnMars) {
         this.monthsOnMars = monthsOnMars;
     }
+
 }
