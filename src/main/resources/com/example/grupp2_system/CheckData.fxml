@@ -22,7 +22,7 @@
 
         <!-- Booking Info Labels -->
         <Label fx:id="lblID" layoutX="150" layoutY="80" textFill="WHITE" />
-        <Label fx:id="lblDatefrom" layoutX="150" layoutY="110" textFill="WHITE" />
+        <Label fx:id="lblyearto" layoutX="150" layoutY="110" textFill="WHITE" />
         <Label fx:id="lbldateto" layoutX="150" layoutY="140" textFill="WHITE" />
         <Label fx:id="lblcabin" layoutX="150" layoutY="180" textFill="WHITE" />
         <Label fx:id="lblfoodoption" layoutX="150" layoutY="210" textFill="WHITE" />

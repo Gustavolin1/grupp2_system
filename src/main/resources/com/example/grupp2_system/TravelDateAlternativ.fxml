@@ -1,39 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #cdeaf8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.TravelDateController">
    <children>
-      <DatePicker fx:id="dtpTur" layoutX="71.0" layoutY="234.0" prefHeight="36.0" prefWidth="230.0" style="-fx-background-color: #2685b9;" />
-      <DatePicker fx:id="dtpRetur" layoutX="493.0" layoutY="236.0" prefHeight="36.0" prefWidth="230.0" style="-fx-background-color: #2685b9;" />
-      <Label layoutX="68.0" layoutY="198.0" prefHeight="36.0" prefWidth="50.0" text="Tur" textFill="#2685b9">
+      <Label alignment="CENTER" layoutX="137.0" layoutY="256.0" prefHeight="43.0" prefWidth="132.0" text="År" textFill="#2685b9" AnchorPane.leftAnchor="137.0">
          <font>
-            <Font name="Hannotate SC Bold" size="21.0" />
-         </font></Label>
-      <Label layoutX="490.0" layoutY="186.0" prefHeight="60.0" prefWidth="74.0" text="Retur" textFill="#2685b9">
-         <font>
-            <Font name="Hannotate SC Bold" size="21.0" />
+            <Font size="25.0" />
          </font></Label>
       <Label layoutX="232.0" layoutY="18.0" prefHeight="79.0" prefWidth="362.0" text="Välj datum för resa till Mars" textFill="#2685b9" textOverrun="CLIP">
          <font>
             <Font name="Hannotate SC Bold" size="27.0" />
          </font>
       </Label>
-      <Circle fill="#dd6738" layoutX="402.0" layoutY="252.0" radius="18.0" stroke="#dd6738" strokeType="INSIDE">
-         <effect>
-            <InnerShadow choke="0.1" height="5.9" radius="5.487500000000001" width="18.05">
-               <color>
-                  <Color red="0.6184210777282715" green="0.2851608097553253" blue="0.0629873275756836" />
-               </color>
-            </InnerShadow>
-         </effect></Circle>
       <Button fx:id="btnBack" layoutX="69.0" layoutY="479.0" mnemonicParsing="false" onAction="#cancelBooking" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #2685b9;" text="Avbryt bokning " textFill="WHITE">
          <font>
             <Font size="16.0" />
@@ -42,5 +25,12 @@
          <font>
             <Font size="20.0" />
          </font></Button>
+      <ComboBox fx:id="ÅrAvresa" editable="true" layoutX="69.0" layoutY="302.0" prefHeight="43.0" prefWidth="205.0" promptText="Välj år" AnchorPane.leftAnchor="100.0" />
+      <ComboBox fx:id="MånadAvresa" editable="true" layoutX="479.0" layoutY="302.0" prefHeight="43.0" prefWidth="205.0" promptText="Välj Månad" AnchorPane.rightAnchor="100.0" />
+      <Label alignment="CENTER" layoutX="531.0" layoutY="256.0" prefHeight="43.0" prefWidth="132.0" text="Månad" textFill="#2685b9" AnchorPane.rightAnchor="137.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
