@@ -1,7 +1,8 @@
 package com.example.grupp2_system.Booking;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
+
+import java.time.Month;
+import java.time.Year;
 import java.util.List;
 import java.util.Random;
 
@@ -13,18 +14,21 @@ public class Booking {
 //"There" is for choices on the way there
     private String cabinThere;
     private String foodThere;
-    private LocalDate dateThere;
+    private Month monthThere;
+    private Year yearThere;
 
     private String hotelChoice;
 //"Home" is for choices in the way home
     private String cabinHome;
     private String foodHome;
-    private LocalDate dateHome;
 //cardAmount is the amount of money loaded to the card
     private double cardAmount;
 //travelInsurance bool where 1 means they want insurance and 0 meant they don't want it
     private boolean travelInsurance;
-    private List<String> events = new ArrayList<>();
+    private int theatreTickets;
+    private int movieTickets;
+    private int concertTickets;
+    private int monthsOnMars;
 
     // Constructor for new booking
 
@@ -41,24 +45,21 @@ public class Booking {
     public Booking(String bookingId,
                    String cabinThere,
                    String foodThere,
-                   LocalDate dateThere,
+                   Month dateThere,
+                   Year yearThere,
                    String hotelChoice,
                    String cabinHome,
                    String foodHome,
-                   LocalDate dateHome,
                    List<String> events,
                    double cardAmount,
                    boolean travelInsurance) {
 
-        this.bookingId = bookingId;
+        this.bookingId = generateBookingid(); // generate new ID
         this.cabinThere = cabinThere;
         this.foodThere = foodThere;
-        this.dateThere = dateThere;
         this.hotelChoice = hotelChoice;
         this.cabinHome = cabinHome;
         this.foodHome = foodHome;
-        this.dateHome = dateHome;
-        this.events = events;
         this.cardAmount = cardAmount;
         this.travelInsurance = travelInsurance;
     }
@@ -67,17 +68,14 @@ public class Booking {
 
     // Convert object to one line for text file
     public String toFileString() {
-        String eventsString = String.join(",", events);
         return bookingId + ";" +
                 cabinThere + ";" +
                 foodThere + ";" +
-                dateThere + ";" +
+                monthThere + ";" +
                 hotelChoice + ";" +
                 cabinHome + ";" +
                 foodHome + ";" +
-                dateHome + ";" +
                 cardAmount + ";" +
-                eventsString +";" +
                 travelInsurance;
     }
 
@@ -85,14 +83,17 @@ public class Booking {
     public String getBookingId() { return bookingId; }
     public String getCabinThere() { return cabinThere; }
     public String getFoodThere() { return foodThere; }
-    public LocalDate getDateThere() { return dateThere; }
+    public Year getYearThere() { return yearThere; }
+    public Month getMonthThere() { return monthThere; }
     public String getHotelChoice() { return hotelChoice; }
     public String getCabinHome() { return cabinHome; }
     public String getFoodHome() { return foodHome; }
-    public LocalDate getDateHome() { return dateHome; }
     public double getCardAmount() { return cardAmount; }
     public boolean hasTravelInsurance() { return travelInsurance; }
-    public List<String> getEvents() {return events;}
+    public int getTheatreTickets() {return theatreTickets;}
+    public int getMovieTickets() {return movieTickets;}
+    public int getConcertTickets() {return concertTickets;}
+    public int getMonthsOnMars() {return  monthsOnMars;}
     //setter
 
     public void setBookingId(String bookingId) {
@@ -107,8 +108,12 @@ public class Booking {
         this.foodThere = foodThere;
     }
 
-    public void setDateThere(LocalDate dateThere) {
-        this.dateThere = dateThere;
+    public void setYearThere(Year yearThere) {
+        this.yearThere = yearThere;
+    }
+
+    public void setMonthThere(Month monthThere) {
+        this.monthThere = monthThere;
     }
 
     public void setHotelChoice(String hotelChoice) {
@@ -123,10 +128,6 @@ public class Booking {
         this.foodHome = foodHome;
     }
 
-    public void setDateHome(LocalDate dateHome) {
-        this.dateHome = dateHome;
-    }
-
     public void setCardAmount(double cardAmount) {
         this.cardAmount = cardAmount;
     }
@@ -135,11 +136,15 @@ public class Booking {
         this.travelInsurance = travelInsurance;
     }
 
-    public void setEvents(List<String> events) {
-        this.events = events;
+    public void setTheatreTickets(int theatreTickets) {theatreTickets = theatreTickets;}
+
+    public void setMovieTickets(int movieTickets) {movieTickets = movieTickets;}
+
+    public void setConcertTickets(int concertTickets) {
+        this.concertTickets = concertTickets;}
+
+    public void setMonthsOnMars(int monthsOnMars) {
+        this.monthsOnMars = monthsOnMars;
     }
 
-    public void addEvent(String event){
-        events.add(event);
-    }
 }

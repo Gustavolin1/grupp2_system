@@ -42,28 +42,21 @@ public class SearchBookingController {
         // Format events nicely
         String eventsText;
 
-        if (booking.getEvents() == null || booking.getEvents().isEmpty()) {
-            eventsText = "No events booked.";
-        } else {
-            eventsText = "• " + String.join("\n• ", booking.getEvents());
-        }
 
         String info = "Booking ID: " + booking.getBookingId() + "\n\n" +
 
                 "Trip There:\n" +
                 "  Cabin: " + booking.getCabinThere() + "\n" +
                 "  Food: " + booking.getFoodThere() + "\n" +
-                "  Date: " + booking.getDateThere() + "\n\n" +
+                "  Year. " + booking.getYearThere() + "\n\n" +
+                "  Month: " + booking.getMonthThere() + "\n\n" +
 
                 "Hotel: " + booking.getHotelChoice() + "\n\n" +
 
                 "Trip Home:\n" +
                 "  Cabin: " + booking.getCabinHome() + "\n" +
                 "  Food: " + booking.getFoodHome() + "\n" +
-                "  Date: " + booking.getDateHome() + "\n\n" +
-
                 "Events:\n" +
-                eventsText + "\n\n" +
 
                 "Card Amount: " + booking.getCardAmount() + " kr\n" +
 

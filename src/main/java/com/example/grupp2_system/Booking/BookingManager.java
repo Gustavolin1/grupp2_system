@@ -47,6 +47,7 @@ public class BookingManager {
                     events = new ArrayList<>(List.of(parts[9].split(",")));
                 }
 
+                /*
                 Booking booking = new Booking(
                         parts[0],
                         parts[1],
@@ -56,12 +57,14 @@ public class BookingManager {
                         parts[5],
                         parts[6],
                         LocalDate.parse(parts[7]),
-                        events,
                         Double.parseDouble(parts[8]),   // FIXED
                         Boolean.parseBoolean(parts[10])
                 );
 
+
                 bookings.add(booking);
+
+                 */
             }
 
         } catch (IOException e) {
