@@ -4,10 +4,10 @@ import com.example.grupp2_system.Booking.Booking;
 
 public class PriceCalculator {
 
-    public static int calculateTotalPrice(Booking booking) {
+    public static double calculateTotalPrice(Booking booking) {
         if (booking == null) return 0;
 
-        int total = 0;
+        double total = 0;
 
         total += calculateCabinPrice(booking.getCabinThere());
         total += calculateCabinPrice(booking.getCabinHome());
@@ -18,7 +18,27 @@ public class PriceCalculator {
         total += calculateEventPrice(booking);
         total += calculateInsurancePrice(booking);
 
+        total += calculateHotelPrice(booking);
+        total += booking.getCardAmount();
+
         return total;
+    }
+
+    private static int calculateHotelPrice(Booking booking) {
+
+        String hotel = booking.getHotelChoice();
+        if (hotel == null) return 0;
+
+        switch (hotel) {
+            case "Polar Lansdorp": return (booking.getMonthsOnMars()*3500);
+            case "Polar Wielders": return (booking.getMonthsOnMars()*5000);
+            case "Enkelrum": return (booking.getMonthsOnMars()*7500);
+            case "Dubbelrum": return (booking.getMonthsOnMars()*12000);
+            case "Enkel Lyx": return (booking.getMonthsOnMars()*20000);
+            case "Dubbel Lyx": return (booking.getMonthsOnMars()*35000);
+            case "Svit": return (booking.getMonthsOnMars()*50000);
+            default: return 0;
+        }
     }
 
     private static int calculateCabinPrice(String cabin) {
@@ -52,8 +72,14 @@ public class PriceCalculator {
     }
 
     private static int calculateEventPrice(Booking booking) {
-        if (booking.getEvents() == null) return 0;
-        return booking.getEvents().size() * 300;
+
+        int total = 0;
+                                            //Fyll i kostnad för event-biljetterna
+        total += booking.getMovieTicket() * 15000;
+        total += booking.getConcertTicket() * 22000;
+        total += booking.getTheatreTicket() * 18000;
+
+        return total;
     }
 
     private static int calculateInsurancePrice(Booking booking) {

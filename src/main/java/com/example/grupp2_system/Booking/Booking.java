@@ -1,9 +1,7 @@
 package com.example.grupp2_system.Booking;
 
-
 import java.time.Month;
 import java.time.Year;
-import java.util.List;
 import java.util.Random;
 
 public class Booking {
@@ -11,140 +9,149 @@ public class Booking {
     private static final Random random = new Random();
 
     private String bookingId;
-//"There" is for choices on the way there
+    private String customerId;
+
+    //"There" is for choices on the way there
     private String cabinThere;
     private String foodThere;
     private Month monthThere;
     private Year yearThere;
 
     private String hotelChoice;
-//"Home" is for choices in the way home
+
+    //"Home" is for choices on the way home
     private String cabinHome;
     private String foodHome;
-//cardAmount is the amount of money loaded to the card
-    private double cardAmount;
-//travelInsurance bool where 1 means they want insurance and 0 meant they don't want it
-    private boolean travelInsurance;
-    private int theatreTickets;
-    private int movieTickets;
-    private int concertTickets;
+    private Month monthHome;
+    private Year yearHome;
+
     private int monthsOnMars;
 
+    //cardAmount is the amount of money loaded to the card
+    private double cardAmount;
+
+    //travelInsurance bool where true means they want insurance
+    private boolean travelInsurance;
+
+    //Event tickets
+    private int movieTicket;
+    private int concertTicket;
+    private int theatreTicket;
+
     // Constructor for new booking
-
     public Booking() {
-        this.bookingId = generateBookingid();
+        this.bookingId = generateBookingId();
     }
 
-    private String generateBookingid()
-    {
+    private String generateBookingId() {
         int number = 10000 + random.nextInt(90000);
-        return  "BK-" + number;
+        return "BK-" + number;
     }
+
     // Constructor used when loading from file
     public Booking(String bookingId,
+                   String customerId,
                    String cabinThere,
                    String foodThere,
-                   Month dateThere,
+                   Month monthThere,
                    Year yearThere,
                    String hotelChoice,
                    String cabinHome,
                    String foodHome,
-                   List<String> events,
+                   Month monthHome,
+                   Year yearHome,
                    double cardAmount,
-                   boolean travelInsurance) {
+                   boolean travelInsurance,
+                   int movieTicket,
+                   int concertTicket,
+                   int theatreTicket) {
 
-        this.bookingId = generateBookingid(); // generate new ID
+        this.bookingId = bookingId;
+        this.customerId = customerId;
         this.cabinThere = cabinThere;
         this.foodThere = foodThere;
+        this.monthThere = monthThere;
+        this.yearThere = yearThere;
         this.hotelChoice = hotelChoice;
         this.cabinHome = cabinHome;
         this.foodHome = foodHome;
+        this.monthHome = monthHome;
+        this.yearHome = yearHome;
         this.cardAmount = cardAmount;
         this.travelInsurance = travelInsurance;
+        this.movieTicket = movieTicket;
+        this.concertTicket = concertTicket;
+        this.theatreTicket = theatreTicket;
     }
-
-
 
     // Convert object to one line for text file
     public String toFileString() {
         return bookingId + ";" +
+                customerId + ";" +
                 cabinThere + ";" +
                 foodThere + ";" +
                 monthThere + ";" +
+                yearThere + ";" +
                 hotelChoice + ";" +
                 cabinHome + ";" +
                 foodHome + ";" +
+                monthHome + ";" +
+                yearHome + ";" +
                 cardAmount + ";" +
-                travelInsurance;
+                travelInsurance + ";" +
+                movieTicket + ";" +
+                concertTicket + ";" +
+                theatreTicket;
     }
 
     // Getters
     public String getBookingId() { return bookingId; }
+    public String getCustomerId() { return customerId; }
+
     public String getCabinThere() { return cabinThere; }
     public String getFoodThere() { return foodThere; }
-    public Year getYearThere() { return yearThere; }
     public Month getMonthThere() { return monthThere; }
+    public Year getYearThere() { return yearThere; }
+
     public String getHotelChoice() { return hotelChoice; }
+
     public String getCabinHome() { return cabinHome; }
     public String getFoodHome() { return foodHome; }
+    public Month getMonthHome() { return monthHome; }
+    public Year getYearHome() { return yearHome; }
+
+    public int getMonthsOnMars() { return monthsOnMars; }
+
     public double getCardAmount() { return cardAmount; }
     public boolean hasTravelInsurance() { return travelInsurance; }
-    public int getTheatreTickets() {return theatreTickets;}
-    public int getMovieTickets() {return movieTickets;}
-    public int getConcertTickets() {return concertTickets;}
-    public int getMonthsOnMars() {return  monthsOnMars;}
-    //setter
 
-    public void setBookingId(String bookingId) {
-        this.bookingId = bookingId;
-    }
+    public int getMovieTicket() { return movieTicket; }
+    public int getConcertTicket() { return concertTicket; }
+    public int getTheatreTicket() { return theatreTicket; }
 
-    public void setCabinThere(String cabinThere) {
-        this.cabinThere = cabinThere;
-    }
+    // Setters
+    public void setBookingId(String bookingId) { this.bookingId = bookingId; }
+    public void setCustomerId(String customerId) { this.customerId = customerId; }
 
-    public void setFoodThere(String foodThere) {
-        this.foodThere = foodThere;
-    }
+    public void setCabinThere(String cabinThere) { this.cabinThere = cabinThere; }
+    public void setFoodThere(String foodThere) { this.foodThere = foodThere; }
+    public void setMonthThere(Month monthThere) { this.monthThere = monthThere; }
+    public void setYearThere(Year yearThere) { this.yearThere = yearThere; }
 
-    public void setYearThere(Year yearThere) {
-        this.yearThere = yearThere;
-    }
+    public void setHotelChoice(String hotelChoice) { this.hotelChoice = hotelChoice; }
 
-    public void setMonthThere(Month monthThere) {
-        this.monthThere = monthThere;
-    }
+    public void setCabinHome(String cabinHome) { this.cabinHome = cabinHome; }
+    public void setFoodHome(String foodHome) { this.foodHome = foodHome; }
+    public void setMonthHome(Month monthHome) { this.monthHome = monthHome; }
+    public void setYearHome(Year yearHome) { this.yearHome = yearHome; }
 
-    public void setHotelChoice(String hotelChoice) {
-        this.hotelChoice = hotelChoice;
-    }
+    public void setMonthsOnMars(int monthsOnMars) { this.monthsOnMars = monthsOnMars; }
 
-    public void setCabinHome(String cabinHome) {
-        this.cabinHome = cabinHome;
-    }
+    public void setCardAmount(double cardAmount) { this.cardAmount = cardAmount; }
 
-    public void setFoodHome(String foodHome) {
-        this.foodHome = foodHome;
-    }
+    public void setTravelInsurance(boolean travelInsurance) { this.travelInsurance = travelInsurance; }
 
-    public void setCardAmount(double cardAmount) {
-        this.cardAmount = cardAmount;
-    }
-
-    public void setTravelInsurance(boolean travelInsurance) {
-        this.travelInsurance = travelInsurance;
-    }
-
-    public void setTheatreTickets(int theatreTickets) {theatreTickets = theatreTickets;}
-
-    public void setMovieTickets(int movieTickets) {movieTickets = movieTickets;}
-
-    public void setConcertTickets(int concertTickets) {
-        this.concertTickets = concertTickets;}
-
-    public void setMonthsOnMars(int monthsOnMars) {
-        this.monthsOnMars = monthsOnMars;
-    }
-
+    public void setMovieTicket(int movieTicket) { this.movieTicket = movieTicket; }
+    public void setConcertTicket(int concertTicket) { this.concertTicket = concertTicket; }
+    public void setTheatreTicket(int theatreTicket) { this.theatreTicket = theatreTicket; }
 }
