@@ -69,6 +69,7 @@ public class MarsHotellController {
         booking.setHotelChoice(selectedHotell.toString());
         booking.setMonthsOnMars(spMonth.getValue());
         System.out.println(booking.getHotelChoice());
+        SceneManager.switchScene("MainMenu.fxml");
     }
 
     @FXML

@@ -31,7 +31,7 @@ public class StartpageController {
 
             SceneManager.setCurrentBooking(booking);
             SceneManager.setCurrentCustomer(customer);
-            SceneManager.switchScene("CustomerInformation.fxml");
+            SceneManager.switchScene("MainMenu.fxml");
 
 
     }

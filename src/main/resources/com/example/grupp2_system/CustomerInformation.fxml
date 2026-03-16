@@ -13,7 +13,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8dbbe6" height="55.0" stroke="BLACK" strokeType="INSIDE" width="604.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#78addd" height="55.0" layoutY="345.0" stroke="BLACK" strokeType="INSIDE" width="604.0" />
       <Button fx:id="btnnext" layoutX="515.0" layoutY="360.0" mnemonicParsing="false" onAction="#next" prefHeight="25.0" prefWidth="60.0" text="Spara" />
-      <Button fx:id="btnBack" layoutX="24.0" layoutY="359.0" mnemonicParsing="false" text="Gå tillbaka" />
+      <Button fx:id="btnBack" layoutX="24.0" layoutY="359.0" mnemonicParsing="false" onAction="#openHomeScene" text="Gå tillbaka" />
       <Label layoutX="24.0" layoutY="13.0" text="Kundinformation">
          <font>
             <Font name="System Italic" size="18.0" />

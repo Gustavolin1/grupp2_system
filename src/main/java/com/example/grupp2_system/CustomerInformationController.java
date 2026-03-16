@@ -14,6 +14,8 @@ import java.io.IOException;
 
 public class CustomerInformationController {
 
+    public static boolean customerController = false;
+
 
     public CheckBox chkHälsoförsäkring;
     @FXML
@@ -34,6 +36,19 @@ public class CustomerInformationController {
     @FXML
     public void openHomeScene(ActionEvent event) throws IOException {
         SceneManager.goBack();
+    }
+
+
+    @FXML
+    public void initialize() {
+        Customer customer = SceneManager.getCurrentCustomer();
+
+        if (customer != null) {
+            txtfName.setText(customer.getName());
+            txtfMail.setText(customer.getEmail());
+            txtfPersnumber.setText(customer.getPersonnummer());
+            txtfTel.setText(customer.getPhoneNumber());
+        }
     }
 
     public void next(ActionEvent event) throws IOException
@@ -90,6 +105,9 @@ public class CustomerInformationController {
         customer.setName(txtfName.getText());
         customer.setPhoneNumber(txtfTel.getText());
         customer.setPersonnummer(txtfPersnumber.getText());
+        customerController = true;
+
+        SceneManager.switchScene("MainMenu.fxml");
     }
 
     }

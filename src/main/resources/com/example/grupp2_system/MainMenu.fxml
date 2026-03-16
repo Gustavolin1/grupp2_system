@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.MainMenuController">
+   <children>
+      <Button fx:id="btnThere" layoutX="65.0" layoutY="89.0" mnemonicParsing="false" onAction="#marsTrip" text="Resan till Mars" />
+      <Button fx:id="btnBack" layoutX="65.0" layoutY="188.0" mnemonicParsing="false" onAction="#returnTrip" text="Resan tillbaka" />
+      <Button fx:id="BtnCustomer" layoutX="65.0" layoutY="284.0" mnemonicParsing="false" onAction="#customer" text="Kunduppgifter" />
+      <Button fx:id="BtnCancel" layoutX="374.0" layoutY="284.0" mnemonicParsing="false" onAction="#cancelBooking" text="Avbryta Bokning" />
+      <Button fx:id="BtnComfirm" layoutX="373.0" layoutY="89.0" mnemonicParsing="false" onAction="#confirmBooking" text="Bekräfta bokning" />
+   </children>
+</AnchorPane>
