@@ -19,10 +19,6 @@ jobs:
           distribution: corretto
           java-version: 21
 
-      # ❌ TA BORT MAVEN
-      # - name: Build project
-      #   run: mvn clean package
-
       - name: Build DMG
         run: |
           jpackage \
@@ -39,3 +35,12 @@ jobs:
         with:
           name: mac-build
           path: builds/*.dmg
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.${{ github.run_number }}
+          name: MarsTravelsBooking v1.0.${{ github.run_number }}
+          files: builds/*.dmg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
