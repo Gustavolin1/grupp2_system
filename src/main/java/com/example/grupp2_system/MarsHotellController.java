@@ -55,7 +55,7 @@ public class MarsHotellController {
             if (booking.getHotelChoice() != null) {
                 for (Toggle toggle : grpChoice.getToggles()) {
                     RadioButton rb = (RadioButton) toggle;
-                    if (rb.getText().equals(booking.getHotelChoice())) {
+                    if (rb.getText().equals(booking.getHotelChoice().toString())) {
                         grpChoice.selectToggle(rb);
                         break;
                     }
