@@ -39,10 +39,6 @@ public class SearchBookingController {
 
     private void displayBooking(Booking booking) {
 
-        // Format events nicely
-        String eventsText;
-
-
         String info = "Booking ID: " + booking.getBookingId() + "\n\n" +
 
                 "Trip There:\n" +
@@ -50,18 +46,23 @@ public class SearchBookingController {
                 "  Food: " + booking.getFoodThere() + "\n" +
                 "  Year. " + booking.getYearThere() + "\n\n" +
                 "  Month: " + booking.getMonthThere() + "\n\n" +
+                "  Movie tickets: " + booking.getMovieTicket() + "\n\n" +
+                "  Theatre tickets: " + booking.getTheatreTicket() + "\n\n" +
+                "  Concert tickets: " + booking.getConcertTicket() + "\n\n" +
 
                 "Hotel: " + booking.getHotelChoice() + "\n\n" +
+                "Card Amount: " + booking.getCardAmount() + " kr\n" +
+                "Travel Insurance: " +
+                (booking.hasTravelInsurance() ? "Yes" : "No") +
 
                 "Trip Home:\n" +
                 "  Cabin: " + booking.getCabinHome() + "\n" +
                 "  Food: " + booking.getFoodHome() + "\n" +
-                "Events:\n" +
-
-                "Card Amount: " + booking.getCardAmount() + " kr\n" +
-
-                "Travel Insurance: " +
-                (booking.hasTravelInsurance() ? "Yes" : "No");
+                "  Year. " + booking.getYearHome() + "\n\n" +
+                "  Month: " + booking.getMonthHome() + "\n\n" +
+                "  Movie tickets: " + booking.getHomeMovieTickets() + "\n\n" +
+                "  Theatre tickets: " + booking.getHomeTheatreTickets() + "\n\n" +
+                "  Concert tickets: " + booking.getHomeConcertTickets() + "\n\n";
 
         resultArea.setText(info);
     }
