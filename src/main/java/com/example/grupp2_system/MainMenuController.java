@@ -5,6 +5,7 @@ import com.example.grupp2_system.Customer.Customer;
 import com.example.grupp2_system.SceneManager.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -33,6 +34,10 @@ public class MainMenuController {
 
     @FXML
     private Button btnThere;
+
+    @FXML
+
+    private Button mars;
 
 
     @FXML
@@ -76,6 +81,13 @@ public class MainMenuController {
             BtnCustomer.setStyle("-fx-text-fill: blue;");
         }
     }
+
+    @FXML
+    private void mars(ActionEvent event) throws IOException
+    {
+        SceneManager.switchScene("MarsHotell.fxml");
+    }
+
 
     @FXML
     private void marsTrip(ActionEvent event) throws IOException {
