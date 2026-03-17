@@ -9,7 +9,7 @@ import java.util.List;
 public class BookingManager {
 
     private static final String BASE_PATH =
-            System.getProperty("user.home") + "/Documents/MarsTravels/";
+            System.getProperty("user.home") + "/MarsTravels/";
 
     private static final String FILE_NAME =
             BASE_PATH + "bookings.txt";

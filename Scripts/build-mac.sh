@@ -25,17 +25,6 @@ rm -rf "$DEST"/*
 echo "📁 Skapar builds-mapp..."
 mkdir -p "$DEST"
 
-echo "📦 Bygger .app..."
-$JPACKAGE \
---input "$INPUT" \
---dest "$DEST" \
---name "$FINAL_NAME" \
---app-version "$VERSION" \
---main-jar "$JAR" \
---main-class "$MAIN_CLASS" \
---icon "$ICON" \
---type app-image
-
 echo "📦 Bygger .dmg..."
 $JPACKAGE \
 --input "$INPUT" \

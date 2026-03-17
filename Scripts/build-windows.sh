@@ -13,7 +13,7 @@ set MAIN_CLASS=com.example.grupp2_system.App.Launcher
 set DEST=builds
 
 echo Rensar gamla builds...
-if exist %DEST%\%FINAL_NAME%.exe rmdir /s /q %DEST%\%FINAL_NAME%.exe
+if exist %DEST%\*.exe del /q %DEST%\*.exe
 
 echo Skapar builds-mapp...
 if not exist %DEST% mkdir %DEST%
