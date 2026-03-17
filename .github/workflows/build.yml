@@ -14,11 +14,9 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Java
-        uses: actions/setup-java@v4
+      - uses: actions/setup-java@v4
         with:
           distribution: corretto
           java-version: 21
@@ -43,8 +41,8 @@ jobs:
       - name: Create Release (Mac)
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v1.0.${{ github.run_number }}
-          name: MarsTravelsBooking v1.0.${{ github.run_number }}
+          tag_name: build-${{ github.run_number }}
+          name: MarsTravelsBooking build ${{ github.run_number }}
           files: builds/*.dmg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -54,16 +52,15 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Java
-        uses: actions/setup-java@v4
+      - uses: actions/setup-java@v4
         with:
           distribution: corretto
           java-version: 21
 
       - name: Build EXE
+        shell: cmd
         run: |
           jpackage ^
           --input out/artifacts/grupp2_system_jar ^
@@ -84,7 +81,7 @@ jobs:
       - name: Create Release (Windows)
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v1.0.${{ github.run_number }}
+          tag_name: build-${{ github.run_number }}
           files: builds/*.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
