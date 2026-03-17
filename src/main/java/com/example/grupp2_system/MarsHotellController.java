@@ -44,9 +44,24 @@ public class MarsHotellController {
 
     @FXML
     public void initialize() {
-
         spMonth.setValueFactory(
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 12, 0));
+
+        Booking booking = SceneManager.getCurrentBooking();
+        if (booking != null) {
+            // Restore spinner value
+            spMonth.getValueFactory().setValue(booking.getMonthsOnMars());
+            // Restore selected hotel
+            if (booking.getHotelChoice() != null) {
+                for (Toggle toggle : grpChoice.getToggles()) {
+                    RadioButton rb = (RadioButton) toggle;
+                    if (rb.getText().equals(booking.getHotelChoice())) {
+                        grpChoice.selectToggle(rb);
+                        break;
+                    }
+                }
+            }
+        }
     }
 
 
@@ -66,7 +81,7 @@ public class MarsHotellController {
             alert.showAndWait();
             return;
         }
-        booking.setHotelChoice(selectedHotell.toString());
+        booking.setHotelChoice(selectedHotell.getText());
         booking.setMonthsOnMars(spMonth.getValue());
         System.out.println(booking.getHotelChoice());
         SceneManager.switchScene("MainMenu.fxml");

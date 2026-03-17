@@ -12,9 +12,20 @@ import java.io.IOException;
 import java.util.Optional;
 
 public class HyttAlternativTillbakaController {
+    @FXML
+    public void initialize() {
+        Booking booking = SceneManager.getCurrentBooking();
 
+        if (booking == null || booking.getCabinHome() == null) return;
 
-
+        for (Toggle toggle : grpOption.getToggles()) {
+            RadioButton rb = (RadioButton) toggle;
+            if (rb.getText().equals(booking.getCabinHome())) {
+                grpOption.selectToggle(rb);
+                break;
+            }
+        }
+    }
 
     @FXML
     private Button btnBack;

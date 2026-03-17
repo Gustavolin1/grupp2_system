@@ -46,6 +46,11 @@ public class CustomerInformationController {
             txtfPersnumber.setText(customer.getPersonnummer());
             txtfTel.setText(customer.getPhoneNumber());
         }
+        chkHälsoförsäkring.setSelected(
+            customer != null &&
+            SceneManager.getCurrentBooking() != null &&
+            SceneManager.getCurrentBooking().isTravelInsurance()
+        );
     }
 
     public void next(ActionEvent event) throws IOException

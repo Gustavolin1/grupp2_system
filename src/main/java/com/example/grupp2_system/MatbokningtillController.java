@@ -65,6 +65,18 @@ public class MatbokningtillController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        Booking booking = SceneManager.getCurrentBooking();
+
+        if (booking != null && booking.getFoodThere() != null) {
+            for (Toggle toggle : grpFood.getToggles()) {
+                RadioButton rb = (RadioButton) toggle;
+                if (rb.getText().equals(booking.getFoodThere())) {
+                    grpFood.selectToggle(rb);
+                    break;
+                }
+            }
+        }
     }
     @FXML
     public void openInformation(ActionEvent event) throws IOException {
@@ -101,4 +113,3 @@ public class MatbokningtillController implements Initializable {
     }
 
 }
-

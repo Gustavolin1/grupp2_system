@@ -19,6 +19,15 @@ public class loadcashcardcontroller {
     private TextField txtfieldsum;
 
     @FXML
+    public void initialize() {
+        Booking booking = SceneManager.getCurrentBooking();
+
+        if (booking != null && booking.getCardAmount() > 0) {
+            txtfieldsum.setText(String.valueOf(booking.getCardAmount()));
+        }
+    }
+
+    @FXML
     private void btnnext(ActionEvent event) throws IOException {
 
         String input = txtfieldsum.getText().trim();

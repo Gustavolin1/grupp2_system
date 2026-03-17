@@ -42,6 +42,18 @@ public class MatbokningFrånController implements Initializable {
             e.printStackTrace();
         }
 
+        Booking booking = SceneManager.getCurrentBooking();
+
+        if (booking != null && booking.getFoodHome() != null) {
+            for (Toggle toggle : grpFood.getToggles()) {
+                RadioButton rb = (RadioButton) toggle;
+                if (rb.getText().equals(booking.getFoodHome())) {
+                    grpFood.selectToggle(rb);
+                    break;
+                }
+            }
+        }
+
     }
 
     @FXML
