@@ -17,6 +17,9 @@ public class EventAlternativController {
     private Button btnNext;
 
     @FXML
+    private Button btnInfo;
+
+    @FXML
     private ListView<?> lstSelectedEvents;
 
     @FXML
@@ -27,6 +30,9 @@ public class EventAlternativController {
 
     @FXML
     private Spinner<Integer> spTea;
+
+    @FXML
+    private Button btnmenu;
 
 
     @FXML
@@ -65,5 +71,17 @@ public class EventAlternativController {
         booking.setTheatreTicket(spTea.getValue());
         SceneManager.switchScene("MainMenu.fxml");
 
+    }
+
+    @FXML
+    private void GoToMain() throws IOException {
+
+        SceneManager.switchScene("MainMenu.fxml");
+    }
+
+    @FXML
+    public void GoToInfo(ActionEvent event) throws IOException {
+
+        SceneManager.switchScene("EventInformation.fxml");
     }
 }
