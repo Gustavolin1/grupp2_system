@@ -7,7 +7,8 @@ import java.io.*;
 public class CustomerManager {
 
 
-    private static final String FILE_NAME = "customer.txt";
+    private static final String FILE_NAME =
+            System.getProperty("user.home") + "/customer.txt";
 
     public static void saveCustomer(Customer customer) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {

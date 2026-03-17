@@ -8,7 +8,8 @@ import java.util.List;
 
 public class BookingManager {
 
-    private static final String FILE_NAME = "bookings.txt";
+    private static final String FILE_NAME =
+            System.getProperty("user.home") + "/bookings.txt";
 
     public static void saveBooking(Booking booking) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {
