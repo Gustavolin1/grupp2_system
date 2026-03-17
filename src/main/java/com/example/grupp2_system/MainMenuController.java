@@ -45,6 +45,12 @@ public class MainMenuController {
         Booking booking = SceneManager.getCurrentBooking();
         Customer customer = SceneManager.getCurrentCustomer();
 
+        // Reset customerCheck if booking is new (no customerId set yet)
+        if (booking.getCustomerId() == null) {
+            customer = null;
+            SceneManager.setCurrentCustomer(null);
+        }
+
         if (booking == null) return;
 
         if (booking.getCabinThere() != null &&
@@ -71,9 +77,14 @@ public class MainMenuController {
             btnBack.setStyle("-fx-text-fill: blue;");
         }
 
-        if (customer != null) {
+        if (customer != null &&
+                customer.getName() != null &&
+                customer.getPersonnummer() != null &&
+                customer.getEmail() != null) {
+
             BtnCustomer.setStyle("-fx-text-fill: gray;");
             customerCheck = true;
+
         } else {
             BtnCustomer.setStyle("-fx-text-fill: blue;");
         }
