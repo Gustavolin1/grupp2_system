@@ -2,6 +2,7 @@ package com.example.grupp2_system;
 
 import com.example.grupp2_system.Booking.Booking;
 import com.example.grupp2_system.Booking.BookingManager;
+import com.example.grupp2_system.Customer.Customer;
 import com.example.grupp2_system.PriceCalculator;
 import com.example.grupp2_system.SceneManager.SceneManager;
 import javafx.event.ActionEvent;
@@ -18,6 +19,7 @@ public class CheckDataController {
     @FXML private Button btnSave;
     @FXML private TextArea txtSummary;
     @FXML private TextArea txtTotalPrice;
+    @FXML private TextArea txtCustomer;
 
     private Booking booking;
 
@@ -51,14 +53,8 @@ public class CheckDataController {
 
         summary.append("Matval: ")
                 .append(booking.getFoodThere())
-                .append("\n\n");
+                .append("\n");
 
-        summary.append("=== PÅ MARS ===\n");
-        summary.append("Hotell: ")
-                .append(booking.getHotelChoice())
-                .append("\n\n");
-
-        summary.append("EVENEMANG\n");
         summary.append("Film biljetter: ")
                 .append(booking.getMovieTicket())
                 .append("\n");
@@ -69,6 +65,11 @@ public class CheckDataController {
 
         summary.append("Teater biljetter: ")
                 .append(booking.getTheatreTicket())
+                .append("\n\n");
+
+        summary.append("=== PÅ MARS ===\n");
+        summary.append("Hotell: ")
+                .append(booking.getHotelChoice())
                 .append("\n\n");
 
         summary.append("BETALKORT\n");
@@ -93,12 +94,33 @@ public class CheckDataController {
                 .append(booking.getFoodHome())
                 .append("\n\n");
 
+        summary.append("Film biljetter: ")
+                .append(booking.getHomeMovieTickets())
+                .append("\n");
+
+        summary.append("Konsert biljetter: ")
+                .append(booking.getHomeConcertTickets())
+                .append("\n");
+
+        summary.append("Teater biljetter: ")
+                .append(booking.getHomeTheatreTickets())
+                .append("\n\n");
+
+        StringBuilder customer = new StringBuilder();
+
+        summary.append("Namn: ")
+                .append(Customer.getName())
+                .append("\n");
+
+
         txtSummary.setText(summary.toString());
 
         // Calculate total price
         Double totalPrice = PriceCalculator.calculateTotalPrice(booking);
 
         txtTotalPrice.setText(String.format("%,.2f kr", totalPrice));
+
+        txtCustomer.setText(customer.toString());
     }
 
     @FXML
