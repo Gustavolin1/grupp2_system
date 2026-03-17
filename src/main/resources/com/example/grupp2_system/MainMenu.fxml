@@ -1,15 +1,266 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.MainMenuController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #1d2843;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.MainMenuController">
    <children>
-      <Button fx:id="btnThere" layoutX="65.0" layoutY="89.0" mnemonicParsing="false" onAction="#marsTrip" text="Resan till Mars" />
-      <Button fx:id="btnBack" layoutX="66.0" layoutY="217.0" mnemonicParsing="false" onAction="#returnTrip" text="Resan tillbaka" />
-      <Button fx:id="BtnCustomer" layoutX="65.0" layoutY="284.0" mnemonicParsing="false" onAction="#customer" text="Kunduppgifter" />
-      <Button fx:id="BtnCancel" layoutX="374.0" layoutY="284.0" mnemonicParsing="false" onAction="#cancelBooking" text="Avbryta Bokning" />
-      <Button fx:id="BtnComfirm" layoutX="373.0" layoutY="89.0" mnemonicParsing="false" onAction="#confirmBooking" text="Bekräfta bokning" />
-      <Button fx:id="mars" layoutX="66.0" layoutY="153.0" mnemonicParsing="false" onAction="#mars" prefHeight="26.0" prefWidth="96.0" text="Mars" />
+      <Circle fill="#dd6738" layoutX="414.0" layoutY="323.0" radius="216.0" stroke="#5b2208" strokeType="INSIDE">
+         <effect>
+            <InnerShadow choke="0.61" height="255.0" radius="127.0" width="255.0">
+               <color>
+                  <Color red="0.5921568870544434" green="0.2666666805744171" blue="0.11372549086809158" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Circle>
+      <Button fx:id="btnThere" layoutX="271.0" layoutY="192.0" mnemonicParsing="false" onAction="#marsTrip" prefHeight="43.0" prefWidth="121.0" style="-fx-background-radius: 100; -fx-background-color: #5c96c6;" text="Resan till Mars">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.07450980693101883" green="0.3764705955982208" blue="0.48627451062202454" />
+               </color>
+            </InnerShadow>
+         </effect></Button>
+      <Button fx:id="btnBack" layoutX="271.0" layoutY="318.0" mnemonicParsing="false" onAction="#returnTrip" prefHeight="43.0" prefWidth="121.0" style="-fx-background-radius: 100; -fx-background-color: #5c96c6;" text="Resan tillbaka">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.07450980693101883" green="0.3764705955982208" blue="0.48627451062202454" />
+               </color>
+            </InnerShadow>
+         </effect></Button>
+      <Button fx:id="BtnCustomer" layoutX="271.0" layoutY="382.0" mnemonicParsing="false" onAction="#customer" prefHeight="43.0" prefWidth="121.0" style="-fx-background-radius: 100; -fx-background-color: #5c96c6;" text="Kunduppgifter">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.07450980693101883" green="0.3764705955982208" blue="0.48627451062202454" />
+               </color>
+            </InnerShadow>
+         </effect></Button>
+      <Button fx:id="BtnCancel" layoutX="474.0" layoutY="340.0" mnemonicParsing="false" onAction="#cancelBooking" prefHeight="43.0" prefWidth="121.0" style="-fx-background-radius: 100; -fx-background-color: #5c96c6;" text="Avbryta Bokning">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.07450980693101883" green="0.3764705955982208" blue="0.48627451062202454" />
+               </color>
+            </InnerShadow>
+         </effect></Button>
+      <Button fx:id="BtnComfirm" layoutX="469.0" layoutY="256.0" mnemonicParsing="false" onAction="#confirmBooking" prefHeight="43.0" prefWidth="121.0" style="-fx-background-radius: 100; -fx-background-color: #5c96c6;" text="Bekräfta bokning">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.07450980693101883" green="0.3764705955982208" blue="0.48627451062202454" />
+               </color>
+            </InnerShadow>
+         </effect></Button>
+      <Button fx:id="mars" layoutX="270.0" layoutY="256.0" mnemonicParsing="false" onAction="#mars" prefHeight="43.0" prefWidth="121.0" style="-fx-background-radius: 100; -fx-background-color: #5c96c6;" text="Mars">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.07450980693101883" green="0.3764705955982208" blue="0.48627451062202454" />
+               </color>
+            </InnerShadow>
+         </effect></Button>
+      <Circle fill="WHITE" layoutX="113.0" layoutY="69.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="119.0" layoutY="299.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="266.0" layoutY="539.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="64.0" layoutY="384.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="61.0" layoutY="179.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="171.0" layoutY="167.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="148.0" layoutY="549.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="202.0" layoutY="211.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="206.0" layoutY="79.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="523.0" layoutY="547.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="96.0" layoutY="486.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="273.0" layoutY="107.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="175.0" layoutY="444.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="691.0" layoutY="535.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="755.0" layoutY="210.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="720.0" layoutY="300.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="666.0" layoutY="413.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="723.0" layoutY="46.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="599.0" layoutY="114.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="669.0" layoutY="164.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="598.0" layoutY="42.0" radius="3.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="28.92" radius="14.190000000000001" spread="0.81" width="29.84">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Label layoutX="297.0" layoutY="32.0" text="Mars Travel" textFill="#de7621">
+         <font>
+            <Font name="Kodchasan SemiBold" size="46.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
