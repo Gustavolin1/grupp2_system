@@ -2,6 +2,8 @@ package com.example.grupp2_system;
 
 import com.example.grupp2_system.Booking.Booking;
 import com.example.grupp2_system.Booking.BookingManager;
+import com.example.grupp2_system.Customer.Customer;
+import com.example.grupp2_system.Customer.CustomerManager;
 import com.example.grupp2_system.PriceCalculator;
 import com.example.grupp2_system.SceneManager.SceneManager;
 import javafx.event.ActionEvent;
@@ -117,7 +119,7 @@ public class CheckDataController {
         StringBuilder customer = new StringBuilder();
 
         summary.append("Namn: ")
-                .append(Customer.getName())
+                //.append(Customer.getName())
                 .append("\n");
 
 
