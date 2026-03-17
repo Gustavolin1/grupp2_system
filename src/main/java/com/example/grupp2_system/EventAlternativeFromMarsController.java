@@ -5,21 +5,18 @@ import com.example.grupp2_system.SceneManager.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 
 import java.io.IOException;
 
 public class EventAlternativeFromMarsController {
+
     @FXML
     private Button btnBack;
 
     @FXML
     private Button btnNext;
-
-    @FXML
-    private ListView<?> lstSelectedEvents;
 
     @FXML
     private Spinner<Integer> spKon;
@@ -28,8 +25,7 @@ public class EventAlternativeFromMarsController {
     private Spinner<Integer> spMov;
 
     @FXML
-    private Spinner<Integer> spTea;
-
+    private Spinner<Integer > spTea;
 
     @FXML
     public void initialize() {
@@ -47,17 +43,18 @@ public class EventAlternativeFromMarsController {
     @FXML
     public void setBtnBack(ActionEvent event) throws IOException
     {
+
         SceneManager.goBack();
     }
     @FXML
     public void setBtnNext(ActionEvent event) throws IOException
     {
         Booking booking = SceneManager.getCurrentBooking();
-        booking.setConcertTicket(spKon.getValue());
-        booking.setMovieTicket(spMov.getValue());
-        booking.setTheatreTicket(spTea.getValue());
+        booking.setHomeConcertTickets(spKon.getValue());
+        booking.setHomeMovieTickets(spMov.getValue());
+        booking.setHomeTheatreTickets(spTea.getValue());
         SceneManager.switchScene("MainMenu.fxml");
 
     }
-}
 
+}
