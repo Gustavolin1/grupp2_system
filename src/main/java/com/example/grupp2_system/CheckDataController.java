@@ -158,7 +158,7 @@ public class CheckDataController {
 
         showInfo("Din bokning har sparats!");
 
-        SceneManager.switchScene("Startpage.fxml");
+        SceneManager.switchScene("StartPage.fxml");
     }
 
     private void showError(String message) {
