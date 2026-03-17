@@ -66,6 +66,7 @@ public class MarsHotellController {
 
 
 
+
     @FXML
     public void next(ActionEvent event) throws IOException {
         Booking booking = SceneManager.getCurrentBooking();
