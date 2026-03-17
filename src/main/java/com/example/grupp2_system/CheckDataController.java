@@ -20,15 +20,16 @@ public class CheckDataController {
     @FXML private Button btnSave;
     @FXML private TextArea txtSummary;
     @FXML private TextArea txtTotalPrice;
+    @FXML private TextArea txtCustomer;
 
     private Booking booking;
-    private Customer customer;
+    private Customer customer1;
 
     @FXML
     public void initialize() {
 
         booking = SceneManager.getCurrentBooking();
-        customer = SceneManager.getCurrentCustomer();
+        customer1 = SceneManager.getCurrentCustomer();
 
 
         if (booking == null) return;
@@ -76,6 +77,11 @@ public class CheckDataController {
                 .append(booking.getTheatreTicket())
                 .append("\n\n");
 
+        summary.append("=== PÅ MARS ===\n");
+        summary.append("Hotell: ")
+                .append(booking.getHotelChoice())
+                .append("\n\n");
+
         summary.append("BETALKORT\n");
         summary.append(booking.getCardAmount())
                 .append(" kr\n\n");
@@ -98,12 +104,33 @@ public class CheckDataController {
                 .append(booking.getFoodHome())
                 .append("\n\n");
 
+        summary.append("Film biljetter: ")
+                .append(booking.getHomeMovieTickets())
+                .append("\n");
+
+        summary.append("Konsert biljetter: ")
+                .append(booking.getHomeConcertTickets())
+                .append("\n");
+
+        summary.append("Teater biljetter: ")
+                .append(booking.getHomeTheatreTickets())
+                .append("\n\n");
+
+        StringBuilder customer = new StringBuilder();
+
+        summary.append("Namn: ")
+                .append(customer1.getName())
+                .append("\n");
+
+
         txtSummary.setText(summary.toString());
 
         // Calculate total price
         Double totalPrice = PriceCalculator.calculateTotalPrice(booking);
 
         txtTotalPrice.setText(String.format("%,.2f kr", totalPrice));
+
+        txtCustomer.setText(customer.toString());
     }
 
     @FXML
@@ -120,7 +147,7 @@ public class CheckDataController {
         }
 
         BookingManager.saveBooking(booking);
-        CustomerManager.saveCustomer(customer);
+        CustomerManager.saveCustomer(customer1);
 
         showInfo("Din bokning har sparats!");
 
