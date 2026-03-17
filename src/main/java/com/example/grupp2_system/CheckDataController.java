@@ -38,6 +38,12 @@ public class CheckDataController {
     private Label lblfoodoption;
 
     @FXML
+    private Label lblFoodHome;
+
+    @FXML
+    private Label lblCabinHome;
+
+    @FXML
     public void initialize() {
         Booking booking = SceneManager.getCurrentBooking();
 
@@ -46,7 +52,9 @@ public class CheckDataController {
             lbldateto.setText("Avresa: " + booking.getDateThere().toString());
             lblDatefrom.setText("Hemresa: " + booking.getDateHome().toString());
             lblcabin.setText("Kabin: " + booking.getCabinThere());
+            lblCabinHome.setText("Kabin för hemresa: " + booking.getCabinHome());
             lblfoodoption.setText("Matval: " + booking.getFoodThere());
+            lblFoodHome.setText("Matval för hemresa: " + booking.getFoodHome());
             lblEvents.setText("Bokade evenemang: " + String.join(", ", booking.getEvents()));
         }
     }
