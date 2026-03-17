@@ -14,8 +14,8 @@ import java.util.Optional;
 
 public class MainMenuController {
 
-    private boolean toMarsCheck = false;
-    private boolean backCheck = true;
+    public static boolean toMarsCheck = false;
+    public static boolean backCheck = true;
     private boolean customerCheck = false;
     private boolean marsCheck = false;
 
@@ -61,9 +61,7 @@ public class MainMenuController {
         }
 
         if (booking.getCabinHome()!=null &&
-                booking.getFoodHome()!= null &&
-                booking.getMonthHome() != null&&
-                booking.getYearHome() != null
+                booking.getFoodHome()!= null
         || "Sömnkapsel".equals(booking.getCabinHome()) ) {
 
             btnBack.setStyle("-fx-text-fill: gray;");
@@ -138,7 +136,7 @@ public class MainMenuController {
         @FXML
         private void confirmBooking(ActionEvent event) throws IOException {
 
-           if (!toMarsCheck || !backCheck || !customerCheck || marsCheck) {
+           if (!toMarsCheck || !backCheck || !customerCheck || !marsCheck) {
 
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Bokningen är inte klar");
