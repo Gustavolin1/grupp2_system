@@ -102,6 +102,18 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <Button fx:id="BtnResume" layoutX="453.0" layoutY="404.0" onAction="#resumeBooking" prefHeight="39.0" prefWidth="192.0" style="-fx-background-color: #5c96c6; -fx-background-radius: 100;" text="Återuppta bokning" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.0745" green="0.3764" blue="0.4862" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Button>
 
     </children>
 </AnchorPane>

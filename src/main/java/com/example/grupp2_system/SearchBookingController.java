@@ -2,10 +2,12 @@ package com.example.grupp2_system;
 
 import com.example.grupp2_system.Booking.Booking;
 import com.example.grupp2_system.Booking.BookingManager;
+import com.example.grupp2_system.Customer.Customer;
 import com.example.grupp2_system.Customer.CustomerManager;
 import com.example.grupp2_system.SceneManager.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
@@ -26,6 +28,12 @@ public class SearchBookingController {
     private TextArea priceArea;
 
     @FXML
+    private Button BtnResume;
+
+
+    private Booking currentBooking;
+
+    @FXML
     private void handleSearch() {
 
         String bookingId = bookingIdField.getText();
@@ -44,6 +52,7 @@ public class SearchBookingController {
     }
 
     private void displayBooking(Booking booking) {
+        this.currentBooking = booking;
 
         StringBuilder info = new StringBuilder();
 
@@ -121,7 +130,6 @@ public class SearchBookingController {
                 .append(booking.getHomeTheatreTickets());
 
 
-
         resultArea.setText(info.toString());
 
         // Calculate total price
@@ -133,8 +141,24 @@ public class SearchBookingController {
     }
 
     @FXML
-    public void backPage(ActionEvent event) throws IOException
-    {
+    public void backPage(ActionEvent event) throws IOException {
         SceneManager.goBack();
     }
+
+    @FXML
+    public void resumeBooking(ActionEvent event) throws IOException {
+
+        if (currentBooking == null) {
+            resultArea.setText("No booking selected to resume.");
+            return;
+        }
+
+        SceneManager.setCurrentBooking(currentBooking);
+
+        Customer customer = CustomerManager.findCustomerById(currentBooking.getCustomerId());
+        SceneManager.setCurrentCustomer(customer);
+
+        SceneManager.switchScene("MainMenu.fxml");
+    }
 }
+
