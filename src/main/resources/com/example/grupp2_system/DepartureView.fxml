@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #cdeaf8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.DepartureViewController">
+   <children>
+      <Label fx:id="titleDeparture" layoutX="331.0" layoutY="22.0" text="Avgångar" textFill="#5c96c6">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+      <Text fx:id="mars1" fill="#5c96c6" layoutX="94.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Till Mars">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="mars2" fill="#5c96c6" layoutX="600.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Från Mars">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="toMars" fill="#5c96c6" layoutX="94.0" layoutY="143.0" lineSpacing="8.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3 januari&#10;3 februari&#10;3 mars&#10;3 april&#10;3 maj&#10;3 juni&#10;3 juli&#10;3 augusti&#10;3 september&#10;3 oktober&#10;3 november&#10;3 december">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="fromMars" fill="#5c96c6" layoutX="600.0" layoutY="144.0" lineSpacing="8.0" strokeType="OUTSIDE" strokeWidth="0.0" text="27 januari&#10;27  februari&#10;27 mars&#10;27 april&#10;27 maj&#10;27 juni&#10;27 juli&#10;27 augusti&#10;27 september&#10;27 oktober&#10;27 november&#10;27 december">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Circle fill="#dd6738" layoutX="400.0" layoutY="141.0" radius="37.0" stroke="#dd6738" strokeType="INSIDE">
+         <effect>
+            <InnerShadow choke="0.1" height="5.9" radius="5.487500000000001" width="18.05">
+               <color>
+                  <Color red="0.6184210777282715" green="0.2851608097553253" blue="0.0629873275756836" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Circle>
+      <Button fx:id="btnBack" layoutX="650.0" layoutY="527.0" mnemonicParsing="false" onAction="#back" style="-fx-background-radius: 100; -fx-background-color: #5c96c6;" text="Tillbaka" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #1d2843;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.CheckDataController">
+
+    <children>
+
+        <!-- Page Title -->
+        <Label layoutX="220.0" layoutY="20.0" text="Bekräfta bokningen" textFill="#5c96c6">
+            <font>
+                <Font name="Kodchasan SemiBold" size="40.0" />
+            </font>
+        </Label>
+
+        <!-- Booking Info Labels -->
+        <Label fx:id="lblID" layoutX="150" layoutY="80" textFill="WHITE" />
+        <Label fx:id="lblyearto" layoutX="150" layoutY="110" textFill="WHITE" />
+        <Label fx:id="lbldateto" layoutX="150" layoutY="140" textFill="WHITE" />
+        <Label fx:id="lblcabin" layoutX="150" layoutY="180" textFill="WHITE" />
+        <Label fx:id="lblfoodoption" layoutX="150" layoutY="210" textFill="WHITE" />
+        <Label fx:id="lblEvents" layoutX="150" layoutY="240" textFill="WHITE" />
+        <Label fx:id="lblCabinHome" layoutX="150" layoutY="270" textFill="WHITE" />
+        <Label fx:id="lblFoodHome" layoutX="150" layoutY="300" textFill="WHITE" />
+        <Label fx:id="lblHotel" layoutX="150" layoutY="330" textFill="WHITE" />
+        <Label fx:id="lblCard" layoutX="150" layoutY="360" textFill="WHITE" />
+        <Label fx:id="lblInsurance" layoutX="150" layoutY="390" textFill="WHITE" />
+
+        <!-- Back Button -->
+        <Button fx:id="btnBack" layoutX="180" layoutY="500" onAction="#setBtnBack" prefHeight="60.0" prefWidth="160.0" style="-fx-background-color: #5c96c6; -fx-background-radius: 100;" text="Tillbaka" textFill="WHITE">
+            <font>
+                <Font name="Hannotate SC Bold" size="18.0" />
+            </font>
+            <effect>
+                <InnerShadow>
+                    <color>
+                        <Color red="0.0745" green="0.3764" blue="0.4862" />
+                    </color>
+                </InnerShadow>
+            </effect>
+        </Button>
+
+        <!-- Save & Confirm Button -->
+        <Button fx:id="btnSave" layoutX="450" layoutY="500" onAction="#setBtnSave" prefHeight="60.0" prefWidth="160.0" style="-fx-background-color: #5c96c6; -fx-background-radius: 100;" text="Bekräfta &amp; Boka" textFill="WHITE">
+            <font>
+                <Font name="Hannotate SC Bold" size="18.0" />
+            </font>
+            <effect>
+                <InnerShadow>
+                    <color>
+                        <Color red="0.0745" green="0.3764" blue="0.4862" />
+                    </color>
+                </InnerShadow>
+            </effect>
+        </Button>
+
+        <!-- Decorative Stars -->
+        <Circle fill="WHITE" layoutX="100.0" layoutY="78.0" radius="3.0">
+            <effect>
+                <DropShadow color="WHITE" radius="14" spread="0.8" />
+            </effect>
+        </Circle>
+
+        <Circle fill="WHITE" layoutX="680.0" layoutY="150.0" radius="3.0">
+            <effect>
+                <DropShadow color="WHITE" radius="14" spread="0.8" />
+            </effect>
+        </Circle>
+      <Circle fill="WHITE" layoutX="118.0" layoutY="249.0" radius="3.0">
+         <effect>
+            <DropShadow color="WHITE" radius="14" spread="0.8" />
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="65.0" layoutY="446.0" radius="3.0">
+         <effect>
+            <DropShadow color="WHITE" radius="14" spread="0.8" />
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="596.0" layoutY="32.0" radius="3.0">
+         <effect>
+            <DropShadow color="WHITE" radius="14" spread="0.8" />
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="638.0" layoutY="390.0" radius="3.0">
+         <effect>
+            <DropShadow color="WHITE" radius="14" spread="0.8" />
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="725.0" layoutY="62.0" radius="3.0">
+         <effect>
+            <DropShadow color="WHITE" radius="14" spread="0.8" />
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="739.0" layoutY="309.0" radius="3.0">
+         <effect>
+            <DropShadow color="WHITE" radius="14" spread="0.8" />
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="719.0" layoutY="516.0" radius="3.0">
+         <effect>
+            <DropShadow color="WHITE" radius="14" spread="0.8" />
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="27.0" layoutY="169.0" radius="3.0">
+         <effect>
+            <DropShadow color="WHITE" radius="14" spread="0.8" />
+         </effect>
+      </Circle>
+      <Circle fill="WHITE" layoutX="103.0" layoutY="549.0" radius="3.0">
+         <effect>
+            <DropShadow color="WHITE" radius="14" spread="0.8" />
+         </effect>
+      </Circle>
+    </children>
+</AnchorPane>

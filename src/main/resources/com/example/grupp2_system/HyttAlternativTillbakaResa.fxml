@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #cdeaf8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.HyttAlternativTillbakaController">
+    <children>
+        <Button fx:id="btnSave" layoutX="651.0" layoutY="520.0" mnemonicParsing="false" onAction="#next" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #3b82b2;" text="Gå vidare" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Label fx:id="lblHytt" layoutX="287.0" layoutY="14.0" prefHeight="106.0" prefWidth="263.0" text="Vänligen välj hytt för tillbaka resan" textFill="#3b82b2" wrapText="true">
+            <font>
+                <Font size="31.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnBack" layoutX="80.0" layoutY="520.0" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #3b82b2;" text="Gå tillbaka" textFill="WHITE" />
+        <Button fx:id="btninfo" layoutX="367.0" layoutY="520.0" mnemonicParsing="false" onAction="#info" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #3b82b2;" text="Mer info..." textFill="WHITE" />
+        <RadioButton layoutX="31.0" layoutY="202.0" mnemonicParsing="false" text="Economy" textFill="#3b82b2">
+            <toggleGroup>
+                <ToggleGroup fx:id="grpOption" />
+            </toggleGroup>
+            <font>
+                <Font size="17.0" />
+            </font>
+        </RadioButton>
+        <RadioButton layoutX="186.0" layoutY="202.0" mnemonicParsing="false" text="Svit" textFill="#3b82b2" toggleGroup="$grpOption">
+            <font>
+                <Font size="17.0" />
+            </font></RadioButton>
+        <RadioButton layoutX="507.0" layoutY="202.0" mnemonicParsing="false" text="SpaceSide" textFill="#3b82b2" toggleGroup="$grpOption">
+            <font>
+                <Font size="17.0" />
+            </font></RadioButton>
+        <RadioButton layoutX="651.0" layoutY="202.0" mnemonicParsing="false" text="Inside" textFill="#3b82b2" toggleGroup="$grpOption">
+            <font>
+                <Font size="17.0" />
+            </font></RadioButton>
+        <RadioButton fx:id="radbtnSleep" layoutX="350.0" layoutY="202.0" mnemonicParsing="false" text="Sömnkapsel" textFill="#3b82b2" toggleGroup="$grpOption">
+            <font>
+                <Font size="17.0" />
+            </font></RadioButton>
+        <Button fx:id="btnCancel" layoutX="40.0" layoutY="33.0" mnemonicParsing="false" onAction="#cancelBooking" style="-fx-background-color: #3b82b2;" text="Avbryt bokning" textFill="WHITE">
+            <font>
+                <Font size="17.0" />
+            </font></Button>
+        <Text fill="#3b82b2" layoutX="186.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Svit med utsikt över rymden, separat vardags- och sovrum med dubbelsäng, plus skärm med film, serier, musik och spel." wrappingWidth="148.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text fill="#3b82b2" layoutX="33.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="180 000 kr/person">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text fill="#3b82b2" layoutX="504.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hytt med utsikt över rymden, dubbelsäng, badrum med dusch och toalett, samt skärm med film, serier, musik och spel." wrappingWidth="125.1943359375">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text fill="#3b82b2" layoutX="507.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="700 000 kr/person">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text fill="#3b82b2" layoutX="186.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 200 000 kr/person">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text fill="#3b82b2" layoutX="353.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2 500 000 kr/person">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text fill="#3b82b2" layoutX="651.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="300 000 kr/person">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text fill="#3b82b2" layoutX="34.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insideshytt med 4 bäddar (överbäddar + underbäddar som kan bli soffa), dusch i hytten, toaletter i korridoren." wrappingWidth="117.66357421875">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text fill="#3b82b2" layoutX="350.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Möjlighet att sova hela resan med specialutbildad personal som övervakar kapseln dygnet runt." wrappingWidth="119.99267578125">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text fill="#3b82b2" layoutX="651.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insideshytt med två underbäddar som kan bli soffa, samt badrum med dusch och toalett." wrappingWidth="106.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Circle fill="#dd6738" layoutX="688.0" layoutY="98.0" radius="74.0" stroke="#dd6738" strokeType="INSIDE">
+            <effect>
+                <InnerShadow choke="0.25" height="91.75" radius="40.2175" width="71.12">
+                    <color>
+                        <Color red="0.5921568870544434" green="0.2666666805744171" blue="0.11372549086809158" />
+                    </color>
+                </InnerShadow>
+            </effect>
+        </Circle>
+    </children>
+</AnchorPane>
