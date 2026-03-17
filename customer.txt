@@ -14,3 +14,5 @@ CustomerID-19536;lkjfsd;3847283;12121212-2133;ldsjf@dkosfj.se
 CustomerID-20251;kdjfdkj;9437437834;22221212-1212;lkjfd@ksoljda.se
 CustomerID-53048;test björnesson;3493948;12001212-1212;kdjfkjsd@hotmail.com
 CustomerID-52310;nice nicesson;83478343;12121212-1212;834738@fdhasj.se
+CustomerID-1003;test björnesson;3493948;12001212-1212;kdjfkjsd@hotmail.comCustomerID-49818;Narnia Astrid;43983993;10101010-1010;hhjalpd@nej.se
+CustomerID-14213;sparas det;8293497938;14141010-1010;dlskfkjads@kdsjfla.se

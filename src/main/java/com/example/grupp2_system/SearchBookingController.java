@@ -2,6 +2,7 @@ package com.example.grupp2_system;
 
 import com.example.grupp2_system.Booking.Booking;
 import com.example.grupp2_system.Booking.BookingManager;
+import com.example.grupp2_system.Customer.CustomerManager;
 import com.example.grupp2_system.SceneManager.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,6 +18,12 @@ public class SearchBookingController {
 
     @FXML
     private TextArea resultArea;
+
+    @FXML
+    private TextArea cumstomerArea;
+
+    @FXML
+    private TextArea priceArea;
 
     @FXML
     private void handleSearch() {
@@ -111,11 +118,18 @@ public class SearchBookingController {
                 .append("\n");
 
         info.append("Teater biljetter: ")
-                .append(booking.getHomeTheatreTickets())
-                .append("\n\n");
+                .append(booking.getHomeTheatreTickets());
+
 
 
         resultArea.setText(info.toString());
+
+        // Calculate total price
+        Double totalPrice = PriceCalculator.calculateTotalPrice(booking);
+
+        priceArea.setText(String.format("%,.2f kr", totalPrice));
+
+        cumstomerArea.setText(CustomerManager.getCustomerInfo(booking.getCustomerId()));
     }
 
     @FXML
