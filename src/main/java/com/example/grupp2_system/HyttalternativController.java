@@ -93,9 +93,10 @@ public class HyttalternativController {
     }
 
     @FXML
-    private void cancelBooking() throws IOException {
+    private void GoToMain() throws IOException {
 
-            SceneManager.switchScene("MainMenu.fxml");
+        SceneManager.switchScene("MainMenu.fxml");
+
 
         }
     }

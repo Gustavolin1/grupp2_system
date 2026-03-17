@@ -4,113 +4,96 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #cdeaf8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.HyttalternativController">
+<AnchorPane maxHeight="600.0" maxWidth="800.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #cdeaf8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.HyttalternativController">
    <children>
-      <Button fx:id="btnSave" layoutX="651.0" layoutY="520.0" mnemonicParsing="false" onAction="#next" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #3b82b2;" text="Gå vidare" textFill="WHITE">
+       <ImageView fx:id="rocketimageview" fitHeight="585.0" fitWidth="306.0" layoutX="247.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" AnchorPane.rightAnchor="247.0" AnchorPane.topAnchor="10.0">
+           <image>
+               <Image url="@images/rocket-ship-png-1.png" />
+           </image>
+       </ImageView>
+      <Button fx:id="btnSave" layoutX="636.0" layoutY="520.0" mnemonicParsing="false" onAction="#next" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #3b82b2;" text="Nästa" textFill="WHITE" AnchorPane.bottomAnchor="42.6" AnchorPane.rightAnchor="70.0">
          <font>
-            <Font size="14.0" />
+            <Font size="17.0" />
          </font>
       </Button>
-      <Label fx:id="lblHytt" layoutX="287.0" layoutY="14.0" prefHeight="106.0" prefWidth="263.0" text="Vänligen välj hytt" textFill="#3b82b2">
+      <Label fx:id="lblHytt" alignment="CENTER" layoutX="234.0" layoutY="14.0" prefHeight="106.0" prefWidth="342.0" text="Hur vill du bo på fartyget?" textFill="#3b82b2" AnchorPane.topAnchor="14.0">
          <font>
-            <Font name="Hannotate SC Bold" size="31.0" />
+            <Font size="27.0" />
          </font>
       </Label>
-      <Button fx:id="btnBack" layoutX="80.0" layoutY="520.0" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #3b82b2;" text="Gå tillbaka" textFill="WHITE" />
-      <Button fx:id="btninfo" layoutX="367.0" layoutY="520.0" mnemonicParsing="false" onAction="#info" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #3b82b2;" text="Mer info..." textFill="WHITE" />
-      <RadioButton layoutX="31.0" layoutY="202.0" mnemonicParsing="false" text="Economy" textFill="#3b82b2">
+      <Button fx:id="btnBack" layoutX="80.0" layoutY="520.0" mnemonicParsing="false" onAction="#back" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #3b82b2;" text="Tillbaka" textFill="WHITE" AnchorPane.bottomAnchor="42.6" AnchorPane.leftAnchor="70.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btninfo" layoutX="353.0" layoutY="519.0" mnemonicParsing="false" onAction="#info" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #3b82b2;" text="Info" textFill="WHITE" AnchorPane.bottomAnchor="42.6" AnchorPane.leftAnchor="349.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <RadioButton layoutX="182.0" layoutY="355.0" mnemonicParsing="false" text="Economy" textFill="WHITE" AnchorPane.leftAnchor="182.0" AnchorPane.topAnchor="355.0">
          <toggleGroup>
             <ToggleGroup fx:id="grpOption" />
          </toggleGroup>
          <font>
-            <Font size="17.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="186.0" layoutY="202.0" mnemonicParsing="false" text="Svit" textFill="#3b82b2" toggleGroup="$grpOption">
+      <RadioButton layoutX="392.0" layoutY="211.0" mnemonicParsing="false" text="Svit" textFill="WHITE" toggleGroup="$grpOption" AnchorPane.leftAnchor="392.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="169.0" layoutY="158.0" mnemonicParsing="false" text="SpaceSide" textFill="WHITE" toggleGroup="$grpOption" AnchorPane.leftAnchor="169.0" AnchorPane.topAnchor="158.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </RadioButton>
+      <RadioButton id="#ffffff" layoutX="221.0" layoutY="268.0" mnemonicParsing="false" style="-fx-background-color: lol;" text="Inside" textFill="WHITE" toggleGroup="$grpOption" AnchorPane.leftAnchor="221.0" AnchorPane.topAnchor="268.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="radbtnSleep" layoutX="392.0" layoutY="313.0" mnemonicParsing="false" text="Sömnkapsel" textFill="WHITE" toggleGroup="$grpOption" AnchorPane.leftAnchor="392.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="btnCancel" layoutX="76.0" layoutY="48.0" mnemonicParsing="false" onAction="#GoToMain" prefHeight="38.0" prefWidth="94.0" style="-fx-background-color: #3b82b2;" text="Meny" textFill="WHITE" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="48.0">
          <font>
             <Font size="17.0" />
-         </font></RadioButton>
-      <RadioButton layoutX="507.0" layoutY="202.0" mnemonicParsing="false" text="SpaceSide" textFill="#3b82b2" toggleGroup="$grpOption">
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="182.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="180 000 kr/person" AnchorPane.leftAnchor="182.0" AnchorPane.topAnchor="384.8134765625">
          <font>
-            <Font size="17.0" />
-         </font></RadioButton>
-      <RadioButton layoutX="651.0" layoutY="202.0" mnemonicParsing="false" text="Inside" textFill="#3b82b2" toggleGroup="$grpOption">
-         <font>
-            <Font size="17.0" />
-         </font></RadioButton>
-      <RadioButton fx:id="radbtnSleep" layoutX="350.0" layoutY="202.0" mnemonicParsing="false" text="Sömnkapsel" textFill="#3b82b2" toggleGroup="$grpOption">
-         <font>
-            <Font size="17.0" />
-         </font></RadioButton>
-      <Button fx:id="btnCancel" layoutX="40.0" layoutY="33.0" mnemonicParsing="false" onAction="#cancelBooking" style="-fx-background-color: #3b82b2;" text="Avbryt bokning" textFill="WHITE">
-         <font>
-            <Font size="17.0" />
-         </font></Button>
-      <Text fill="#3b82b2" layoutX="186.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Svit med utsikt över rymden, separat vardags- och sovrum med dubbelsäng, plus skärm med film, serier, musik och spel." wrappingWidth="148.0">
-         <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Text>
-      <Text fill="#3b82b2" layoutX="33.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="180 000 kr/person">
+      <Text fill="WHITE" layoutX="169.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="700 000 kr/person" AnchorPane.leftAnchor="169.0" AnchorPane.topAnchor="181.8134765625">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Text>
-      <Text fill="#3b82b2" layoutX="504.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hytt med utsikt över rymden, dubbelsäng, badrum med dusch och toalett, samt skärm med film, serier, musik och spel." wrappingWidth="125.1943359375">
+      <Text fill="WHITE" layoutX="392.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 200 000 kr/person" AnchorPane.leftAnchor="392.0">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Text>
-      <Text fill="#3b82b2" layoutX="507.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="700 000 kr/person">
+      <Text fill="WHITE" layoutX="392.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2 500 000 kr/person" AnchorPane.leftAnchor="392.0">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Text>
-      <Text fill="#3b82b2" layoutX="186.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 200 000 kr/person">
+      <Text id="#ffffff" fill="WHITE" layoutX="221.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-background-color: lol;" text="300 000 kr/person" AnchorPane.leftAnchor="221.0" AnchorPane.topAnchor="292.8134765625">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Text>
-      <Text fill="#3b82b2" layoutX="353.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2 500 000 kr/person">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Text>
-      <Text fill="#3b82b2" layoutX="651.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="300 000 kr/person">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Text>
-      <Text fill="#3b82b2" layoutX="34.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insideshytt med 4 bäddar (överbäddar + underbäddar som kan bli soffa), dusch i hytten, toaletter i korridoren." wrappingWidth="117.66357421875">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Text>
-      <Text fill="#3b82b2" layoutX="350.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Möjlighet att sova hela resan med specialutbildad personal som övervakar kapseln dygnet runt." wrappingWidth="119.99267578125">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Text>
-      <Text fill="#3b82b2" layoutX="651.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insideshytt med två underbäddar som kan bli soffa, samt badrum med dusch och toalett." wrappingWidth="106.0">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Text>
-      <Circle fill="#dd6738" layoutX="688.0" layoutY="98.0" radius="74.0" stroke="#dd6738" strokeType="INSIDE">
-         <effect>
-            <InnerShadow choke="0.25" height="91.75" radius="40.2175" width="71.12">
-               <color>
-                  <Color red="0.5921568870544434" green="0.2666666805744171" blue="0.11372549086809158" />
-               </color>
-            </InnerShadow>
-         </effect>
-      </Circle>
    </children>
 </AnchorPane>
