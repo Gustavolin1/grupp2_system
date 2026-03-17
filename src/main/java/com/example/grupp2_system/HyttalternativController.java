@@ -80,18 +80,8 @@ public class HyttalternativController {
     @FXML
     private void cancelBooking() throws IOException {
 
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Avbryt bokning");
-        alert.setHeaderText("Är du säker?");
-        alert.setContentText("All information du fyllt i kommer att raderas.");
+            SceneManager.switchScene("MainMenu.fxml");
 
-        Optional<ButtonType> result = alert.showAndWait();
-
-        if (result.isPresent() && result.get() == ButtonType.OK) {
-
-            SceneManager.setCurrentBooking(null);
-
-            SceneManager.switchScene("StartPage.fxml");
         }
     }
-}
+
