@@ -15,7 +15,7 @@ public class HyttInformationController {
     private Button btnBack;
 
     @FXML
-    private ImageView img1;
+    private ImageView rocketimageview;
 
     @FXML
     private Label price1;

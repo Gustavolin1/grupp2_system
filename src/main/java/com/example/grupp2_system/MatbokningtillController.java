@@ -46,6 +46,9 @@ public class MatbokningtillController implements Initializable {
     private Button btnNästaMatpaket;
 
     @FXML
+    private Button btnmenu;
+
+    @FXML
     private ToggleGroup grpFood;
 
     @Override
@@ -98,6 +101,14 @@ public class MatbokningtillController implements Initializable {
 
         booking.setFoodThere(selectedFood.getText());
         SceneManager.switchScene("EventAlternativ.fxml");
+    }
+
+    @FXML
+    private void GoToMain() throws IOException {
+
+        SceneManager.switchScene("MainMenu.fxml");
+
+
     }
 
 }

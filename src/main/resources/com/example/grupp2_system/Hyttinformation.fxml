@@ -12,13 +12,13 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.HyttInformationController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5c96c6" height="131.0" stroke="BLACK" strokeType="INSIDE" width="818.0" />
-      <Label fx:id="title" layoutX="270.0" layoutY="47.0" prefHeight="35.0" prefWidth="267.0" text="HYTTINFORMATION" textFill="#cdeaf8">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5c96c6" height="131.0" stroke="BLACK" strokeType="INSIDE" width="800.0" AnchorPane.bottomAnchor="469.20000000000005" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label fx:id="title" alignment="CENTER" layoutX="270.0" layoutY="47.0" prefHeight="35.0" prefWidth="267.0" text="HYTTINFORMATION" textAlignment="CENTER" textFill="#cdeaf8" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="262.40000000000003" AnchorPane.topAnchor="47.0">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdeaf8" height="471.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="818.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdeaf8" height="471.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
       <ImageView fx:id="img1" fitHeight="132.0" fitWidth="618.0" layoutX="85.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/5hyttalternativ.png" />
@@ -28,27 +28,27 @@
          <children>
             <VBox prefHeight="250.0" prefWidth="118.0">
                <children>
-                  <Label fx:id="txt1" prefHeight="167.0" prefWidth="118.0" text="Insideshytt med 4 bäddar (två under- och överbäddar) därunderbäddarna kan ändras till soffa dagtid. Dusch finns till hytten, men toaletterfinns i korridoren." wrapText="true" />
+                  <Label fx:id="txt1" prefHeight="167.0" prefWidth="118.0" text="Insideshytt med 4 bäddar (två under- och överbäddar) därunderbäddarna kan ändras till soffa dagtid. Dusch finns till hytten, men toaletter finns i korridoren." textAlignment="CENTER" wrapText="true" />
                </children>
             </VBox>
             <VBox prefHeight="250.0" prefWidth="122.0">
                <children>
-                  <Label fx:id="txt2" prefHeight="131.0" prefWidth="122.0" text="Hytt med utsikt över rymden, separat vardags- och sovrum inklusivedubbelsäng. Dessutom skärm med stort utbud av film, serier, musik och spel." wrapText="true" />
+                  <Label fx:id="txt2" prefHeight="131.0" prefWidth="122.0" text="Hytt med utsikt över rymden, separat vardags- och sovrum inklusivedubbelsäng. Dessutom skärm med stort utbud av film, serier, musik och spel." textAlignment="CENTER" wrapText="true" />
                </children>
             </VBox>
             <VBox prefHeight="250.0" prefWidth="126.0">
                <children>
-                  <Label fx:id="txt3" prefHeight="242.0" prefWidth="126.0" text="Våra specialdesignade kapslar låter dig vila tryggt i mikrogravitation medan du svävar bland stjärnorna. Ergonomiska, ljudisolerade och temperaturkontrollerade för maximal komfort – en unik rymdupplevelse du aldrig glömmer." wrapText="true" />
+                  <Label fx:id="txt3" prefHeight="242.0" prefWidth="126.0" text="Våra specialdesignade kapslar låter dig vila tryggt i mikrogravitation medan du svävar bland stjärnorna. Ergonomiska, ljudisolerade och temperatur- kontrollerade för maximal komfort – en unik rymdupplevelse du aldrig glömmer." textAlignment="CENTER" wrapText="true" />
                </children>
             </VBox>
             <VBox prefHeight="250.0" prefWidth="129.0">
                <children>
-                  <Label fx:id="txt4" prefHeight="98.0" prefWidth="122.0" text="Insideshytt med två underbäddar som kan ändras till soffa dagtid.Badrum med dusch och toalett." wrapText="true" />
+                  <Label fx:id="txt4" prefHeight="98.0" prefWidth="122.0" text="Insideshytt med två underbäddar som kan ändras till soffa dagtid. Badrum med dusch och toalett." textAlignment="CENTER" wrapText="true" />
                </children>
             </VBox>
             <VBox prefHeight="250.0" prefWidth="113.0">
                <children>
-                  <Label fx:id="txt5" prefHeight="148.0" prefWidth="114.0" text="Hytt med utsikt över rymden, dubbelsäng. Dessutom skärm med stortutbud av film, serier, musik och spel. Badrum med dusch och toalett." wrapText="true" />
+                  <Label fx:id="txt5" prefHeight="148.0" prefWidth="114.0" text="Hytt med utsikt över rymden, dubbelsäng. Dessutom skärm med stortutbud av film, serier, musik och spel. Badrum med dusch och toalett." textAlignment="CENTER" wrapText="true" />
                </children>
             </VBox>
          </children>
@@ -136,9 +136,9 @@
             </Label>
          </children>
       </HBox>
-      <Button fx:id="btnBack" layoutX="595.0" layoutY="504.0" mnemonicParsing="false" onAction="#back" prefHeight="58.0" prefWidth="127.0" style="-fx-background-radius: 100; -fx-background-color: #5c96c6;" text="Tillbaka" textFill="WHITE">
+      <Button fx:id="btnBack" layoutX="595.0" layoutY="504.0" mnemonicParsing="false" onAction="#back" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #2685b9;" text="Tillbaka" textFill="WHITE" AnchorPane.bottomAnchor="42.6" AnchorPane.leftAnchor="70.0">
          <font>
-            <Font size="25.0" />
+            <Font size="17.0" />
          </font></Button>
    </children>
 </AnchorPane>

@@ -7,32 +7,61 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.EventAlternativController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #cdeaf8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.EventAlternativController">
 
     <children>
 
-        <AnchorPane layoutY="-18.0">
+        <AnchorPane layoutY="-18.0" prefWidth="800.0" AnchorPane.topAnchor="0.0">
             <children>
 
-                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7baddb" height="418.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7baddb" height="240.0" layoutX="-2.0" layoutY="169.0" stroke="BLACK" strokeType="INSIDE" width="800.0" AnchorPane.rightAnchor="0.0" />
 
-                <Label layoutX="36.0" layoutY="45.0" text="Välj evenemang">
+                <Label layoutX="51.0" layoutY="203.0" text="Välj evenemang" textFill="WHITE">
                     <font>
-                        <Font name="System Italic" size="18.0" />
+                        <Font name="System Bold Italic" size="18.0" />
                     </font>
                 </Label>
-            <Spinner fx:id="spTea" layoutX="16.0" layoutY="117.0" />
-            <Spinner fx:id="spMov" layoutX="16.0" layoutY="183.0" />
-            <Spinner fx:id="spKon" layoutX="16.0" layoutY="247.0" />
-            <Label layoutX="34.0" layoutY="87.0" text="Teater - Antal biljetter: " />
-            <Label layoutX="34.0" layoutY="155.0" text="Filmer - Antal biljetter: " />
-            <Label layoutX="33.0" layoutY="220.0" text="Konserter - Antal biljetter: " />
+            <Spinner fx:id="spTea" layoutX="48.0" layoutY="293.0" prefWidth="187.0" AnchorPane.topAnchor="293.0" />
+            <Spinner fx:id="spMov" layoutX="306.0" layoutY="293.0" prefHeight="26.0" prefWidth="187.0" AnchorPane.topAnchor="293.0" />
+            <Spinner fx:id="spKon" layoutX="548.0" layoutY="293.0" prefWidth="187.0" AnchorPane.topAnchor="293.0" />
+            <Label layoutX="48.0" layoutY="247.0" text="Teater - Antal biljetter: " textFill="WHITE" AnchorPane.topAnchor="254.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
+            <Label layoutX="306.0" layoutY="254.0" text="Filmer - Antal biljetter: " textFill="WHITE" AnchorPane.rightAnchor="306.8" AnchorPane.topAnchor="254.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
+            <Label layoutX="541.0" layoutY="263.0" text="Konserter - Antal biljetter: " textFill="WHITE" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="254.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
+              <Button fx:id="btnmenu" layoutX="31.0" layoutY="56.0" mnemonicParsing="false" onAction="#GoToMain" prefHeight="38.0" prefWidth="94.0" style="-fx-background-color: #2685b9;" text="Meny" textFill="WHITE" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="48.0">
+                  <font>
+                      <Font size="17.0" />
+                  </font>
+              </Button>
+            <Label alignment="CENTER" layoutX="197.0" layoutY="14.0" prefHeight="106.0" prefWidth="406.0" text="Vilka evenemang vill du delta på?" textFill="#2685b9" textOverrun="CLIP" AnchorPane.leftAnchor="197.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
 
             </children>
         </AnchorPane>
-
-        <Button fx:id="btnBack" layoutX="18.0" layoutY="351.0" mnemonicParsing="false" onAction="#setBtnBack" text="Tillbaka" />
-        <Button fx:id="btnNext" layoutX="519.0" layoutY="351.0" mnemonicParsing="false" onAction="#setBtnNext" text="Nästa" />
+        <Button fx:id="btnBack" layoutX="18.0" layoutY="351.0" mnemonicParsing="false" onAction="#setBtnBack" prefWidth="104.0" style="-fx-background-color: #2685b9;" text="Tillbaka" textFill="WHITE" AnchorPane.bottomAnchor="42.6" AnchorPane.leftAnchor="70.0">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+        <Button fx:id="btnNext" layoutX="519.0" layoutY="351.0" mnemonicParsing="false" onAction="#setBtnNext" prefWidth="104.0" style="-fx-background-color: #2685b9;" text="Nästa" textFill="WHITE" AnchorPane.bottomAnchor="42.6" AnchorPane.rightAnchor="70.0">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button fx:id="btnInfo" layoutX="360.0" layoutY="520.0" mnemonicParsing="false" onAction="#GoToInfo" prefWidth="104.0" style="-fx-background-color: #2685b9;" text="Info" textFill="WHITE" AnchorPane.bottomAnchor="42.6" AnchorPane.leftAnchor="349.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
 
     </children>
 </AnchorPane>
