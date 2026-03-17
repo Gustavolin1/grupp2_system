@@ -45,6 +45,7 @@ public class EventAlternativController {
     @FXML
     public void setBtnBack(ActionEvent event) throws IOException
     {
+
         SceneManager.goBack();
     }
     @FXML
