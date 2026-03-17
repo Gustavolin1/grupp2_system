@@ -93,7 +93,7 @@ public class MainMenuController {
     @FXML
     private void mars(ActionEvent event) throws IOException
     {
-        SceneManager.switchScene("MarsHotell.fxml");
+        SceneManager.switchScene("MarsHotel.fxml");
     }
 
 
@@ -105,6 +105,7 @@ public class MainMenuController {
 
     @FXML
     private void returnTrip(ActionEvent event) throws IOException {
+        SceneManager.switchScene("HyttAlternativTillbakaResa.fxml");
 
     }
 
