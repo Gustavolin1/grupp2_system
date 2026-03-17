@@ -18,29 +18,5 @@ BK-90625;Economy;Lyx 1;2026-03-14;null;null;null;2026-03-20;0.0;Star Wars;false
 BK-69590;Inside;Mellan 3;2026-03-09;null;null;null;2029-03-22;0.0;;false
 BK-41265;Svit;Budget 3;2026-03-20;null;null;null;2026-03-31;0.0;Aliens live Action;false
 BK-76672;Sömnkapsel;null;2026-03-14;null;null;null;2029-03-27;0.0;;false
-BK-96555;Svit;Mellan 3;2026-03-21;null;null;null;2030-03-20;0.0;;false
-BK-76987;Svit;Budget 1;2026-03-12;null;null;null;2031-03-19;53000.0;;false
-BK-45715;Svit;Mellan 2;2026-03-21;null;null;null;2030-03-15;3.942080328E9;;false
-BK-40549;Inside;Mellan 3;2026-03-12;null;null;null;2026-03-22;3.9482392E7;;false
-BK-10579;SpaceSide;Mellan 2;2026-03-14;null;null;null;2026-03-22;3.4873848378E10;;false
-BK-28995;Svit;Mellan 2;2026-03-12;null;null;null;2026-03-27;3.2847938274E10;;false
-BK-14527;Svit;Budget 2
-40 000 kr/pers;2026-03-21;null;null;null;2028-03-16;3.228372832888E12;;false
-BK-35408;Svit;Budget 2
-40 000 kr/pers;2026-03-20;null;null;null;2026-03-29;9.3843993E7;;false
-BK-69517;Economy;Budget 3
-54 000 kr/pers
-;2026-03-11;null;null;null;2026-03-28;439839.0;;false
-BK-35969;Svit;Lyx 2
-150 000 kr/pers;2026-03-14;null;null;null;2026-03-28;8.23479328E8;;false
-BK-27251;Economy;Lyx 3
-200 000 kr/pers;2026-03-14;null;null;null;2026-03-28;2.9382983E7;;false
-BK-80903;Economy;Lyx 3
-200 000 kr/pers;2026-03-14;null;null;null;2026-03-28;3.947938274E9;;false
-BK-14193;Economy;Lyx 3
-200 000 kr/pers;2026-03-14;null;null;null;2026-03-21;934893.0;;false
-BK-16437;Economy;Budget 3
-54 000 kr/pers
-;2026-03-06;null;null;null;2026-03-28;4398439.0;;false
-BK-47695;Economy;Lyx 3
-200 000 kr/pers;2026-03-14;null;null;null;2026-03-22;8349232.0;;false
+BK-13304;SpaceSide;Lyx 3;2026-03-13;null;null;null;2026-03-26;0.0;;false
+BK-88468;Sömnkapsel;null;2026-03-13;null;null;null;2026-03-25;0.0;;false
