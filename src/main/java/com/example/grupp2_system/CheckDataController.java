@@ -77,10 +77,6 @@ public class CheckDataController {
                 .append(booking.getTheatreTicket())
                 .append("\n\n");
 
-        summary.append("=== PÅ MARS ===\n");
-        summary.append("Hotell: ")
-                .append(booking.getHotelChoice())
-                .append("\n\n");
 
         summary.append("BETALKORT\n");
         summary.append(booking.getCardAmount())

@@ -21,3 +21,9 @@ BK-76672;Sömnkapsel;null;2026-03-14;null;null;null;2029-03-27;0.0;;false
 BK-13304;SpaceSide;Lyx 3;2026-03-13;null;null;null;2026-03-26;0.0;;false
 BK-88468;Sömnkapsel;null;2026-03-13;null;null;null;2026-03-25;0.0;;false
 BK-12345;CUST-001;Spaceside;Mellan 2;MAY;2045;Olympus Mons Resort;Spaceside;Lyx 1;JUNE;2045;20000.0;true;2;1;0;1;0;2
+BK-97319;CustomerID-84537;Svit;Mellan 2
+90 000 kr/pers;AUGUST;2028;RadioButton@8db220e[styleClass=radio-button]'Dubbelrum';Svit;Mellan 3
+100 000 kr/pers;null;null;2.938742983E9;true;0;0;0;0;0;0
+BK-89395;CustomerID-21467;Svit;Lyx 2
+150 000 kr/pers;SEPTEMBER;2029;RadioButton@5dba9d12[styleClass=radio-button]'Dubbelrum';Svit;Mellan 2
+90 000 kr/pers;null;null;3.8473847E7;true;0;0;0;0;0;0

@@ -39,32 +39,87 @@ public class SearchBookingController {
 
     private void displayBooking(Booking booking) {
 
-        String info = "Booking ID: " + booking.getBookingId() + "\n\n" +
+        StringBuilder info = new StringBuilder();
 
-                "Trip There:\n" +
-                "  Cabin: " + booking.getCabinThere() + "\n" +
-                "  Food: " + booking.getFoodThere() + "\n" +
-                "  Year: " + booking.getYearThere() + "\n" +
-                "  Month: " + booking.getMonthThere() + "\n" +
-                "  Movie tickets: " + booking.getMovieTicket() + "\n" +
-                "  Theatre tickets: " + booking.getTheatreTicket() + "\n" +
-                "  Concert tickets: " + booking.getConcertTicket() + "\n" +
+        info.append("Bokningsnummer: ")
+                .append(booking.getBookingId())
+                .append("\n");
 
-                "Hotel: " + booking.getHotelChoice() + "\n\n" +
-                "Card Amount: " + booking.getCardAmount() + " kr\n" +
-                "Travel Insurance: " +
-                (booking.hasTravelInsurance() ? "Yes" : "No") +
+        info.append("Kundnummer: ")
+                .append(booking.getCustomerId())
+                .append("\n\n");
 
-                "Trip Home:\n" +
-                "  Cabin: " + booking.getCabinHome() + "\n" +
-                "  Food: " + booking.getFoodHome() + "\n" +
-                "  Year: " + booking.getYearHome() + "\n" +
-                "  Month: " + booking.getMonthHome() + "\n" +
-                "  Movie tickets: " + booking.getHomeMovieTickets() + "\n" +
-                "  Theatre tickets: " + booking.getHomeTheatreTickets() + "\n" +
-                "  Concert tickets: " + booking.getHomeConcertTickets() + "\n";
+        info.append("=== RESA TILL MARS ===\n");
+        info.append("Avresa: ")
+                .append(booking.getMonthThere())
+                .append(" ")
+                .append(booking.getYearThere())
+                .append("\n");
 
-        resultArea.setText(info);
+        info.append("Kabin: ")
+                .append(booking.getCabinThere())
+                .append("\n");
+
+        info.append("Matval: ")
+                .append(booking.getFoodThere())
+                .append("\n");
+
+        info.append("Film biljetter: ")
+                .append(booking.getMovieTicket())
+                .append("\n");
+
+        info.append("Konsert biljetter: ")
+                .append(booking.getConcertTicket())
+                .append("\n");
+
+        info.append("Teater biljetter: ")
+                .append(booking.getTheatreTicket())
+                .append("\n\n");
+
+        info.append("=== PÅ MARS ===\n");
+        info.append("Hotell: ")
+                .append(booking.getHotelChoice())
+                .append("\n\n");
+
+
+
+
+        info.append("BETALKORT\n");
+        info.append(booking.getCardAmount())
+                .append(" kr\n\n");
+
+        info.append("RESEFÖRSÄKRING\n");
+        info.append(booking.hasTravelInsurance() ? "Ja" : "Nej");
+
+        info.append("\n\n=== RESA HEM FRÅN MARS ===\n");
+        info.append("Hemresa: ")
+                .append(booking.getMonthHome())
+                .append(" ")
+                .append(booking.getYearHome())
+                .append("\n");
+
+        info.append("Kabin: ")
+                .append(booking.getCabinHome())
+                .append("\n");
+
+        info.append("Matval: ")
+                .append(booking.getFoodHome())
+                .append("\n");
+
+        info.append("Film biljetter: ")
+                .append(booking.getHomeMovieTickets())
+                .append("\n");
+
+        info.append("Konsert biljetter: ")
+                .append(booking.getHomeConcertTickets())
+                .append("\n");
+
+        info.append("Teater biljetter: ")
+                .append(booking.getHomeTheatreTickets())
+                .append("\n\n");
+
+
+        resultArea.setText(info.toString());
     }
 
     @FXML
