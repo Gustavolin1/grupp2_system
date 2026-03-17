@@ -50,7 +50,8 @@ public class MainMenuController {
         if (booking.getCabinThere() != null &&
                 booking.getFoodThere() != null &&
                 booking.getMonthThere() != null &&
-                booking.getYearThere() != null) {
+                booking.getYearThere() != null
+                || "Sömnkapsel".equals(booking.getCabinHome()) ){
 
             btnThere.setStyle("-fx-text-fill: gray;");
             toMarsCheck = true;
@@ -62,7 +63,8 @@ public class MainMenuController {
         if (booking.getCabinHome()!=null &&
                 booking.getFoodHome()!= null &&
                 booking.getMonthHome() != null&&
-                booking.getYearHome() != null) {
+                booking.getYearHome() != null
+        || "Sömnkapsel".equals(booking.getCabinHome()) ) {
 
             btnBack.setStyle("-fx-text-fill: gray;");
             backCheck = true;
