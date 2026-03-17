@@ -37,6 +37,7 @@ public class HyttAlternativTillbakaController {
     @FXML
     private ToggleGroup grpOption;
 
+
     @FXML
     public void next(ActionEvent event) throws IOException
     {
