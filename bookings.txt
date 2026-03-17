@@ -22,3 +22,4 @@ BK-13304;SpaceSide;Lyx 3;2026-03-13;null;null;null;2026-03-26;0.0;;false
 BK-88468;Sömnkapsel;null;2026-03-13;null;null;null;2026-03-25;0.0;;false
 BK-73216;CustomerID-85594;Sömnkapsel;null;MAY;2028;RadioButton@da4e66a[styleClass=radio-button]'Enkelrum';Sömnkapsel;null;null;null;40000.0;true;0;0;0;0;0;0
 
+
