@@ -22,13 +22,12 @@ public class SearchBookingController {
     private void handleSearch() {
 
         String bookingId = bookingIdField.getText();
-
-        if (bookingId == null || bookingId.isEmpty()) {
+        if (bookingId == null || bookingId.trim().isEmpty()) {
             resultArea.setText("Please enter a Booking ID.");
             return;
         }
 
-        Booking booking = BookingManager.findBookingById(bookingId);
+        Booking booking = BookingManager.findBookingById(bookingId.trim());
 
         if (booking == null) {
             resultArea.setText("No booking found with ID: " + bookingId);
@@ -39,31 +38,84 @@ public class SearchBookingController {
 
     private void displayBooking(Booking booking) {
 
-        // Format events nicely
-        String eventsText;
+        StringBuilder info = new StringBuilder();
+
+        info.append("Bokningsnummer: ")
+                .append(booking.getBookingId())
+                .append("\n");
+
+        info.append("Kundnummer: ")
+                .append(booking.getCustomerId())
+                .append("\n\n");
+
+        info.append("=== RESA TILL MARS ===\n");
+        info.append("Avresa: ")
+                .append(booking.getMonthThere())
+                .append(" ")
+                .append(booking.getYearThere())
+                .append("\n");
+
+        info.append("Kabin: ")
+                .append(booking.getCabinThere())
+                .append("\n");
+
+        info.append("Matval: ")
+                .append(booking.getFoodThere())
+                .append("\n");
+
+        info.append("Film biljetter: ")
+                .append(booking.getMovieTicket())
+                .append("\n");
+
+        info.append("Konsert biljetter: ")
+                .append(booking.getConcertTicket())
+                .append("\n");
+
+        info.append("Teater biljetter: ")
+                .append(booking.getTheatreTicket())
+                .append("\n\n");
+
+        info.append("=== PÅ MARS ===\n");
+        info.append("Hotell: ")
+                .append(booking.getHotelChoice())
+                .append("\n");
+
+        info.append("BETALKORT: ");
+        info.append(booking.getCardAmount())
+                .append(" kr\n");
+
+        info.append("RESEFÖRSÄKRING: ");
+        info.append(booking.hasTravelInsurance() ? "Ja" : "Nej");
+
+        info.append("\n\n=== RESA HEM FRÅN MARS ===\n");
+        info.append("Hemresa: ")
+                .append(booking.getMonthHome())
+                .append(" ")
+                .append(booking.getYearHome())
+                .append("\n");
+
+        info.append("Kabin: ")
+                .append(booking.getCabinHome())
+                .append("\n");
+
+        info.append("Matval: ")
+                .append(booking.getFoodHome())
+                .append("\n");
+
+        info.append("Film biljetter: ")
+                .append(booking.getHomeMovieTickets())
+                .append("\n");
+
+        info.append("Konsert biljetter: ")
+                .append(booking.getHomeConcertTickets())
+                .append("\n");
+
+        info.append("Teater biljetter: ")
+                .append(booking.getHomeTheatreTickets())
+                .append("\n\n");
 
 
-        String info = "Booking ID: " + booking.getBookingId() + "\n\n" +
-
-                "Trip There:\n" +
-                "  Cabin: " + booking.getCabinThere() + "\n" +
-                "  Food: " + booking.getFoodThere() + "\n" +
-                "  Year. " + booking.getYearThere() + "\n\n" +
-                "  Month: " + booking.getMonthThere() + "\n\n" +
-
-                "Hotel: " + booking.getHotelChoice() + "\n\n" +
-
-                "Trip Home:\n" +
-                "  Cabin: " + booking.getCabinHome() + "\n" +
-                "  Food: " + booking.getFoodHome() + "\n" +
-                "Events:\n" +
-
-                "Card Amount: " + booking.getCardAmount() + " kr\n" +
-
-                "Travel Insurance: " +
-                (booking.hasTravelInsurance() ? "Yes" : "No");
-
-        resultArea.setText(info);
+        resultArea.setText(info.toString());
     }
 
     @FXML

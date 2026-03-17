@@ -57,14 +57,8 @@ public class CheckDataController {
 
         summary.append("Matval: ")
                 .append(booking.getFoodThere())
-                .append("\n\n");
+                .append("\n");
 
-        summary.append("=== PÅ MARS ===\n");
-        summary.append("Hotell: ")
-                .append(booking.getHotelChoice())
-                .append("\n\n");
-
-        summary.append("EVENEMANG\n");
         summary.append("Film biljetter: ")
                 .append(booking.getMovieTicket())
                 .append("\n");
@@ -80,13 +74,14 @@ public class CheckDataController {
         summary.append("=== PÅ MARS ===\n");
         summary.append("Hotell: ")
                 .append(booking.getHotelChoice())
-                .append("\n\n");
+                .append("\n");
 
-        summary.append("BETALKORT\n");
+
+        summary.append("BETALKORT: ");
         summary.append(booking.getCardAmount())
-                .append(" kr\n\n");
+                .append(" kr\n");
 
-        summary.append("RESEFÖRSÄKRING\n");
+        summary.append("RESEFÖRSÄKRING: ");
         summary.append(booking.hasTravelInsurance() ? "Ja" : "Nej");
 
         summary.append("\n\n=== RESA HEM FRÅN MARS ===\n");
@@ -102,7 +97,7 @@ public class CheckDataController {
 
         summary.append("Matval: ")
                 .append(booking.getFoodHome())
-                .append("\n\n");
+                .append("\n");
 
         summary.append("Film biljetter: ")
                 .append(booking.getHomeMovieTickets())
@@ -113,13 +108,25 @@ public class CheckDataController {
                 .append("\n");
 
         summary.append("Teater biljetter: ")
-                .append(booking.getHomeTheatreTickets())
-                .append("\n\n");
+                .append(booking.getHomeTheatreTickets());
+
 
         StringBuilder customer = new StringBuilder();
 
-        summary.append("Namn: ")
+        customer.append("Namn: ")
                 .append(customer1.getName())
+                .append("\n");
+
+        customer.append("Personnummer: ")
+                .append(customer1.getPersonnummer())
+                .append("\n");
+
+        customer.append("Telefonnummer: ")
+                .append(customer1.getPhoneNumber())
+                .append("\n");
+
+        customer.append("Email: ")
+                .append(customer1.getEmail())
                 .append("\n");
 
 

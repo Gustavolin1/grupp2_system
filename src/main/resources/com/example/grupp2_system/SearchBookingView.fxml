@@ -27,19 +27,19 @@
         </Circle>
 
         <!-- Booking ID Label -->
-        <Label layoutX="162.0" layoutY="38.0" text="Skriv in bokningsnummer:" textFill="WHITE">
+        <Label layoutX="87.0" layoutY="40.0" text="Skriv in bokningsnummer:" textFill="WHITE">
             <font>
-                <Font size="20.0" />
+                <Font size="22.0" />
             </font>
         </Label>
 
         <!-- TextField -->
-        <TextField fx:id="bookingIdField" layoutX="400.0" layoutY="33.0" prefHeight="40.0" prefWidth="280.0" style="-fx-background-radius: 20;" />
+        <TextField fx:id="bookingIdField" layoutX="347.0" layoutY="36.0" prefHeight="40.0" prefWidth="235.0" style="-fx-background-radius: 20;" />
 
         <!-- Search Button -->
-        <Button fx:id="searchButton" layoutX="546.0" layoutY="80.0" onAction="#handleSearch" prefHeight="59.0" prefWidth="124.0" style="-fx-background-color: #5c96c6; -fx-background-radius: 100;" text="SÖK" textFill="WHITE">
+        <Button fx:id="searchButton" layoutX="604.0" layoutY="34.0" onAction="#handleSearch" prefHeight="30.0" prefWidth="111.0" style="-fx-background-color: #5c96c6; -fx-background-radius: 100;" text="SÖK" textFill="WHITE">
             <font>
-                <Font size="28.0" />
+                <Font size="20.0" />
             </font>
             <effect>
                 <InnerShadow>
@@ -51,7 +51,7 @@
         </Button>
 
         <!-- Result Area -->
-        <TextArea fx:id="resultArea" editable="false" layoutX="170.0" layoutY="151.0" prefHeight="403.0" prefWidth="317.0" style="-fx-background-radius: 20;" wrapText="true" />
+        <TextArea fx:id="resultArea" editable="false" layoutX="170.0" layoutY="97.0" prefHeight="446.0" prefWidth="317.0" style="-fx-background-radius: 20;" wrapText="true" />
 
         <!-- Decorative Stars (a few for consistency) -->
         <Circle fill="WHITE" layoutX="120.0" layoutY="90.0" radius="3.0">
