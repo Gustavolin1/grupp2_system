@@ -1,0 +1,40 @@
+name: Build App
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: corretto
+          java-version: 21
+
+      - name: Build project
+        run: mvn clean package
+
+      - name: Build DMG
+        run: |
+          jpackage \
+          --input target \
+          --dest builds \
+          --name MarsTravelsBooking \
+          --app-version 1.0.0 \
+          --main-jar grupp2_system.jar \
+          --main-class com.example.grupp2_system.App.Launcher \
+          --type dmg
+
+      - name: Upload DMG
+        uses: actions/upload-artifact@v4
+        with:
+          name: mac-build
+          path: builds/*.dmg
