@@ -78,7 +78,7 @@ public class MatbokningFrånController implements Initializable {
 
         booking.setFoodHome(selectedFood.getText());
 
-        SceneManager.switchScene("EventAlternativTillbaka.fxml");
+        SceneManager.switchScene("/com/example/grupp2_system/EventAlternativTillbaka.fxml");
 
     }
 }

@@ -61,7 +61,7 @@ public class HyttAlternativTillbakaController {
             SceneManager.switchScene("CheckData.fxml");
         }
         else {
-            SceneManager.switchScene("BokaMatpaket.fxml");
+            SceneManager.switchScene("MatAlternativTillbaka.fxml");
         }
 
     }
