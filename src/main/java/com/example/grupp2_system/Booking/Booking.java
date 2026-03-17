@@ -70,7 +70,10 @@ public class Booking {
                    boolean travelInsurance,
                    int movieTicket,
                    int concertTicket,
-                   int theatreTicket) {
+                   int theatreTicket,
+                   int homeMovieTickets,
+                   int homeConcertTickets,
+                   int homeTheatreTickets) {
 
         this.bookingId = bookingId;
         this.customerId = customerId;
@@ -88,6 +91,9 @@ public class Booking {
         this.movieTicket = movieTicket;
         this.concertTicket = concertTicket;
         this.theatreTicket = theatreTicket;
+        this.homeMovieTickets = homeMovieTickets;
+        this.homeConcertTickets = homeConcertTickets;
+        this.homeTheatreTickets = homeTheatreTickets;
     }
 
     // Convert object to one line for text file
@@ -107,7 +113,10 @@ public class Booking {
                 travelInsurance + ";" +
                 movieTicket + ";" +
                 concertTicket + ";" +
-                theatreTicket;
+                theatreTicket + ";" +
+                homeMovieTickets + ";" +
+                homeConcertTickets + ";" +
+                homeTheatreTickets;
     }
 
     // Getters
