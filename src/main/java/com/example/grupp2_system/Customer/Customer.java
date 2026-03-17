@@ -57,4 +57,12 @@ public class Customer {
         int number = 10000 + random.nextInt(90000);
         return "CustomerID-" + number;
     }
+
+    public String toFileString() {
+        return customerID + ";" +
+                name + ";" +
+                phoneNumber + ";" +
+                personnummer + ";" +
+                email;
+    }
 }

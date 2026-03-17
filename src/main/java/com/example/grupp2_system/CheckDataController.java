@@ -2,7 +2,6 @@ package com.example.grupp2_system;
 
 import com.example.grupp2_system.Booking.Booking;
 import com.example.grupp2_system.Booking.BookingManager;
-import com.example.grupp2_system.Customer.Customer;
 import com.example.grupp2_system.PriceCalculator;
 import com.example.grupp2_system.SceneManager.SceneManager;
 import javafx.event.ActionEvent;
@@ -22,11 +21,14 @@ public class CheckDataController {
     @FXML private TextArea txtCustomer;
 
     private Booking booking;
+    private Customer customer;
 
     @FXML
     public void initialize() {
 
         booking = SceneManager.getCurrentBooking();
+        customer = SceneManager.getCurrentCustomer();
+
 
         if (booking == null) return;
 
@@ -53,8 +55,14 @@ public class CheckDataController {
 
         summary.append("Matval: ")
                 .append(booking.getFoodThere())
-                .append("\n");
+                .append("\n\n");
 
+        summary.append("=== PÅ MARS ===\n");
+        summary.append("Hotell: ")
+                .append(booking.getHotelChoice())
+                .append("\n\n");
+
+        summary.append("EVENEMANG\n");
         summary.append("Film biljetter: ")
                 .append(booking.getMovieTicket())
                 .append("\n");
@@ -137,6 +145,7 @@ public class CheckDataController {
         }
 
         BookingManager.saveBooking(booking);
+        CustomerManager.saveCustomer(customer);
 
         showInfo("Din bokning har sparats!");
 

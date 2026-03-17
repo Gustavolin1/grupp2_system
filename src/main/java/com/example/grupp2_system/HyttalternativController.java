@@ -58,7 +58,7 @@ public class HyttalternativController {
 
         if (selectedCabin == radbtnSleep)
         {
-            SceneManager.switchScene("CheckData.fxml");
+            SceneManager.switchScene("MainMenu.fxml");
         }
         else {
             SceneManager.switchScene("BokaMatpaket.fxml");
