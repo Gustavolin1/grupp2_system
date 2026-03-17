@@ -8,10 +8,18 @@ import java.util.List;
 
 public class BookingManager {
 
+    private static final String BASE_PATH =
+            System.getProperty("user.home") + "/Desktop/MarsTravels/";
+
     private static final String FILE_NAME =
-            System.getProperty("user.home") + "/bookings.txt";
+            BASE_PATH + "bookings.txt";
 
     public static void saveBooking(Booking booking) {
+        File dir = new File(BASE_PATH);
+
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {
             writer.write(booking.toFileString());
             writer.newLine();
@@ -23,6 +31,11 @@ public class BookingManager {
 
     public static List<Booking> loadBookings() {
         List<Booking> bookings = new ArrayList<>();
+        File dir = new File(BASE_PATH);
+
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
 
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
             String line;

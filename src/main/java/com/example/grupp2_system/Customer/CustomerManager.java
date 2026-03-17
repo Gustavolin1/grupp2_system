@@ -7,10 +7,18 @@ import java.io.*;
 public class CustomerManager {
 
 
+    private static final String BASE_PATH =
+            System.getProperty("user.home") + "/Desktop/MarsTravels/";
+
     private static final String FILE_NAME =
-            System.getProperty("user.home") + "/customer.txt";
+            BASE_PATH + "customer.txt";
 
     public static void saveCustomer(Customer customer) {
+        File dir = new File(BASE_PATH);
+
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {
             writer.write(customer.toFileString());
             writer.newLine();
