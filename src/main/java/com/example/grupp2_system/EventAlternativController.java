@@ -52,9 +52,9 @@ public class EventAlternativController {
     public void setBtnNext(ActionEvent event) throws IOException
     {
         Booking booking = SceneManager.getCurrentBooking();
-        booking.setHomeConcertTickets(spKon.getValue());
-        booking.setHomeMovieTickets(spMov.getValue());
-        booking.setHomeTheatreTickets(spTea.getValue());
+        booking.setConcertTicket(spKon.getValue());
+        booking.setConcertTicket(spMov.getValue());
+        booking.setTheatreTicket(spTea.getValue());
         SceneManager.switchScene("MainMenu.fxml");
 
     }
