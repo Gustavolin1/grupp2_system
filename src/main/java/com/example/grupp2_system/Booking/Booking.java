@@ -99,17 +99,17 @@ public class Booking {
     // Convert object to one line for text file
     public String toFileString() {
         return bookingId + ";" +
-                customerId + ";" +
-                cabinThere + ";" +
-                foodThere + ";" +
-                monthThere + ";" +
-                yearThere + ";" +
-                hotelChoice + ";" +
-                cabinHome + ";" +
-                foodHome + ";" +
-                monthHome + ";" +
-                yearHome + ";" +
-                cardAmount + ";" +
+                safe(customerId) + ";" +
+                safe(cabinThere) + ";" +
+                safe(foodThere) + ";" +
+                safe(monthThere) + ";" +
+                safe(yearThere) + ";" +
+                safe(hotelChoice) + ";" +
+                safe(cabinHome) + ";" +
+                safe(foodHome) + ";" +
+                safe(monthHome) + ";" +
+                safe(yearHome) + ";" +
+                String.format("%.0f", cardAmount) + ";" +
                 travelInsurance + ";" +
                 movieTicket + ";" +
                 concertTicket + ";" +
@@ -117,6 +117,10 @@ public class Booking {
                 homeMovieTickets + ";" +
                 homeConcertTickets + ";" +
                 homeTheatreTickets;
+    }
+
+    private String safe(Object value) {
+        return value == null ? "" : value.toString();
     }
 
     // Getters

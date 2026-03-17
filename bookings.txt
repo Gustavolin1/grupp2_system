@@ -1,36 +1,10 @@
-BK-60391;Svit;Mellan 2;2026-03-11;null;null;null;2026-03-20;0.0;false
-BK-32308;Svit;Budget 2;2026-03-04;null;null;null;2026-03-06;0.0;false
-BK-63020;Svit;Mellan  1;2026-03-04;null;null;null;2026-03-11;0.0;false
-BK-16120;Svit;Mellan  1;2026-03-03;null;null;null;2026-03-06;0.0;false
-BK-58700;Svit;Lyx 3;2026-03-04;null;null;null;2026-03-05;0.0;false
-BK-85803;Svit;Budget 1;2026-03-04;null;null;null;2026-03-05;0.0;false
-BK-81855;Svit;Mellan 2;2026-03-04;null;null;null;2026-03-05;0.0;Wicked 3,Madonna,Mandalorian & Groggu,Avengers;false
-BK-83613;Svit;Mellan 2;2026-03-12;null;null;null;2026-04-15;0.0;Wicked 3,Madonna,John Wick 4;false
-BK-47163;Inside;Budget 2;2026-03-05;null;null;null;2026-03-06;0.0;Madonna,Cats 7,Mandalorian & Groggu;false
-BK-54344;Svit;Mellan 2;2026-03-19;null;null;null;2029-03-08;0.0;Wicked 3,Mandalorian & Groggu;false
-BK-58583;Svit;Budget 2;2026-03-05;null;null;null;2026-03-12;0.0;Cats 7,Mandalorian & Groggu;false
-BK-66150;Economy;Lyx 3;2026-03-13;null;null;null;2028-03-16;0.0;Zara Larsson;false
-BK-52790;Sömnkapsel;null;2026-03-20;null;null;null;2026-03-23;0.0;;false
-BK-82766;Svit;Mellan 2;2026-03-26;null;null;null;2026-03-27;0.0;Avengers 6;false
-BK-61766;Svit;Budget 1;2027-03-19;null;null;null;2028-03-24;0.0;Barbie;false
-BK-85165;Svit;Mellan 3;2026-03-12;null;null;null;2030-03-20;0.0;;false
-BK-90625;Economy;Lyx 1;2026-03-14;null;null;null;2026-03-20;0.0;Star Wars;false
-BK-69590;Inside;Mellan 3;2026-03-09;null;null;null;2029-03-22;0.0;;false
-BK-41265;Svit;Budget 3;2026-03-20;null;null;null;2026-03-31;0.0;Aliens live Action;false
-BK-76672;Sömnkapsel;null;2026-03-14;null;null;null;2029-03-27;0.0;;false
-BK-13304;SpaceSide;Lyx 3;2026-03-13;null;null;null;2026-03-26;0.0;;false
-BK-88468;Sömnkapsel;null;2026-03-13;null;null;null;2026-03-25;0.0;;false
-BK-12345;CUST-001;Spaceside;Mellan 2;MAY;2045;Olympus Mons Resort;Spaceside;Lyx 1;JUNE;2045;20000.0;true;2;1;0;1;0;2
-BK-97319;CustomerID-84537;Svit;Mellan 2
-90 000 kr/pers;AUGUST;2028;RadioButton@8db220e[styleClass=radio-button]'Dubbelrum';Svit;Mellan 3
-100 000 kr/pers;null;null;2.938742983E9;true;0;0;0;0;0;0
-BK-89395;CustomerID-21467;Svit;Lyx 2
-150 000 kr/pers;SEPTEMBER;2029;RadioButton@5dba9d12[styleClass=radio-button]'Dubbelrum';Svit;Mellan 2
-90 000 kr/pers;null;null;3.8473847E7;true;0;0;0;0;0;0
-BK-71059;CustomerID-62784;Economy;Mellan 2;JULY;2029;RadioButton@5fa9c3aa[styleClass=radio-button]'Svit';Svit;Lyx 3;null;null;3947938.0;true;0;0;0;0;0;0
-BK-89995;CustomerID-40438;Sömnkapsel;null;JUNE;2028;RadioButton@36beaff[styleClass=radio-button]'Dubbel Lyx';Sömnkapsel;null;null;null;786764.0;false;0;0;0;0;0;0
-BK-77758;CustomerID-35966;Economy;Mellan 3;AUGUST;2028;RadioButton@2ae7aadc[styleClass=radio-button]'Dubbel Lyx';Economy;Lyx 2;null;null;394839.0;true;0;5;4;0;2;0
-BK-31275;CustomerID-35494;Sömnkapsel;null;AUGUST;2030;RadioButton@36beaff[styleClass=radio-button]'Polar Wielders';Inside;Lyx 3;null;null;40000.0;true;0;0;0;0;0;0
-BK-90251;CustomerID-41968;Economy;Lyx 3;JUNE;2029;RadioButton@6779102d[styleClass=radio-button]'Svit';Economy;Lyx 3;null;null;1000000.0;true;0;4;2;2;0;0
-BK-19075;CustomerID-64717;Economy;Lyx 2;SEPTEMBER;2030;RadioButton@65fe0e0c[styleClass=radio-button]'Polar Wielders';Inside;Budget 3;null;null;40000.0;false;0;0;1;0;0;0
-BK-34747;CustomerID-33504;Inside;Budget 2;JANUARY;2026;RadioButton@1c01e146[styleClass=radio-button]'Polar Wielders';Economy;Lyx 3;null;null;40000.0;true;0;6;4;0;0;0
+BK-10001;CustomerID-1001;Economy;Budget 1;JANUARY;2027;Olympus Mons Resort;Inside;Mellan 2;FEBRUARY;2027;50000.0;true;1;0;0;0;0;0
+BK-10002;CustomerID-1002;Svit;Lyx 1;MARCH;2028;Valles Marineris Hotel;Svit;Lyx 2;APRIL;2028;120000.0;false;2;1;0;1;0;0
+BK-10003;CustomerID-1003;Spaceside;Mellan 3;JUNE;2026;Olympus Mons Resort;Inside;Budget 3;JULY;2026;75000.0;true;0;2;1;0;1;0
+BK-10004;CustomerID-1004;Sömnkapsel;Lyx 2;MAY;2029;Tharsis Palace;Spaceside;Lyx 3;JUNE;2029;200000.0;true;3;0;0;2;1;1
+BK-10005;CustomerID-1005;Inside;Mellan 1;AUGUST;2030;Valles Marineris Hotel;Economy;Budget 2;SEPTEMBER;2030;60000.0;false;0;0;2;0;0;1
+BK-10006;CustomerID-1006;Svit;Lyx 3;NOVEMBER;2031;Olympus Mons Resort;Svit;Lyx 1;DECEMBER;2031;150000.0;true;1;1;1;1;1;1
+BK-10007;CustomerID-1007;Economy;Budget 2;FEBRUARY;2025;Tharsis Palace;Sömnkapsel;Mellan 3;MARCH;2025;45000.0;false;0;0;0;0;0;0
+BK-10008;CustomerID-1008;Spaceside;Mellan 2;APRIL;2026;Olympus Mons Resort;Inside;Budget 1;MAY;2026;80000.0;true;2;2;0;0;1;0
+BK-10009;CustomerID-1009;Sömnkapsel;Lyx 1;JULY;2027;Valles Marineris Hotel;Spaceside;Lyx 2;AUGUST;2027;220000.0;false;1;0;2;1;0;1
+BK-10010;CustomerID-1010;Inside;Budget 3;SEPTEMBER;2028;Olympus Mons Resort;Economy;Mellan 1;OCTOBER;2028;70000.0;true;0;1;0;0;1;1

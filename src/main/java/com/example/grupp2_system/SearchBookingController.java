@@ -22,13 +22,12 @@ public class SearchBookingController {
     private void handleSearch() {
 
         String bookingId = bookingIdField.getText();
-
-        if (bookingId == null || bookingId.isEmpty()) {
+        if (bookingId == null || bookingId.trim().isEmpty()) {
             resultArea.setText("Please enter a Booking ID.");
             return;
         }
 
-        Booking booking = BookingManager.findBookingById(bookingId);
+        Booking booking = BookingManager.findBookingById(bookingId.trim());
 
         if (booking == null) {
             resultArea.setText("No booking found with ID: " + bookingId);
@@ -79,16 +78,13 @@ public class SearchBookingController {
         info.append("=== PÅ MARS ===\n");
         info.append("Hotell: ")
                 .append(booking.getHotelChoice())
-                .append("\n\n");
+                .append("\n");
 
-
-
-
-        info.append("BETALKORT\n");
+        info.append("BETALKORT: ");
         info.append(booking.getCardAmount())
-                .append(" kr\n\n");
+                .append(" kr\n");
 
-        info.append("RESEFÖRSÄKRING\n");
+        info.append("RESEFÖRSÄKRING: ");
         info.append(booking.hasTravelInsurance() ? "Ja" : "Nej");
 
         info.append("\n\n=== RESA HEM FRÅN MARS ===\n");
