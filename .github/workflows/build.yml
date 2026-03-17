@@ -19,13 +19,14 @@ jobs:
           distribution: corretto
           java-version: 21
 
-      - name: Build project
-        run: mvn clean package
+      # ❌ TA BORT MAVEN
+      # - name: Build project
+      #   run: mvn clean package
 
       - name: Build DMG
         run: |
           jpackage \
-          --input target \
+          --input out/artifacts/grupp2_system_jar \
           --dest builds \
           --name MarsTravelsBooking \
           --app-version 1.0.0 \
