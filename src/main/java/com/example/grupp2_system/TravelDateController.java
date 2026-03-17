@@ -140,4 +140,9 @@ public class TravelDateController {
             SceneManager.switchScene("StartPage.fxml");
         }
     }
+
+    @FXML
+    public void info(ActionEvent event) throws IOException {
+        SceneManager.switchScene("Hyttinformation.fxml");
+    }
 }

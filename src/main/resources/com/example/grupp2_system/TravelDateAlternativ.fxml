@@ -32,5 +32,10 @@
             <Font size="25.0" />
          </font>
       </Label>
+      <Button fx:id="btninfo" layoutX="334.0" layoutY="479.0" mnemonicParsing="false" onAction="#info" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #2685b9;" text="Information" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
