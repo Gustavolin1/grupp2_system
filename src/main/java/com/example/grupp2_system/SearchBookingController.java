@@ -44,11 +44,11 @@ public class SearchBookingController {
                 "Trip There:\n" +
                 "  Cabin: " + booking.getCabinThere() + "\n" +
                 "  Food: " + booking.getFoodThere() + "\n" +
-                "  Year. " + booking.getYearThere() + "\n\n" +
-                "  Month: " + booking.getMonthThere() + "\n\n" +
-                "  Movie tickets: " + booking.getMovieTicket() + "\n\n" +
-                "  Theatre tickets: " + booking.getTheatreTicket() + "\n\n" +
-                "  Concert tickets: " + booking.getConcertTicket() + "\n\n" +
+                "  Year: " + booking.getYearThere() + "\n" +
+                "  Month: " + booking.getMonthThere() + "\n" +
+                "  Movie tickets: " + booking.getMovieTicket() + "\n" +
+                "  Theatre tickets: " + booking.getTheatreTicket() + "\n" +
+                "  Concert tickets: " + booking.getConcertTicket() + "\n" +
 
                 "Hotel: " + booking.getHotelChoice() + "\n\n" +
                 "Card Amount: " + booking.getCardAmount() + " kr\n" +
@@ -58,11 +58,11 @@ public class SearchBookingController {
                 "Trip Home:\n" +
                 "  Cabin: " + booking.getCabinHome() + "\n" +
                 "  Food: " + booking.getFoodHome() + "\n" +
-                "  Year. " + booking.getYearHome() + "\n\n" +
-                "  Month: " + booking.getMonthHome() + "\n\n" +
-                "  Movie tickets: " + booking.getHomeMovieTickets() + "\n\n" +
-                "  Theatre tickets: " + booking.getHomeTheatreTickets() + "\n\n" +
-                "  Concert tickets: " + booking.getHomeConcertTickets() + "\n\n";
+                "  Year: " + booking.getYearHome() + "\n" +
+                "  Month: " + booking.getMonthHome() + "\n" +
+                "  Movie tickets: " + booking.getHomeMovieTickets() + "\n" +
+                "  Theatre tickets: " + booking.getHomeTheatreTickets() + "\n" +
+                "  Concert tickets: " + booking.getHomeConcertTickets() + "\n";
 
         resultArea.setText(info);
     }
