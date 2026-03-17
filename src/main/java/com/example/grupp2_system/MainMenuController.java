@@ -51,7 +51,7 @@ public class MainMenuController {
                 booking.getFoodThere() != null &&
                 booking.getMonthThere() != null &&
                 booking.getYearThere() != null
-                || "Sömnkapsel".equals(booking.getCabinHome()) ){
+                || "Sömnkapsel".equals(booking.getCabinThere()) ){
 
             btnThere.setStyle("-fx-text-fill: gray;");
             toMarsCheck = true;
