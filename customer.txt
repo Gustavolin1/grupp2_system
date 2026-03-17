@@ -1,3 +1,9 @@
 CustomerID-84537;asfd dsafd;398742983784;10001010-1010;osakjfds@gmail.com
 CustomerID-21467;jfd aslkjfd;3948394;10001010-1010;sd@kds.se
 CustomerID-62784;klfjd dfslkfjd;83974293;10001010-1212;kj@dlsakf.se
+CustomerID-40438;hjg;76546435354;12001212-2020;jhtkk@njk.se
+CustomerID-35966;test;439839843738;15001243-1233;oidhjsa@hotmail.com
+CustomerID-35494;Anders Grishuvud;829374823;15430505-2134;dkljaf@hotmail.com
+CustomerID-41968;nian nian;92389329;12341111-1111;odsjkfs@dkfjs.com
+CustomerID-64717;jan jansson;388374938;14002039-1232;lkajd@kdjf.com
+CustomerID-33504;dslkfja sdklafj;23878934783784;20290323-2342;dkosjfl@hotmail.com

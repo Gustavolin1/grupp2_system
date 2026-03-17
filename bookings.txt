@@ -28,3 +28,9 @@ BK-89395;CustomerID-21467;Svit;Lyx 2
 150 000 kr/pers;SEPTEMBER;2029;RadioButton@5dba9d12[styleClass=radio-button]'Dubbelrum';Svit;Mellan 2
 90 000 kr/pers;null;null;3.8473847E7;true;0;0;0;0;0;0
 BK-71059;CustomerID-62784;Economy;Mellan 2;JULY;2029;RadioButton@5fa9c3aa[styleClass=radio-button]'Svit';Svit;Lyx 3;null;null;3947938.0;true;0;0;0;0;0;0
+BK-89995;CustomerID-40438;Sömnkapsel;null;JUNE;2028;RadioButton@36beaff[styleClass=radio-button]'Dubbel Lyx';Sömnkapsel;null;null;null;786764.0;false;0;0;0;0;0;0
+BK-77758;CustomerID-35966;Economy;Mellan 3;AUGUST;2028;RadioButton@2ae7aadc[styleClass=radio-button]'Dubbel Lyx';Economy;Lyx 2;null;null;394839.0;true;0;5;4;0;2;0
+BK-31275;CustomerID-35494;Sömnkapsel;null;AUGUST;2030;RadioButton@36beaff[styleClass=radio-button]'Polar Wielders';Inside;Lyx 3;null;null;40000.0;true;0;0;0;0;0;0
+BK-90251;CustomerID-41968;Economy;Lyx 3;JUNE;2029;RadioButton@6779102d[styleClass=radio-button]'Svit';Economy;Lyx 3;null;null;1000000.0;true;0;4;2;2;0;0
+BK-19075;CustomerID-64717;Economy;Lyx 2;SEPTEMBER;2030;RadioButton@65fe0e0c[styleClass=radio-button]'Polar Wielders';Inside;Budget 3;null;null;40000.0;false;0;0;1;0;0;0
+BK-34747;CustomerID-33504;Inside;Budget 2;JANUARY;2026;RadioButton@1c01e146[styleClass=radio-button]'Polar Wielders';Economy;Lyx 3;null;null;40000.0;true;0;6;4;0;0;0
