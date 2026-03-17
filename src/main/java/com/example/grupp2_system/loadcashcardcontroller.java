@@ -13,6 +13,8 @@ import java.io.IOException;
 
 public class loadcashcardcontroller {
 
+    public static boolean customerController = false;
+
     @FXML
     private TextField txtfieldsum;
 
@@ -50,9 +52,10 @@ public class loadcashcardcontroller {
 
         // Save card amount
         booking.setCardAmount(amount);
+        customerController = true;
 
         // Go to next page
-        SceneManager.switchScene("CheckData.fxml"); // change to your next scene
+        SceneManager.switchScene("MainMenu.fxml"); // change to your next scene
     }
 
     @FXML

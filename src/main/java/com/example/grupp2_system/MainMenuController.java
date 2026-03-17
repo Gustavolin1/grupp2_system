@@ -71,7 +71,7 @@ public class MainMenuController {
             btnBack.setStyle("-fx-text-fill: blue;");
         }
 
-        if (CustomerInformationController.customerController == true) {
+        if (loadcashcardcontroller.customerController == true) {
 
             BtnCustomer.setStyle("-fx-text-fill: gray;");
             customerCheck = true;
@@ -93,7 +93,7 @@ public class MainMenuController {
     @FXML
     private void mars(ActionEvent event) throws IOException
     {
-        SceneManager.switchScene("MarsHotell.fxml");
+        SceneManager.switchScene("MarsHotel.fxml");
     }
 
 
@@ -105,6 +105,7 @@ public class MainMenuController {
 
     @FXML
     private void returnTrip(ActionEvent event) throws IOException {
+        SceneManager.switchScene("HyttAlternativTillbakaResa.fxml");
 
     }
 

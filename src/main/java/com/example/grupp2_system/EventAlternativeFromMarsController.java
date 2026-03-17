@@ -4,12 +4,14 @@ import com.example.grupp2_system.Booking.Booking;
 import com.example.grupp2_system.SceneManager.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
 
 import java.io.IOException;
 
-public class EventAlternativController {
-
+public class EventAlternativeFromMarsController {
     @FXML
     private Button btnBack;
 
@@ -51,10 +53,11 @@ public class EventAlternativController {
     public void setBtnNext(ActionEvent event) throws IOException
     {
         Booking booking = SceneManager.getCurrentBooking();
-        booking.setHomeConcertTickets(spKon.getValue());
-        booking.setHomeMovieTickets(spMov.getValue());
-        booking.setHomeTheatreTickets(spTea.getValue());
+        booking.setConcertTicket(spKon.getValue());
+        booking.setMovieTicket(spMov.getValue());
+        booking.setTheatreTicket(spTea.getValue());
         SceneManager.switchScene("MainMenu.fxml");
 
     }
 }
+

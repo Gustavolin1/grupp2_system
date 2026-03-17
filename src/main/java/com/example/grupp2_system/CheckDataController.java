@@ -2,6 +2,8 @@ package com.example.grupp2_system;
 
 import com.example.grupp2_system.Booking.Booking;
 import com.example.grupp2_system.Booking.BookingManager;
+import com.example.grupp2_system.Customer.Customer;
+import com.example.grupp2_system.Customer.CustomerManager;
 import com.example.grupp2_system.PriceCalculator;
 import com.example.grupp2_system.SceneManager.SceneManager;
 import javafx.event.ActionEvent;
@@ -20,11 +22,14 @@ public class CheckDataController {
     @FXML private TextArea txtTotalPrice;
 
     private Booking booking;
+    private Customer customer;
 
     @FXML
     public void initialize() {
 
         booking = SceneManager.getCurrentBooking();
+        customer = SceneManager.getCurrentCustomer();
+
 
         if (booking == null) return;
 
@@ -115,6 +120,7 @@ public class CheckDataController {
         }
 
         BookingManager.saveBooking(booking);
+        CustomerManager.saveCustomer(customer);
 
         showInfo("Din bokning har sparats!");
 
