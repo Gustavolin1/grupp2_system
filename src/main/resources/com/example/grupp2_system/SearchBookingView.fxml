@@ -85,7 +85,7 @@
                 <DropShadow color="WHITE" radius="14" spread="0.8" />
             </effect>
         </Circle>
-      <TextArea fx:id="cumstomerArea" editable="false" layoutX="438.0" layoutY="142.0" prefHeight="114.0" prefWidth="221.0" style="-fx-background-radius: 20;" wrapText="true" />
+      <TextArea fx:id="customerArea" editable="false" layoutX="438.0" layoutY="142.0" prefHeight="114.0" prefWidth="221.0" style="-fx-background-radius: 20;" wrapText="true" />
       <TextArea fx:id="priceArea" editable="false" layoutX="438.0" layoutY="331.0" prefHeight="40.0" prefWidth="221.0" style="-fx-background-radius: 20;" wrapText="true" />
       <Label layoutX="180.0" layoutY="109.0" text="Bokningsinformation:" textFill="WHITE">
          <font>

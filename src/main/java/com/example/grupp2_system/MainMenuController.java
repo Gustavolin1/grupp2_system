@@ -71,11 +71,9 @@ public class MainMenuController {
             btnBack.setStyle("-fx-text-fill: blue;");
         }
 
-        if (loadcashcardcontroller.customerController == true) {
-
+        if (customer != null) {
             BtnCustomer.setStyle("-fx-text-fill: gray;");
             customerCheck = true;
-
         } else {
             BtnCustomer.setStyle("-fx-text-fill: blue;");
         }
