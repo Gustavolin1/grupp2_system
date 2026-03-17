@@ -18,3 +18,5 @@ BK-90625;Economy;Lyx 1;2026-03-14;null;null;null;2026-03-20;0.0;Star Wars;false
 BK-69590;Inside;Mellan 3;2026-03-09;null;null;null;2029-03-22;0.0;;false
 BK-41265;Svit;Budget 3;2026-03-20;null;null;null;2026-03-31;0.0;Aliens live Action;false
 BK-76672;Sömnkapsel;null;2026-03-14;null;null;null;2029-03-27;0.0;;false
+BK-13304;SpaceSide;Lyx 3;2026-03-13;null;null;null;2026-03-26;0.0;;false
+BK-88468;Sömnkapsel;null;2026-03-13;null;null;null;2026-03-25;0.0;;false
