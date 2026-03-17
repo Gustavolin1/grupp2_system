@@ -56,6 +56,7 @@ public class CheckDataController {
             lblfoodoption.setText("Matval: " + booking.getFoodThere());
             lblFoodHome.setText("Matval för hemresa: " + booking.getFoodHome());
             lblEvents.setText("Bokade evenemang: " + String.join(", ", booking.getEvents()));
+
         }
     }
 
