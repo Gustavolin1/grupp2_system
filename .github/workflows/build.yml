@@ -1,6 +1,7 @@
+name: Build App
+
 permissions:
   contents: write
-name: Build App
 
 on:
   push:
@@ -8,7 +9,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+
+  build-mac:
     runs-on: macos-latest
 
     steps:
@@ -38,11 +40,51 @@ jobs:
           name: mac-build
           path: builds/*.dmg
 
-      - name: Create Release
+      - name: Create Release (Mac)
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v1.0.${{ github.run_number }}
           name: MarsTravelsBooking v1.0.${{ github.run_number }}
           files: builds/*.dmg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: corretto
+          java-version: 21
+
+      - name: Build EXE
+        run: |
+          jpackage ^
+          --input out/artifacts/grupp2_system_jar ^
+          --dest builds ^
+          --name MarsTravelsBooking ^
+          --app-version 1.0.0 ^
+          --main-jar grupp2_system.jar ^
+          --main-class com.example.grupp2_system.App.Launcher ^
+          --type exe ^
+          --icon icons/icon.ico
+
+      - name: Upload EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-build
+          path: builds/*.exe
+
+      - name: Create Release (Windows)
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.${{ github.run_number }}
+          files: builds/*.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
