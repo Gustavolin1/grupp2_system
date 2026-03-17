@@ -37,6 +37,7 @@ public class HyttAlternativTillbakaController {
     @FXML
     private ToggleGroup grpOption;
 
+
     @FXML
     public void next(ActionEvent event) throws IOException
     {
@@ -58,7 +59,7 @@ public class HyttAlternativTillbakaController {
 
         if (selectedCabin == radbtnSleep)
         {
-            SceneManager.switchScene("CheckData.fxml");
+            SceneManager.switchScene("MainMenu.fxml");
         }
         else {
             SceneManager.switchScene("MatAlternativTillbaka.fxml");
