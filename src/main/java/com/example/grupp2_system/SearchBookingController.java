@@ -22,7 +22,7 @@ public class SearchBookingController {
     private TextArea resultArea;
 
     @FXML
-    private TextArea cumstomerArea;
+    private TextArea customerArea;
 
     @FXML
     private TextArea priceArea;
@@ -30,19 +30,23 @@ public class SearchBookingController {
     @FXML
     private Button BtnResume;
 
-
     private Booking currentBooking;
+
+    @FXML
+    public void initialize() {
+        BtnResume.setDisable(true);
+    }
 
     @FXML
     private void handleSearch() {
 
-        String bookingId = bookingIdField.getText();
-        if (bookingId == null || bookingId.trim().isEmpty()) {
+        String bookingId = bookingIdField.getText().trim();
+        if (bookingId == null || bookingId.isEmpty()) {
             resultArea.setText("Please enter a Booking ID.");
             return;
         }
 
-        Booking booking = BookingManager.findBookingById(bookingId.trim());
+        Booking booking = BookingManager.findBookingById(bookingId);
 
         if (booking == null) {
             resultArea.setText("No booking found with ID: " + bookingId);
@@ -53,6 +57,7 @@ public class SearchBookingController {
 
     private void displayBooking(Booking booking) {
         this.currentBooking = booking;
+        BtnResume.setDisable(false);
 
         StringBuilder info = new StringBuilder();
 
@@ -137,7 +142,12 @@ public class SearchBookingController {
 
         priceArea.setText(String.format("%,.2f kr", totalPrice));
 
-        cumstomerArea.setText(CustomerManager.getCustomerInfo(booking.getCustomerId()));
+        String customerInfo = CustomerManager.getCustomerInfo(booking.getCustomerId());
+        if (customerInfo == null) {
+            customerArea.setText("Ingen kundinformation hittades.");
+        } else {
+            customerArea.setText(customerInfo);
+        }
     }
 
     @FXML
@@ -156,9 +166,12 @@ public class SearchBookingController {
         SceneManager.setCurrentBooking(currentBooking);
 
         Customer customer = CustomerManager.findCustomerById(currentBooking.getCustomerId());
+        if (customer == null) {
+            resultArea.setText("Kunde inte hitta kund för denna bokning.");
+            return;
+        }
         SceneManager.setCurrentCustomer(customer);
 
         SceneManager.switchScene("MainMenu.fxml");
     }
 }
-

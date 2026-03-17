@@ -9,7 +9,7 @@ public class CustomerManager {
 
 
     private static final String BASE_PATH =
-            System.getProperty("user.home") + "/Desktop/MarsTravels/";
+            System.getProperty("user.home") + "/MarsTravels/";
 
     private static final String FILE_NAME =
             BASE_PATH + "customer.txt";
@@ -30,6 +30,11 @@ public class CustomerManager {
 
     //Metod för att söka fram kunden
     public static String getCustomerInfo(String customerId) {
+        File file = new File(FILE_NAME);
+        file.getParentFile().mkdirs();
+        if (!file.exists()) {
+            return null;
+        }
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
             String line;
 
@@ -63,6 +68,11 @@ public class CustomerManager {
     }
 
     public static Customer findCustomerById(String customerId) {
+        File file = new File(FILE_NAME);
+        file.getParentFile().mkdirs();
+        if (!file.exists()) {
+            return null;
+        }
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
             String line;
 

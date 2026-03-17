@@ -9,7 +9,7 @@ import java.util.List;
 public class BookingManager {
 
     private static final String BASE_PATH =
-            System.getProperty("user.home") + "/Desktop/MarsTravels/";
+            System.getProperty("user.home") + "/MarsTravels/";
 
     private static final String FILE_NAME =
             BASE_PATH + "bookings.txt";
@@ -20,7 +20,15 @@ public class BookingManager {
         if (!dir.exists()) {
             dir.mkdirs();
         }
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {
+        File file = new File(FILE_NAME);
+        if (!file.exists()) {
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
             writer.write(booking.toFileString());
             writer.newLine();
             System.out.println("Booking saved: " + booking.getBookingId());
@@ -35,6 +43,15 @@ public class BookingManager {
 
         if (!dir.exists()) {
             dir.mkdirs();
+        }
+        File file = new File(FILE_NAME);
+        if (!file.exists()) {
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return bookings;
         }
 
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
