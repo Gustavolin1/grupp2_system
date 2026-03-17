@@ -81,6 +81,7 @@ public class HyttalternativController {
     private void cancelBooking() throws IOException {
 
             SceneManager.switchScene("MainMenu.fxml");
+
         }
     }
 
