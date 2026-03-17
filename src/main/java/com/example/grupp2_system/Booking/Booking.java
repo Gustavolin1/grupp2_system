@@ -33,10 +33,16 @@ public class Booking {
     //travelInsurance bool where true means they want insurance
     private boolean travelInsurance;
 
-    //Event tickets
+    //Event tickets there
     private int movieTicket;
     private int concertTicket;
     private int theatreTicket;
+
+    //Event tickets home
+
+    private int homeMovieTickets;
+    private int homeConcertTickets;
+    private int homeTheatreTickets;
 
     // Constructor for new booking
     public Booking() {
@@ -129,6 +135,22 @@ public class Booking {
     public int getConcertTicket() { return concertTicket; }
     public int getTheatreTicket() { return theatreTicket; }
 
+    public boolean isTravelInsurance() {
+        return travelInsurance;
+    }
+
+    public int getHomeMovieTickets() {
+        return homeMovieTickets;
+    }
+
+    public int getHomeConcertTickets() {
+        return homeConcertTickets;
+    }
+
+    public int getHomeTheatreTickets() {
+        return homeTheatreTickets;
+    }
+
     // Setters
     public void setBookingId(String bookingId) { this.bookingId = bookingId; }
     public void setCustomerId(String customerId) { this.customerId = customerId; }
@@ -154,4 +176,16 @@ public class Booking {
     public void setMovieTicket(int movieTicket) { this.movieTicket = movieTicket; }
     public void setConcertTicket(int concertTicket) { this.concertTicket = concertTicket; }
     public void setTheatreTicket(int theatreTicket) { this.theatreTicket = theatreTicket; }
+
+    public void setHomeMovieTickets(int homeMovieTickets) {
+        this.homeMovieTickets = homeMovieTickets;
+    }
+
+    public void setHomeConcertTickets(int homeConcertTickets) {
+        this.homeConcertTickets = homeConcertTickets;
+    }
+
+    public void setHomeTheatreTickets(int homeTheatreTickets) {
+        this.homeTheatreTickets = homeTheatreTickets;
+    }
 }
