@@ -40,6 +40,14 @@ public class EventAlternativController {
 
         spTea.setValueFactory(
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 4, 0));
+
+        Booking booking = SceneManager.getCurrentBooking();
+
+        if (booking != null) {
+            spKon.getValueFactory().setValue(booking.getConcertTicket());
+            spMov.getValueFactory().setValue(booking.getMovieTicket());
+            spTea.getValueFactory().setValue(booking.getTheatreTicket());
+        }
     }
 
     @FXML
@@ -53,7 +61,7 @@ public class EventAlternativController {
     {
         Booking booking = SceneManager.getCurrentBooking();
         booking.setConcertTicket(spKon.getValue());
-        booking.setConcertTicket(spMov.getValue());
+        booking.setMovieTicket(spMov.getValue());
         booking.setTheatreTicket(spTea.getValue());
         SceneManager.switchScene("MainMenu.fxml");
 

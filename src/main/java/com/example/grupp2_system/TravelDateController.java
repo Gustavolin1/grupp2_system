@@ -68,6 +68,18 @@ public class TravelDateController {
                 }
             }
         });
+
+        Booking booking = SceneManager.getCurrentBooking();
+
+        if (booking != null) {
+            if (booking.getMonthThere() != null) {
+                MånadAvresa.setValue(booking.getMonthThere());
+            }
+
+            if (booking.getYearThere() != null) {
+                ÅrAvresa.setValue(booking.getYearThere().getValue());
+            }
+        }
     }
 
     private String getSwedishMonth(Month month) {

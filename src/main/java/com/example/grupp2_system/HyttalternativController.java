@@ -38,6 +38,21 @@ public class HyttalternativController {
     private ToggleGroup grpOption;
 
     @FXML
+    public void initialize() {
+        Booking booking = SceneManager.getCurrentBooking();
+
+        if (booking == null || booking.getCabinThere() == null) return;
+
+        for (Toggle toggle : grpOption.getToggles()) {
+            RadioButton rb = (RadioButton) toggle;
+            if (rb.getText().equals(booking.getCabinThere())) {
+                grpOption.selectToggle(rb);
+                break;
+            }
+        }
+    }
+
+    @FXML
     public void next(ActionEvent event) throws IOException
     {
         Booking booking = SceneManager.getCurrentBooking();

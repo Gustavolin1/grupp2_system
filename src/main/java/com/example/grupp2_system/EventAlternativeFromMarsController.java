@@ -38,6 +38,14 @@ public class EventAlternativeFromMarsController {
 
         spTea.setValueFactory(
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 4, 0));
+
+        Booking booking = SceneManager.getCurrentBooking();
+
+        if (booking != null) {
+            spKon.getValueFactory().setValue(booking.getHomeConcertTickets());
+            spMov.getValueFactory().setValue(booking.getHomeMovieTickets());
+            spTea.getValueFactory().setValue(booking.getHomeTheatreTickets());
+        }
     }
 
     @FXML
