@@ -17,7 +17,7 @@
                <children>
                   <AnchorPane layoutY="-18.0">
                      <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7baddb" height="418.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ac5c5c" height="418.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
                         <MenuButton fx:id="btnMovieNR" layoutX="43.0" layoutY="209.0" mnemonicParsing="false" text=" Film                ">
                            <items>
                               <MenuItem fx:id="altJhonW" mnemonicParsing="false" text="0" />
