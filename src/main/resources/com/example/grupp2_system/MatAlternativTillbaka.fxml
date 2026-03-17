@@ -2,72 +2,97 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.MatbokningtillController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFEBEB;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.MatbokningtillController">
+
+    <!-- Define the ToggleGroup separately -->
+    <fx:define>
+        <ToggleGroup fx:id="grpFood" />
+    </fx:define>
+
     <children>
-        <SplitPane layoutX="114.0" layoutY="42.0" prefHeight="115.0" prefWidth="800.0" style="-fx-background-color: #8e8e8e;" AnchorPane.bottomAnchor="443.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="42.0">
-            <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="196.0" prefWidth="862.0" style="-fx-background-color: #cdeaf8;">
-                    <children>
-                        <Text fx:id="txtEvenemangInfo" fill="#0b0b0b" layoutX="250.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matpaket Bokning Från Mars">
-                            <font>
-                                <Font size="30.0" />
-                            </font>
-                        </Text>
-                    </children>
-                </AnchorPane>
-            </items>
-        </SplitPane>
-        <AnchorPane layoutX="123.0" layoutY="420.0" minHeight="0.0" minWidth="0.0" prefHeight="113.0" prefWidth="741.0" />
-        <AnchorPane layoutX="358.0" layoutY="139.0" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
-        <SplitPane layoutX="338.0" layoutY="156.0" orientation="VERTICAL" prefHeight="444.0" prefWidth="864.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="156.0">
-            <items>
-                <AnchorPane blendMode="SRC_ATOP" minHeight="0.0" minWidth="0.0" prefHeight="529.0" prefWidth="827.0">
-                    <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdeaf8" height="86.0" layoutX="-40.0" layoutY="328.0" stroke="BLACK" strokeType="INSIDE" width="925.0" />
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff171" height="214.0" layoutX="637.0" layoutY="81.0" stroke="BLACK" strokeType="INSIDE" width="134.0" AnchorPane.bottomAnchor="151.33333333333331" AnchorPane.leftAnchor="637.0" />
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dadee2" height="214.0" layoutX="354.0" layoutY="86.0" stroke="BLACK" strokeType="INSIDE" width="134.0" AnchorPane.bottomAnchor="151.33333333333331" />
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fdbb50" height="214.0" layoutX="85.0" layoutY="80.0" stroke="#1d68b3" strokeType="INSIDE" width="134.0" AnchorPane.bottomAnchor="151.0" />
-                        <Button fx:id="btnBackaMatBokning" layoutX="76.0" layoutY="355.0" mnemonicParsing="false" onAction="#back" prefHeight="42.0" prefWidth="110.0" style="-fx-background-color: #1d68b3;" text="Backa" textFill="#f6f5f5" AnchorPane.bottomAnchor="47.0" AnchorPane.topAnchor="353.0">
-                            <font>
-                                <Font size="16.0" />
-                            </font>
-                        </Button>
-                        <Button fx:id="btnNästaMatpaket" layoutX="677.0" layoutY="352.0" mnemonicParsing="false" onAction="#next" prefHeight="42.0" prefWidth="110.0" style="-fx-background-color: #1d68b3;" text="Nästa" textFill="#f6eeee" AnchorPane.bottomAnchor="47.0" AnchorPane.topAnchor="353.0">
-                            <font>
-                                <Font size="16.0" />
-                            </font>
-                        </Button>
-                        <Button fx:id="btnMatpaketInfo" layoutX="328.0" layoutY="353.0" mnemonicParsing="false" onAction="#openInformation" prefHeight="42.0" prefWidth="186.0" style="-fx-background-color: #1d68b3;" text="Matpaketinformation" textFill="#f2eeee" AnchorPane.bottomAnchor="47.0" AnchorPane.topAnchor="353.0">
-                            <font>
-                                <Font size="16.0" />
-                            </font>
-                        </Button>
-                        <RadioButton layoutX="113.0" layoutY="118.0" mnemonicParsing="false" text="Budget 1">
-                            <toggleGroup>
-                                <ToggleGroup fx:id="grpFood" />
-                            </toggleGroup>
-                        </RadioButton>
-                        <RadioButton layoutX="113.0" layoutY="170.0" mnemonicParsing="false" text="Budget 2" toggleGroup="$grpFood" />
-                        <RadioButton layoutX="113.0" layoutY="220.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="91.0" text="Budget 3" toggleGroup="$grpFood" />
-                        <RadioButton layoutX="379.0" layoutY="170.0" mnemonicParsing="false" text="Mellan 2" toggleGroup="$grpFood" />
-                        <RadioButton layoutX="379.0" layoutY="118.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="83.0" text="Mellan  1" toggleGroup="$grpFood" />
-                        <RadioButton layoutX="379.0" layoutY="220.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="82.0" text="Mellan 3" toggleGroup="$grpFood" />
-                        <RadioButton layoutX="676.0" layoutY="118.0" mnemonicParsing="false" text="Lyx 1" toggleGroup="$grpFood" />
-                        <RadioButton layoutX="676.0" layoutY="170.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="69.0" text="Lyx 2" toggleGroup="$grpFood" />
-                        <RadioButton layoutX="676.0" layoutY="220.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="69.0" text="Lyx 3" toggleGroup="$grpFood" />
-                        <Text layoutX="135.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bronz" AnchorPane.bottomAnchor="380.3333333333333" />
-                        <Text layoutX="406.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Silver" AnchorPane.bottomAnchor="380.3333333333333" />
-                        <Text layoutX="689.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guld" AnchorPane.bottomAnchor="380.3333333333333" />
-                    </children>
-                </AnchorPane>
-            </items>
-        </SplitPane>
+        <!-- Header Text -->
+        <Text fx:id="txtEvenemangInfo" fill="#b82727" layoutX="232.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Val av mat på resan från Mars">
+            <font>
+                <Font size="28.0" />
+            </font>
+        </Text>
+
+        <!-- Visual Panels -->
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a6272733" height="304.0" layoutX="47.0" layoutY="100.0" stroke="#2685b9" strokeType="INSIDE" width="207.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a63e4d80" height="304.0" layoutX="309.0" layoutY="100.0" stroke="#2685b9" strokeType="INSIDE" width="207.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c71a1a99" height="304.0" layoutX="564.0" layoutY="100.0" stroke="#2685b9" strokeType="INSIDE" width="207.0" />
+
+        <!-- Radio Buttons - Bronz -->
+        <RadioButton layoutX="74.0" layoutY="140.0" text="Budget 1&#10;27 000 kr/pers" textFill="WHITE">
+            <toggleGroup>
+                <ToggleGroup fx:id="grpFood" />
+            </toggleGroup>
+            <font>
+                <Font size="18.0" />
+            </font></RadioButton>
+        <RadioButton layoutX="74.0" layoutY="237.0" text="Budget 2&#10;40 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood">
+            <font>
+                <Font size="18.0" />
+            </font></RadioButton>
+        <RadioButton layoutX="77.0" layoutY="323.0" text="Budget 3&#10;54 000 kr/pers&#10;" textFill="WHITE" toggleGroup="$grpFood">
+            <font>
+                <Font size="18.0" />
+            </font></RadioButton>
+
+        <!-- Radio Buttons - Silver -->
+        <RadioButton layoutX="340.0" layoutY="140.0" text="Mellan 1&#10;76 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood">
+            <font>
+                <Font size="18.0" />
+            </font></RadioButton>
+        <RadioButton layoutX="340.0" layoutY="237.0" text="Mellan 2&#10;90 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood">
+            <font>
+                <Font size="18.0" />
+            </font></RadioButton>
+        <RadioButton layoutX="340.0" layoutY="323.0" text="Mellan 3&#10;100 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood">
+            <font>
+                <Font size="18.0" />
+            </font></RadioButton>
+
+        <!-- Radio Buttons - Guld -->
+        <RadioButton layoutX="598.0" layoutY="140.0" text="Lyx 1&#10;120 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood">
+            <font>
+                <Font size="18.0" />
+            </font></RadioButton>
+        <RadioButton layoutX="598.0" layoutY="237.0" text="Lyx 2&#10;150 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood">
+            <font>
+                <Font size="18.0" />
+            </font></RadioButton>
+        <RadioButton layoutX="598.0" layoutY="323.0" text="Lyx 3&#10;200 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood">
+            <font>
+                <Font size="18.0" />
+            </font></RadioButton>
+
+        <!-- Buttons -->
+
+        <!-- Back button -->
+        <Button fx:id="btnBackaMatBokning" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #FF6F6F;" text="Tillbaka" textFill="WHITE">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+
+        <!-- Next button -->
+        <Button fx:id="btnNästaMatpaket" layoutX="600.0" layoutY="480.0" mnemonicParsing="false" onAction="#next" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #FF6F6F;" text="Nästa" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+
+        <Button fx:id="btnMatpaketInfo" layoutX="301.0" layoutY="480.0" onAction="#openInformation" prefHeight="37.0" prefWidth="224.0" style="-fx-background-color: #FF6F6F;" text="Matpaketinformation" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
     </children>
 </AnchorPane>
