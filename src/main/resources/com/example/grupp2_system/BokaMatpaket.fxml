@@ -29,46 +29,46 @@
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2785b899" height="304.0" layoutX="564.0" layoutY="100.0" stroke="#2685b9" strokeType="INSIDE" width="207.0" />
 
         <!-- Radio Buttons - Bronz -->
-        <RadioButton layoutX="74.0" layoutY="140.0" text="Budget 1&#10;27 000 kr/pers" textFill="WHITE">
+        <RadioButton layoutX="74.0" layoutY="140.0" text="Budget 1" textFill="WHITE">
          <toggleGroup>
             <ToggleGroup fx:id="grpFood" />
          </toggleGroup>
          <font>
             <Font size="18.0" />
          </font></RadioButton>
-        <RadioButton layoutX="74.0" layoutY="237.0" text="Budget 2&#10;40 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood">
+        <RadioButton layoutX="74.0" layoutY="237.0" text="Budget 2" textFill="WHITE" toggleGroup="$grpFood">
          <font>
             <Font size="18.0" />
          </font></RadioButton>
-        <RadioButton layoutX="77.0" layoutY="323.0" text="Budget 3&#10;54 000 kr/pers&#10;" textFill="WHITE" toggleGroup="$grpFood">
+        <RadioButton layoutX="77.0" layoutY="323.0" text="Budget 3" textFill="WHITE" toggleGroup="$grpFood">
          <font>
             <Font size="18.0" />
          </font></RadioButton>
 
         <!-- Radio Buttons - Silver -->
-        <RadioButton layoutX="340.0" layoutY="140.0" text="Mellan 1&#10;76 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood">
+        <RadioButton layoutX="340.0" layoutY="140.0" text="Mellan 1" textFill="WHITE" toggleGroup="$grpFood">
          <font>
             <Font size="18.0" />
          </font></RadioButton>
-        <RadioButton layoutX="340.0" layoutY="237.0" text="Mellan 2&#10;90 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood">
+        <RadioButton layoutX="340.0" layoutY="237.0" text="Mellan 2" textFill="WHITE" toggleGroup="$grpFood">
          <font>
             <Font size="18.0" />
          </font></RadioButton>
-        <RadioButton layoutX="340.0" layoutY="323.0" text="Mellan 3&#10;100 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood">
+        <RadioButton layoutX="340.0" layoutY="323.0" text="Mellan 3" textFill="WHITE" toggleGroup="$grpFood">
          <font>
             <Font size="18.0" />
          </font></RadioButton>
 
         <!-- Radio Buttons - Guld -->
-        <RadioButton layoutX="598.0" layoutY="140.0" text="Lyx 1&#10;120 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood">
+        <RadioButton layoutX="598.0" layoutY="140.0" text="Lyx 1" textFill="WHITE" toggleGroup="$grpFood">
          <font>
             <Font size="18.0" />
          </font></RadioButton>
-        <RadioButton layoutX="598.0" layoutY="237.0" text="Lyx 2&#10;150 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood">
+        <RadioButton layoutX="598.0" layoutY="237.0" text="Lyx 2" textFill="WHITE" toggleGroup="$grpFood">
          <font>
             <Font size="18.0" />
          </font></RadioButton>
-        <RadioButton layoutX="598.0" layoutY="323.0" text="Lyx 3&#10;200 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood">
+        <RadioButton layoutX="598.0" layoutY="323.0" text="Lyx 3" textFill="WHITE" toggleGroup="$grpFood">
          <font>
             <Font size="18.0" />
          </font></RadioButton>

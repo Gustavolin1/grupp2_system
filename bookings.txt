@@ -27,3 +27,4 @@ BK-97319;CustomerID-84537;Svit;Mellan 2
 BK-89395;CustomerID-21467;Svit;Lyx 2
 150 000 kr/pers;SEPTEMBER;2029;RadioButton@5dba9d12[styleClass=radio-button]'Dubbelrum';Svit;Mellan 2
 90 000 kr/pers;null;null;3.8473847E7;true;0;0;0;0;0;0
+BK-71059;CustomerID-62784;Economy;Mellan 2;JULY;2029;RadioButton@5fa9c3aa[styleClass=radio-button]'Svit';Svit;Lyx 3;null;null;3947938.0;true;0;0;0;0;0;0
