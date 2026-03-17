@@ -5,7 +5,7 @@ permissions:
 
 on:
   push:
-    branches: [ "*" ]
+    branches: [ master ]
   workflow_dispatch:
 
 jobs:
@@ -21,10 +21,13 @@ jobs:
           distribution: corretto
           java-version: 21
 
+      - name: Build JAR
+        run: mvn clean package
+
       - name: Build DMG
         run: |
           jpackage \
-          --input out/artifacts/grupp2_system_jar \
+          --input target \
           --dest builds \
           --name MarsTravelsBooking \
           --app-version 1.0.0 \
@@ -41,12 +44,11 @@ jobs:
       - name: Create Release (Mac)
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: build-${{ github.run_number }}
-          name: MarsTravelsBooking build ${{ github.run_number }}
+          tag_name: v1.0.${{ github.run_number }}
+          name: MarsTravelsBooking v1.0.${{ github.run_number }}
           files: builds/*.dmg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 
   build-windows:
     runs-on: windows-latest
@@ -59,18 +61,20 @@ jobs:
           distribution: corretto
           java-version: 21
 
+      - name: Build JAR
+        run: mvn clean package
+
       - name: Build EXE
         shell: cmd
         run: |
           jpackage ^
-          --input out/artifacts/grupp2_system_jar ^
+          --input target ^
           --dest builds ^
           --name MarsTravelsBooking ^
           --app-version 1.0.0 ^
           --main-jar grupp2_system.jar ^
           --main-class com.example.grupp2_system.App.Launcher ^
-          --type exe ^
-          --icon icons/icon.ico
+          --type exe
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
@@ -81,7 +85,7 @@ jobs:
       - name: Create Release (Windows)
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: build-${{ github.run_number }}
+          tag_name: v1.0.${{ github.run_number }}
           files: builds/*.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
