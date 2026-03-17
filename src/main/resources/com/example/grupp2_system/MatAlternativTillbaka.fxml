@@ -76,20 +76,20 @@
         <!-- Buttons -->
 
         <!-- Back button -->
-        <Button fx:id="btnBackaMatBokning" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #FF6F6F;" text="Tillbaka" textFill="WHITE">
+        <Button fx:id="btnBackaMatBokning" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #b03f3c;" text="Tillbaka" textFill="WHITE">
             <font>
                 <Font size="16.0" />
             </font>
         </Button>
 
         <!-- Next button -->
-        <Button fx:id="btnNästaMatpaket" layoutX="600.0" layoutY="480.0" mnemonicParsing="false" onAction="#next" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #FF6F6F;" text="Nästa" textFill="WHITE">
+        <Button fx:id="btnNästaMatpaket" layoutX="600.0" layoutY="480.0" mnemonicParsing="false" onAction="#next" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #b03f3c;" text="Nästa" textFill="WHITE">
             <font>
                 <Font size="20.0" />
             </font>
         </Button>
 
-        <Button fx:id="btnMatpaketInfo" layoutX="301.0" layoutY="480.0" onAction="#openInformation" prefHeight="37.0" prefWidth="224.0" style="-fx-background-color: #FF6F6F;" text="Matpaketinformation" textFill="WHITE">
+        <Button fx:id="btnMatpaketInfo" layoutX="301.0" layoutY="480.0" onAction="#openInformation" prefHeight="37.0" prefWidth="224.0" style="-fx-background-color: #b03f3c;" text="Matpaketinformation" textFill="WHITE">
             <font>
                 <Font size="20.0" />
             </font>
