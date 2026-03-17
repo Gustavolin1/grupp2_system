@@ -59,7 +59,7 @@ public class HyttAlternativTillbakaController {
 
         if (selectedCabin == radbtnSleep)
         {
-            SceneManager.switchScene("CheckData.fxml");
+            SceneManager.switchScene("MainMenu.fxml");
         }
         else {
             SceneManager.switchScene("MatAlternativTillbaka.fxml");
