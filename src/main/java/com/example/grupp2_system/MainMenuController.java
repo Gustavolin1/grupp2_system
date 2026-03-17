@@ -71,7 +71,7 @@ public class MainMenuController {
             btnBack.setStyle("-fx-text-fill: blue;");
         }
 
-        if (CustomerInformationController.customerController == true) {
+        if (loadcashcardcontroller.customerController == true) {
 
             BtnCustomer.setStyle("-fx-text-fill: gray;");
             customerCheck = true;

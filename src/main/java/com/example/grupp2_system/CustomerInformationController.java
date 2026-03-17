@@ -14,9 +14,6 @@ import java.io.IOException;
 
 public class CustomerInformationController {
 
-    public static boolean customerController = false;
-
-
     public CheckBox chkHälsoförsäkring;
     @FXML
     private Button btnBack;
@@ -105,9 +102,8 @@ public class CustomerInformationController {
         customer.setName(txtfName.getText());
         customer.setPhoneNumber(txtfTel.getText());
         customer.setPersonnummer(txtfPersnumber.getText());
-        customerController = true;
 
-        SceneManager.switchScene("MainMenu.fxml");
+        SceneManager.switchScene("loadcashcard.fxml");
     }
 
     }
