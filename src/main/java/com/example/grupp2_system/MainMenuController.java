@@ -5,20 +5,19 @@ import com.example.grupp2_system.Customer.Customer;
 import com.example.grupp2_system.SceneManager.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
-import javafx.scene.paint.Color;
 
 import java.io.IOException;
 import java.util.Optional;
 
 public class MainMenuController {
 
-    private boolean marsCheck = false;
+    private boolean toMarsCheck = false;
     private boolean backCheck = true;
     private boolean customerCheck = false;
+    private boolean marsCheck = false;
 
     @FXML
     private Button BtnCancel;
@@ -54,7 +53,7 @@ public class MainMenuController {
                 booking.getYearThere() != null) {
 
             btnThere.setStyle("-fx-text-fill: gray;");
-            marsCheck = true;
+            toMarsCheck = true;
 
         } else {
             btnThere.setStyle("-fx-text-fill: blue;");
@@ -79,6 +78,15 @@ public class MainMenuController {
 
         } else {
             BtnCustomer.setStyle("-fx-text-fill: blue;");
+        }
+
+        if (booking.getHotelChoice()!=null) {
+
+            mars.setStyle("-fx-text-fill: gray;");
+            marsCheck = true;
+
+        } else {
+            mars.setStyle("-fx-text-fill: blue;");
         }
     }
 
@@ -127,12 +135,12 @@ public class MainMenuController {
         @FXML
         private void confirmBooking(ActionEvent event) throws IOException {
 
-           if (!marsCheck || !backCheck || !customerCheck) {
+           if (!toMarsCheck || !backCheck || !customerCheck || marsCheck) {
 
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Bokningen är inte klar");
                 alert.setHeaderText("Alla uppgifter är inte ifyllda");
-                alert.setContentText("Fyll i resa till Mars, hemresa och kunduppgifter innan du bekräftar bokningen.");
+                alert.setContentText("Fyll i resa till Mars, på Mars, hemresa och kunduppgifter innan du bekräftar bokningen.");
                 alert.showAndWait();
 
                 return;
