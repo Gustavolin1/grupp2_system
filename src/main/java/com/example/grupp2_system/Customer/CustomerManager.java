@@ -11,8 +11,8 @@ public class CustomerManager {
     private static final String BASE_PATH =
             System.getProperty("user.home") + "/MarsTravels/";
 
-    private static final String FILE_NAME =
-            BASE_PATH + "customer.txt";
+    private static final String FILE_NAME = BASE_PATH + "customer.txt";
+    private static final String PROJECT_FILE = "customer.txt";
 
     public static void saveCustomer(Customer customer) {
         File dir = new File(BASE_PATH);
@@ -20,9 +20,21 @@ public class CustomerManager {
         if (!dir.exists()) {
             dir.mkdirs();
         }
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {
-            writer.write(customer.toFileString());
-            writer.newLine();
+        try {
+            String line = customer.toFileString().replace("\n", " ").replace("\r", "");
+
+            // Write to user folder (MarsTravels)
+            BufferedWriter writer1 = new BufferedWriter(new FileWriter(FILE_NAME, true));
+            writer1.write(line);
+            writer1.newLine();
+            writer1.close();
+
+            // Write to project folder (IntelliJ)
+            BufferedWriter writer2 = new BufferedWriter(new FileWriter(PROJECT_FILE, true));
+            writer2.write(line);
+            writer2.newLine();
+            writer2.close();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -100,4 +112,3 @@ public class CustomerManager {
         return null;
     }
     }
-
