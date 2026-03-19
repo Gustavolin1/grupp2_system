@@ -45,7 +45,9 @@ jobs:
           --main-jar $(basename "${{ steps.jar.outputs.jar }}") \
           --main-class com.example.grupp2_system.App.Launcher \
           --type dmg \
-          --icon icons/icon.icns
+          --icon icons/icon.icns \
+          --mac-package-name MarsTravelsBooking \
+          --mac-package-identifier com.marstravels.booking \
 
       - name: Upload DMG
         uses: actions/upload-artifact@v4
