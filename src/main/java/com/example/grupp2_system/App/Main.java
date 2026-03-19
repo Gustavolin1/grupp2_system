@@ -19,6 +19,7 @@ public class Main extends Application {
         stage.setScene(new Scene(loader.load()));
         stage.setTitle("Bokningssystem");
         stage.show();
+
     }
 
     public static void main(String[] args) {
