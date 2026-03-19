@@ -22,7 +22,13 @@ jobs:
           java-version: 21
 
       - name: Build JAR
-        run: mvn clean package
+        run: ./mvnw clean package
+
+      - name: Find JAR
+        id: jar
+        run: |
+          JAR=$(ls target/*.jar | head -n 1)
+          echo "jar=$JAR" >> $GITHUB_OUTPUT
 
       - name: Build DMG
         run: |
@@ -31,9 +37,10 @@ jobs:
           --dest builds \
           --name MarsTravelsBooking \
           --app-version 1.0.0 \
-          --main-jar grupp2_system-1.0-SNAPSHOT.jar \
+          --main-jar $(basename "${{ steps.jar.outputs.jar }}") \
           --main-class com.example.grupp2_system.App.Launcher \
-          --type dmg
+          --type dmg \
+          --icon icons/icon.icns
 
       - name: Upload DMG
         uses: actions/upload-artifact@v4
@@ -62,33 +69,57 @@ jobs:
           java-version: 21
 
       - name: Build JAR
-        run: mvn clean package
+        run: mvnw.cmd clean package
+
+      - name: Find JAR
+        id: jar
+        shell: bash
+        run: |
+          JAR=$(ls target/*.jar | head -n 1)
+          echo "jar=$JAR" >> $GITHUB_OUTPUT
 
       - name: Build EXE
-        shell: cmd
+        shell: bash
         run: |
-          jpackage ^
-          --input target ^
-          --dest builds ^
-          --name MarsTravelsBooking ^
-          --app-version 1.0.0 ^
-          --main-jar grupp2_system-1.0-SNAPSHOT.jar ^
-          --main-class com.example.grupp2_system.App.Launcher ^
-          --type exe ^
-          --win-menu ^
-          --win-shortcut ^
+          jpackage \
+          --input target \
+          --dest builds \
+          --name MarsTravelsBooking \
+          --app-version 1.0.0 \
+          --main-jar $(basename "${{ steps.jar.outputs.jar }}") \
+          --main-class com.example.grupp2_system.App.Launcher \
+          --type exe \
+          --icon icons/icon.ico \
+          --win-menu \
+          --win-shortcut \
+          --win-dir-chooser
+
+      - name: Build MSI
+        shell: bash
+        run: |
+          jpackage \
+          --input target \
+          --dest builds \
+          --name MarsTravelsBooking \
+          --app-version 1.0.0 \
+          --main-jar $(basename "${{ steps.jar.outputs.jar }}") \
+          --main-class com.example.grupp2_system.App.Launcher \
+          --type msi \
+          --icon icons/icon.ico \
+          --win-menu \
+          --win-shortcut \
           --win-dir-chooser
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
         with:
           name: windows-build
-          path: builds/*.exe
+          path: builds/*
 
       - name: Create Release (Windows)
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v1.0.${{ github.run_number }}
-          files: builds/*.exe
+          files: builds/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
