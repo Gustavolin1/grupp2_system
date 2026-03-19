@@ -26,15 +26,22 @@ public class StartpageController {
     @FXML
     public void startBooking(ActionEvent event) throws IOException{
 
+        // Only create new objects if none exist (avoids overwriting on resume)
+        if (SceneManager.getCurrentBooking() == null) {
             Booking booking = new Booking();
-            Customer customer = new Customer();
-
             SceneManager.setCurrentBooking(booking);
+        }
+
+        if (SceneManager.getCurrentCustomer() == null) {
+            Customer customer = new Customer();
             SceneManager.setCurrentCustomer(customer);
-            booking.setCustomerId(customer.getCustomerID());
-            SceneManager.switchScene("MainMenu.fxml");
+        }
 
+        // Ensure booking has correct customerId
+        SceneManager.getCurrentBooking()
+                .setCustomerId(SceneManager.getCurrentCustomer().getCustomerID());
 
+        SceneManager.switchScene("MainMenu.fxml");
     }
     @FXML
     public void openInformation(ActionEvent event) throws IOException{

@@ -4,6 +4,7 @@ import com.example.grupp2_system.Booking.Booking;
 
 import java.io.*;
 import java.util.List;
+import java.util.ArrayList;
 
 public class CustomerManager {
 
@@ -15,29 +16,65 @@ public class CustomerManager {
     private static final String PROJECT_FILE = "customer.txt";
 
     public static void saveCustomer(Customer customer) {
-        File dir = new File(BASE_PATH);
 
-        if (!dir.exists()) {
-            dir.mkdirs();
-        }
-        try {
-            String line = customer.toFileString().replace("\n", " ").replace("\r", "");
+            File dir = new File(BASE_PATH);
+            if (!dir.exists()) {
+                dir.mkdirs();
+            }
 
-            // Write to user folder (MarsTravels)
-            BufferedWriter writer1 = new BufferedWriter(new FileWriter(FILE_NAME, true));
-            writer1.write(line);
-            writer1.newLine();
-            writer1.close();
+            File file = new File(FILE_NAME);
+            if (!file.exists()) {
+                try {
+                    file.createNewFile();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
 
-            // Write to project folder (IntelliJ)
-            BufferedWriter writer2 = new BufferedWriter(new FileWriter(PROJECT_FILE, true));
-            writer2.write(line);
-            writer2.newLine();
-            writer2.close();
+            try {
+                String newLine = customer.toFileString().replace("\n", "").replace("\r", "");
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+                List<String> lines = new ArrayList<>();
+                boolean updated = false;
+
+                try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        if (line.trim().isEmpty()) continue;
+
+                        if (line.startsWith(customer.getCustomerID() + ";")) {
+                            lines.add(newLine); // replace
+                            updated = true;
+                        } else {
+                            lines.add(line);
+                        }
+                    }
+                }
+
+                if (!updated) {
+                    lines.add(newLine);
+                }
+
+                try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, false))) {
+                    for (String l : lines) {
+                        writer.write(l);
+                        writer.newLine();
+                    }
+                }
+
+
+                try (BufferedWriter writer2 = new BufferedWriter(new FileWriter(PROJECT_FILE, false))) {
+                    for (String l : lines) {
+                        writer2.write(l);
+                        writer2.newLine();
+                    }
+                }
+
+                System.out.println("Customer saved (updated/added): " + customer.getCustomerID());
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
     }
 
     //Metod för att söka fram kunden
@@ -77,7 +114,7 @@ public class CustomerManager {
         }
 
         return null; // customer not found
-    }
+}
 
     public static Customer findCustomerById(String customerId) {
         File file = new File(FILE_NAME);

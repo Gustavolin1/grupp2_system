@@ -22,6 +22,9 @@ public class MatbokningFrånController implements Initializable {
     @FXML
     private ToggleGroup grpFood;
 
+    @FXML
+    private Button btnMeny;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -91,6 +94,13 @@ public class MatbokningFrånController implements Initializable {
         booking.setFoodHome(selectedFood.getText());
 
         SceneManager.switchScene("EventAltenativeFromMars.fxml");
+
+    }
+
+    @FXML
+    public void meny(ActionEvent event) throws IOException {
+
+        SceneManager.switchScene("MainMenu.fxml");
 
     }
 }

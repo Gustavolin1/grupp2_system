@@ -17,11 +17,12 @@ public class BookingManager {
     private static final String PROJECT_FILE = "bookings.txt";
 
     public static void saveBooking(Booking booking) {
-        File dir = new File(BASE_PATH);
 
+        File dir = new File(BASE_PATH);
         if (!dir.exists()) {
             dir.mkdirs();
         }
+
         File file = new File(FILE_NAME);
         if (!file.exists()) {
             try {
@@ -30,22 +31,47 @@ public class BookingManager {
                 e.printStackTrace();
             }
         }
+
         try {
-            String line = booking.toFileString().replace("\n", " ").replace("\r", "");
+            String newLine = booking.toFileString().replace("\n", " ").replace("\r", "");
 
-            // Write to user folder (MarsTravels)
-            BufferedWriter writer1 = new BufferedWriter(new FileWriter(FILE_NAME, true));
-            writer1.write(line);
-            writer1.newLine();
-            writer1.close();
+            List<String> lines = new ArrayList<>();
+            boolean updated = false;
 
-            // Write to project folder (IntelliJ)
-            BufferedWriter writer2 = new BufferedWriter(new FileWriter(PROJECT_FILE, true));
-            writer2.write(line);
-            writer2.newLine();
-            writer2.close();
+            try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    if (line.trim().isEmpty()) continue;
 
-            System.out.println("Booking saved: " + booking.getBookingId());
+                    if (line.startsWith(booking.getBookingId() + ";")) {
+                        lines.add(newLine); // ersätt
+                        updated = true;
+                    } else {
+                        lines.add(line);
+                    }
+                }
+            }
+
+            if (!updated) {
+                lines.add(newLine);
+            }
+
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, false))) {
+                for (String l : lines) {
+                    writer.write(l);
+                    writer.newLine();
+                }
+            }
+
+            // Also write to project file (for IntelliJ visibility)
+            try (BufferedWriter writer2 = new BufferedWriter(new FileWriter(PROJECT_FILE, false))) {
+                for (String l : lines) {
+                    writer2.write(l);
+                    writer2.newLine();
+                }
+            }
+
+            System.out.println("Booking saved (updated/added): " + booking.getBookingId());
 
         } catch (IOException e) {
             e.printStackTrace();

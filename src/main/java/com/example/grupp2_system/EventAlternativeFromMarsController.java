@@ -19,6 +19,12 @@ public class EventAlternativeFromMarsController {
     private Button btnNext;
 
     @FXML
+    private Button BtnMeny;
+
+    @FXML
+    private Button BtnInformation;
+
+    @FXML
     private Spinner<Integer> spKon;
 
     @FXML
@@ -63,6 +69,20 @@ public class EventAlternativeFromMarsController {
         booking.setHomeTheatreTickets(spTea.getValue());
         SceneManager.switchScene("MainMenu.fxml");
 
+    }
+
+    @FXML
+    public void setBtnInformation(ActionEvent event) throws IOException
+    {
+
+        SceneManager.switchScene("EventInformation.fxml");
+    }
+
+    @FXML
+    public void setBtnMeny(ActionEvent event) throws IOException
+    {
+
+        SceneManager.switchScene("MainMenu.fxml");
     }
 
 }
