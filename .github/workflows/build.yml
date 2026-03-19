@@ -16,6 +16,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Download JavaFX
+        shell: bash
+        run: |
+          curl -L -o javafx.zip https://download2.gluonhq.com/openjfx/21/openjfx-21_windows-x64_bin-sdk.zip
+          unzip javafx.zip
+
       - name: Create builds folder
         run: |
           rm -rf builds
@@ -64,10 +70,34 @@ jobs:
             --app-version 1.0.0 \
             --main-jar grupp2_system.jar \
             --main-class com.example.grupp2_system.App.Launcher \
+            --module-path javafx-sdk-21/lib \
+            --add-modules javafx.controls,javafx.fxml \
             --type exe \
             --icon icons/icon.ico \
             --win-menu \
             --win-shortcut
+
+      - name: Build MSI
+        shell: bash
+        run: |
+          jpackage \
+            --input out/artifacts/grupp2_system_jar \
+            --dest builds \
+            --name MarsTravelsBooking \
+            --app-version 1.0.0 \
+            --main-jar grupp2_system.jar \
+            --main-class com.example.grupp2_system.App.Launcher \
+            --module-path javafx-sdk-21/lib \
+            --add-modules javafx.controls,javafx.fxml \
+            --type msi \
+            --icon icons/icon.ico \
+            --win-menu \
+            --win-shortcut
+
+      - name: Copy JAR
+        shell: bash
+        run: |
+          cp out/artifacts/grupp2_system_jar/grupp2_system.jar builds/
 
       - name: Upload
         uses: actions/upload-artifact@v4
