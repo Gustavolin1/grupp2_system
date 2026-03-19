@@ -30,8 +30,7 @@ jobs:
       - name: Find JAR
         id: jar
         run: |
-          JAR=$(ls target/*.jar | grep -v "original" | head -n 1)
-          echo "Found JAR: $JAR"
+          JAR=$(find target -name "*.jar" | head -n 1)
           echo "jar=$JAR" >> $GITHUB_OUTPUT
 
       - name: Clean builds folder
@@ -41,12 +40,16 @@ jobs:
 
       - name: Build DMG
         run: |
+          JAR=$(ls target/*.jar | grep -v "original" | head -n 1)
+          JAR_NAME=$(basename "$JAR")
+          echo "Using JAR: $JAR_NAME"
+
           jpackage \
           --input target \
           --dest builds \
           --name MarsTravelsBooking \
           --app-version 1.0.0 \
-          --main-jar $(basename ${{ steps.jar.outputs.jar }}) \
+          --main-jar "$JAR_NAME" \
           --main-class com.example.grupp2_system.App.Launcher \
           --type app-image \
           --icon icons/icon.icns \
@@ -91,8 +94,7 @@ jobs:
         id: jar
         shell: bash
         run: |
-          JAR=$(ls target/*.jar | grep -v "original" | head -n 1)
-          echo "Found JAR: $JAR"
+          JAR=$(find target -name "*.jar" | head -n 1)
           echo "jar=$JAR" >> $GITHUB_OUTPUT
 
       - name: Clean builds folder
@@ -104,12 +106,16 @@ jobs:
       - name: Build EXE
         shell: bash
         run: |
+          JAR=$(ls target/*.jar | grep -v "original" | head -n 1)
+          JAR_NAME=$(basename "$JAR")
+          echo "Using JAR: $JAR_NAME"
+
           jpackage \
           --input target \
           --dest builds \
           --name MarsTravelsBooking \
           --app-version 1.0.0 \
-          --main-jar $(basename ${{ steps.jar.outputs.jar }}) \
+          --main-jar "$JAR_NAME" \
           --main-class com.example.grupp2_system.App.Launcher \
           --type exe \
           --icon icons/icon.ico \
@@ -120,12 +126,16 @@ jobs:
       - name: Build MSI
         shell: bash
         run: |
+          JAR=$(ls target/*.jar | grep -v "original" | head -n 1)
+          JAR_NAME=$(basename "$JAR")
+          echo "Using JAR: $JAR_NAME"
+
           jpackage \
           --input target \
           --dest builds \
           --name MarsTravelsBooking \
           --app-version 1.0.0 \
-          --main-jar $(basename ${{ steps.jar.outputs.jar }}) \
+          --main-jar "$JAR_NAME" \
           --main-class com.example.grupp2_system.App.Launcher \
           --type msi \
           --icon icons/icon.ico \
