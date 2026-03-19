@@ -16,38 +16,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Make mvnw executable
-        run: chmod +x mvnw
-
-      - uses: actions/setup-java@v4
-        with:
-          distribution: corretto
-          java-version: 21
-
-      - name: Build JAR
-        run: ./mvnw clean package
-
-      - name: Clean builds folder
+      - name: Create builds folder
         run: |
           rm -rf builds
           mkdir builds
 
       - name: Build DMG
-        shell: bash
         run: |
-          JAR=$(find target -name "*.jar" ! -name "*original*" | head -n 1)
-
-          if [ -z "$JAR" ]; then
-            echo "ERROR: No JAR found!"
-            exit 1
-          fi
-
-          JAR_NAME=$(basename "$JAR")
-          echo "Using JAR: $JAR_NAME"
-
-          jpackage --input target --dest builds --name MarsTravelsBooking --app-version 1.0.0 --main-jar "$JAR_NAME" --main-class com.example.grupp2_system.App.Launcher --type app-image --icon icons/icon.icns --mac-package-name MarsTravel --mac-package-identifier com.marstravels.booking
-
-          jpackage --input builds --dest builds --name MarsTravelsBooking --app-version 1.0.0 --type dmg
+          jpackage \
+          --input out/artifacts/grupp2_system_jar \
+          --dest builds \
+          --name MarsTravelsBooking \
+          --app-version 1.0.0 \
+          --main-jar grupp2_system.jar \
+          --main-class com.example.grupp2_system.App.Launcher \
+          --type dmg \
+          --icon icons/icon.icns
 
           xattr -cr builds
 
@@ -55,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: mac-build
-          path: builds/MarsTravelsBooking*.dmg
+          path: builds/*.dmg
 
   build-windows:
     runs-on: windows-latest
@@ -64,55 +48,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Make mvnw executable
-        run: chmod +x mvnw
-
-      - uses: actions/setup-java@v4
-        with:
-          distribution: corretto
-          java-version: 21
-
-      - name: Build JAR
-        shell: bash
-        run: ./mvnw clean package
-
-      - name: Clean builds folder
-        shell: bash
+      - name: Create builds folder
         run: |
-          rm -rf builds
+          rmdir /s /q builds || true
           mkdir builds
 
       - name: Build EXE
-        shell: bash
         run: |
-          JAR=$(find target -name "*.jar" ! -name "*original*" | head -n 1)
+          jpackage ^
+          --input out/artifacts/grupp2_system_jar ^
+          --dest builds ^
+          --name MarsTravelsBooking ^
+          --app-version 1.0.0 ^
+          --main-jar grupp2_system.jar ^
+          --main-class com.example.grupp2_system.App.Launcher ^
+          --type exe ^
+          --icon icons/icon.ico ^
+          --win-menu ^
+          --win-shortcut ^
+          --win-dir-chooser
 
-          if [ -z "$JAR" ]; then
-            echo "ERROR: No JAR found!"
-            exit 1
-          fi
-
-          JAR_NAME=$(basename "$JAR")
-          echo "Using JAR: $JAR_NAME"
-
-          jpackage --input target --dest builds --name MarsTravelsBooking --app-version 1.0.0 --main-jar "$JAR_NAME" --main-class com.example.grupp2_system.App.Launcher --type exe --icon icons/icon.ico --win-menu --win-shortcut --win-dir-chooser
-
-      - name: Build MSI
-        shell: bash
-        run: |
-          JAR=$(find target -name "*.jar" ! -name "*original*" | head -n 1)
-
-          if [ -z "$JAR" ]; then
-            echo "ERROR: No JAR found!"
-            exit 1
-          fi
-
-          JAR_NAME=$(basename "$JAR")
-          echo "Using JAR: $JAR_NAME"
-
-          jpackage --input target --dest builds --name MarsTravelsBooking --app-version 1.0.0 --main-jar "$JAR_NAME" --main-class com.example.grupp2_system.App.Launcher --type msi --icon icons/icon.ico --win-menu --win-shortcut --win-dir-chooser
-
-      - name: Upload EXE
+      - name: Upload
         uses: actions/upload-artifact@v4
         with:
           name: windows-build
