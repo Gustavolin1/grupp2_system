@@ -93,7 +93,7 @@ jobs:
           --main-jar $(basename "${{ steps.jar.outputs.jar }}") \
           --main-class com.example.grupp2_system.App.Launcher \
           --type exe \
---icon icons/icon.ico \
+          --icon icons/icon.ico \
           --win-menu \
           --win-shortcut \
           --win-dir-chooser
