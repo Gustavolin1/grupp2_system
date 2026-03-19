@@ -2,10 +2,10 @@
 
 APP_NAME="MarsTravelsBooking"
 
-# 🔥 Mac kräver >=1
+#  Mac kräver >=1
 VERSION="1.0.0"
 
-# 🔥 Din riktiga version
+#  Din riktiga version
 DISPLAY_VERSION="0.1.0"
 
 FINAL_NAME="$APP_NAME-$DISPLAY_VERSION"
@@ -19,13 +19,13 @@ MAIN_CLASS="com.example.grupp2_system.App.Launcher"
 
 DEST="builds"
 
-echo "🧹 Tar bort gamla builds..."
+echo " Tar bort gamla builds..."
 rm -rf "$DEST"/*
 
-echo "📁 Skapar builds-mapp..."
+echo " Skapar builds-mapp..."
 mkdir -p "$DEST"
 
-echo "📦 Bygger .dmg..."
+echo " Bygger .dmg..."
 $JPACKAGE \
 --input "$INPUT" \
 --dest "$DEST" \
@@ -36,4 +36,4 @@ $JPACKAGE \
 --icon "$ICON" \
 --type dmg
 
-echo "🚀 KLART! (Mac builds i /builds)"
+echo " KLART! (Mac builds i /builds)"

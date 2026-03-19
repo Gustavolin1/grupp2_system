@@ -1,7 +1,0 @@
-<?xml version="1.0" ?>
-<jpackage-state version="24.0.2" platform="macOS">
-  <app-version>1.0</app-version>
-  <main-launcher>MarsTravelsBooking</main-launcher>
-  <main-class>com.example.grupp2_system.App.Launcher</main-class>
-  <signed>false</signed>
-  <app-store>false</app-store></jpackage-state>
