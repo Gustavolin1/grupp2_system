@@ -16,12 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download JavaFX
-        shell: bash
-        run: |
-          curl -L -o javafx.zip https://download2.gluonhq.com/openjfx/21/openjfx-21_windows-x64_bin-sdk.zip
-          unzip javafx.zip
-
       - name: Create builds folder
         run: |
           rm -rf builds
@@ -54,6 +48,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Download JavaFX
+        shell: bash
+        run: |
+          curl -L -o javafx.zip https://download2.gluonhq.com/openjfx/21/openjfx-21_windows-x64_bin-sdk.zip
+          unzip javafx.zip
+          mv javafx-sdk-21 javafx
+
       - name: Create builds folder
         shell: bash
         run: |
@@ -70,7 +71,7 @@ jobs:
             --app-version 1.0.0 \
             --main-jar grupp2_system.jar \
             --main-class com.example.grupp2_system.App.Launcher \
-            --module-path javafx-sdk-21/lib \
+            --module-path javafx/lib \
             --add-modules javafx.controls,javafx.fxml \
             --type exe \
             --icon icons/icon.ico \
@@ -87,7 +88,7 @@ jobs:
             --app-version 1.0.0 \
             --main-jar grupp2_system.jar \
             --main-class com.example.grupp2_system.App.Launcher \
-            --module-path javafx-sdk-21/lib \
+            --module-path javafx/lib \
             --add-modules javafx.controls,javafx.fxml \
             --type msi \
             --icon icons/icon.ico \
