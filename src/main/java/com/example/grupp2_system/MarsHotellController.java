@@ -97,7 +97,7 @@ public class MarsHotellController {
     @FXML
     public void info(ActionEvent event) throws IOException
     {
-        SceneManager.switchScene("Hyttinformation.fxml");
+        SceneManager.switchScene("Hotellinformation.fxml");
     }
 
     @FXML
