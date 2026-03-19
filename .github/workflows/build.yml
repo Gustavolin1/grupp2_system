@@ -64,7 +64,7 @@ jobs:
       - name: Build JAR
         run: mvn clean package
 
-      - name: Build MSI
+      - name: Build EXE
         shell: cmd
         run: |
           jpackage ^
@@ -74,7 +74,7 @@ jobs:
           --app-version 1.0.0 ^
           --main-jar grupp2_system.jar ^
           --main-class com.example.grupp2_system.App.Launcher ^
-          --type msi ^
+          --type exe ^
           --win-menu ^
           --win-shortcut ^
           --win-dir-chooser
@@ -83,12 +83,12 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows-build
-          path: builds/*.msi
+          path: builds/*.exe
 
       - name: Create Release (Windows)
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v1.0.${{ github.run_number }}
-          files: builds/*.msi
+          files: builds/*.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

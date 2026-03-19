@@ -12,13 +12,13 @@ set MAIN_CLASS=com.example.grupp2_system.App.Launcher
 
 set DEST=builds
 
-echo Rensar gamla builds...
+echo Cleaning old builds...
 if exist %DEST%\*.exe del /q %DEST%\*.exe
 
-echo Skapar builds-mapp...
+echo Creating builds directory...
 if not exist %DEST% mkdir %DEST%
 
-echo Bygger EXE...
+echo Building Windows executable...
 jpackage ^
 --input %INPUT% ^
 --dest %DEST% ^
@@ -30,5 +30,5 @@ jpackage ^
 --type exe
 
 echo.
-echo KLART! (Windows build i /builds)
+echo Build completed. Output located in /builds
 pause
