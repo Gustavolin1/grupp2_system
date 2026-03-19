@@ -16,28 +16,30 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Make mvnw executable
-        run: chmod +x mvnw
+      - name: Create builds folder
+        run: |
+          rm -rf builds
+          mkdir builds
 
-      - uses: actions/setup-java@v4
-        with:
-          distribution: corretto
-          java-version: 21
+      - name: Build DMG
+        run: |
+          jpackage \
+            --input out/artifacts/grupp2_system_jar \
+            --dest builds \
+            --name MarsTravelsBooking \
+            --app-version 1.0.0 \
+            --main-jar grupp2_system.jar \
+            --main-class com.example.grupp2_system.App.Launcher \
+            --type dmg \
+            --icon icons/icon.icns
 
-      - name: Build JAR
-        run: ./mvnw clean package
-
-      - name: Clean builds folder
-        run: rm -rf builds && mkdir builds
-
-      - name: Build DMG (safe)
-        run: JAR=$(ls target/*.jar | grep -v "original" | head -n 1) && JAR_NAME=$(basename "$JAR") && echo "Using JAR: $JAR_NAME" && jpackage --input target --dest builds --name MarsTravelsBooking --app-version 1.0.0 --main-jar "$JAR_NAME" --main-class com.example.grupp2_system.App.Launcher --type app-image --icon icons/icon.icns --mac-package-name MarsTravel --mac-package-identifier com.marstravels.booking && jpackage --input builds --dest builds --name MarsTravelsBooking --app-version 1.0.0 --type dmg && xattr -cr builds
+          xattr -cr builds
 
       - name: Upload DMG
         uses: actions/upload-artifact@v4
         with:
           name: mac-build
-          path: builds/MarsTravelsBooking*.dmg
+          path: builds/*.dmg
 
   build-windows:
     runs-on: windows-latest
@@ -46,44 +48,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-java@v4
-        with:
-          distribution: corretto
-          java-version: 21
-
-      - name: Build JAR
+      - name: Create builds folder
         shell: bash
-        run: ./mvnw clean package
-
-      - name: Clean builds folder
-        shell: bash
-        run: rm -rf builds && mkdir builds
+        run: |
+          rm -rf builds
+          mkdir builds
 
       - name: Build EXE
         shell: bash
         run: |
-          JAR=$(ls target/*.jar | grep -v "original" | head -n 1)
-          JAR_NAME=$(basename "$JAR")
-          echo "Using JAR: $JAR_NAME"
-
           jpackage \
-            --input target \
+            --input out/artifacts/grupp2_system_jar \
             --dest builds \
             --name MarsTravelsBooking \
             --app-version 1.0.0 \
-            --main-jar "$JAR_NAME" \
+            --main-jar grupp2_system.jar \
             --main-class com.example.grupp2_system.App.Launcher \
             --type exe \
             --icon icons/icon.ico \
             --win-menu \
-            --win-shortcut \
-            --win-dir-chooser
+            --win-shortcut
 
-      - name: Build MSI
-        shell: bash
-        run: JAR=$(ls target/*.jar | grep -v "original" | head -n 1) && JAR_NAME=$(basename "$JAR") && echo "Using JAR: $JAR_NAME" && jpackage --input target --dest builds --name MarsTravelsBooking --app-version 1.0.0 --main-jar "$JAR_NAME" --main-class com.example.grupp2_system.App.Launcher --type msi --icon icons/icon.ico --win-menu --win-shortcut --win-dir-chooser
-
-      - name: Upload EXE/MSI
+      - name: Upload
         uses: actions/upload-artifact@v4
         with:
           name: windows-build
