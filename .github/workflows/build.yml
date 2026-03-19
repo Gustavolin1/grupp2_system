@@ -30,7 +30,8 @@ jobs:
       - name: Find JAR
         id: jar
         run: |
-          JAR=$(find target -name "*.jar" | head -n 1)
+          JAR=$(ls target/*.jar | grep -v "original" | head -n 1)
+          echo "Found JAR: $JAR"
           echo "jar=$JAR" >> $GITHUB_OUTPUT
 
       - name: Clean builds folder
@@ -45,7 +46,7 @@ jobs:
           --dest builds \
           --name MarsTravelsBooking \
           --app-version 1.0.0 \
-          --main-jar $(basename "${{ steps.jar.outputs.jar }}") \
+          --main-jar $(basename ${{ steps.jar.outputs.jar }}) \
           --main-class com.example.grupp2_system.App.Launcher \
           --type app-image \
           --icon icons/icon.icns \
@@ -90,7 +91,8 @@ jobs:
         id: jar
         shell: bash
         run: |
-          JAR=$(find target -name "*.jar" | head -n 1)
+          JAR=$(ls target/*.jar | grep -v "original" | head -n 1)
+          echo "Found JAR: $JAR"
           echo "jar=$JAR" >> $GITHUB_OUTPUT
 
       - name: Clean builds folder
@@ -107,7 +109,7 @@ jobs:
           --dest builds \
           --name MarsTravelsBooking \
           --app-version 1.0.0 \
-          --main-jar $(basename "${{ steps.jar.outputs.jar }}") \
+          --main-jar $(basename ${{ steps.jar.outputs.jar }}) \
           --main-class com.example.grupp2_system.App.Launcher \
           --type exe \
           --icon icons/icon.ico \
@@ -123,7 +125,7 @@ jobs:
           --dest builds \
           --name MarsTravelsBooking \
           --app-version 1.0.0 \
-          --main-jar $(basename "${{ steps.jar.outputs.jar }}") \
+          --main-jar $(basename ${{ steps.jar.outputs.jar }}) \
           --main-class com.example.grupp2_system.App.Launcher \
           --type msi \
           --icon icons/icon.ico \
