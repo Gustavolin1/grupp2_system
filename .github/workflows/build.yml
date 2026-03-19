@@ -30,6 +30,11 @@ jobs:
           JAR=$(ls target/*.jar | head -n 1)
           echo "jar=$JAR" >> $GITHUB_OUTPUT
 
+      - name: Clean builds folder
+        run: |
+          rm -rf builds
+          mkdir builds
+
       - name: Build DMG
         run: |
           jpackage \
@@ -46,16 +51,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: mac-build
-          path: builds/*.dmg
-
-      - name: Create Release (Mac)
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: v1.0.${{ github.run_number }}
-          name: MarsTravelsBooking v1.0.${{ github.run_number }}
-          files: builds/*.dmg
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: builds/MarsTravelsBooking*.dmg
 
   build-windows:
     runs-on: windows-latest
@@ -78,6 +74,12 @@ jobs:
         run: |
           JAR=$(ls target/*.jar | head -n 1)
           echo "jar=$JAR" >> $GITHUB_OUTPUT
+
+      - name: Clean builds folder
+        shell: bash
+        run: |
+          rm -rf builds
+          mkdir builds
 
       - name: Build EXE
         shell: bash
