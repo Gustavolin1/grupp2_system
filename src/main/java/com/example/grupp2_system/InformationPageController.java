@@ -40,6 +40,12 @@ public class InformationPageController {
     }
 
     @FXML
+    public void hotelInfo(ActionEvent event)throws IOException
+    {
+        SceneManager.switchScene("HotelInformation.fxml");
+    }
+
+    @FXML
     public void backPage(ActionEvent event) throws IOException
     {
         SceneManager.goBack();

@@ -15,7 +15,7 @@
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdeaf8" height="60.0" layoutX="-23.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="834.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdeaf8" height="66.0" layoutX="-15.0" layoutY="461.0" stroke="BLACK" strokeType="INSIDE" width="819.0" AnchorPane.bottomAnchor="10.0" />
-      <Button fx:id="btnCancel" layoutX="16.0" layoutY="23.0" mnemonicParsing="false" onAction="#cancelBooking" style="-fx-background-color: #5c96c6;" text="Avbryt Bokning" />
+      <Button fx:id="btnCancel" layoutX="16.0" layoutY="23.0" mnemonicParsing="false" onAction="#Menu" style="-fx-background-color: #5c96c6;" text="Meny" />
       <Label fx:id="lblmain" layoutX="319.0" layoutY="104.0" text="Hotell på Mars">
          <font>
             <Font name="American Typewriter" size="23.0" />
