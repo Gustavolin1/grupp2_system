@@ -69,7 +69,8 @@ jobs:
           java-version: 21
 
       - name: Build JAR
-        run: mvnw.cmd clean package
+        shell: bash
+        run: ./mvnw clean package
 
       - name: Find JAR
         id: jar
