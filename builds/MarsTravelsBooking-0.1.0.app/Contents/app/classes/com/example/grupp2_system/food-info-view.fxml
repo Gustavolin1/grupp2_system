@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.InfoFoodController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdeaf8" height="471.0" layoutY="131.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5c96c6" height="131.0" layoutX="1.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="800.0" AnchorPane.bottomAnchor="469.20000000000005" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label fx:id="lblMatpaket" alignment="CENTER" layoutX="300.0" layoutY="23.0" prefHeight="35.0" prefWidth="267.0" text="MATPAKET" textAlignment="CENTER" textFill="#cdeaf8" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="262.40000000000003" AnchorPane.topAnchor="47.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Text fx:id="txtbudgetmat" layoutX="14.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klass 1 (27 000 kr/person)&#10;&#10;Samtliga måltider under resan intas på MarsDonalds." textAlignment="CENTER" wrappingWidth="249.04180908203125" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtmellanmat" layoutX="275.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klass 1 (76 000 kr/person)&#10;&#10;All frukost intas på MarsDonalds, mellanmål och lunch på Marsian Buffé medan middagar intas på Tellus Home&#10;&#10;Klass 2 (90 000 kr/person)&#10;&#10;Alla måltider förutom middag intas på Marsian Buffé. Middagar intas på Tellus Home.&#10;&#10;Klass 3 (100 000 kr/person)&#10;&#10;Samtliga måltider intas på Tellus Home" textAlignment="CENTER" wrappingWidth="249.04180908203125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtlyxmat" layoutX="536.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klass 1 (120 000 kr/person)&#10;&#10;All måltider förutom middag intas på Tellus Home medan middagarna intas på&#10;SpaceView.&#10;&#10;Klass 2 (150 000 kr/person)&#10;&#10;Frukost och mellanmål intas på Tellus Home medan lunch och middag intas på&#10;SpaceView&#10;&#10;Klass 3 (200 000 kr/person)&#10;&#10;Samtliga måltider intas på SpaceView. För de som valt hyttalternativet Svit serveras&#10;frukosten i hytten från SpaceView." textAlignment="CENTER" wrappingWidth="249.04180908203125" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="btntillbaka" layoutX="58.0" layoutY="495.0" mnemonicParsing="false" onAction="#openHomeScene" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #2685b9;" text="Tillbaka" textFill="WHITE" AnchorPane.bottomAnchor="42.6" AnchorPane.leftAnchor="70.0">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Label alignment="CENTER" layoutX="573.0" layoutY="97.0" prefHeight="35.0" prefWidth="134.0" text="LYX" textAlignment="CENTER" textFill="WHITE" AnchorPane.rightAnchor="72.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="333.0" layoutY="97.0" prefHeight="35.0" prefWidth="134.0" text="BUDGET" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="593.6">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="333.0" layoutY="97.0" prefHeight="35.0" prefWidth="134.0" text="MELLAN" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="333.0" AnchorPane.rightAnchor="332.79999999999995">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Text fx:id="txtbudgetmat1" layoutX="14.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klass 2 (40 000 kr/person)&#10;&#10;All frukost och lunch intas på MarsDonalds medan mellanmål och midddagar intas på Marsian Buffé" textAlignment="CENTER" wrappingWidth="249.04180908203125" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtbudgetmat11" layoutX="14.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klass 3 (54 000 kr/person)&#10;&#10;Samtliga måltider under redan intas på Marsian Buffé&#10;" textAlignment="CENTER" wrappingWidth="249.04180908203125" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

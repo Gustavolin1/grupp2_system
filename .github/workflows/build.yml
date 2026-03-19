@@ -16,6 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Make mvnw executable
+        run: chmod +x mvnw
+
       - uses: actions/setup-java@v4
         with:
           distribution: corretto
@@ -27,7 +30,7 @@ jobs:
       - name: Find JAR
         id: jar
         run: |
-          JAR=$(ls target/*.jar | head -n 1)
+          JAR=$(find target -name "*.jar" | head -n 1)
           echo "jar=$JAR" >> $GITHUB_OUTPUT
 
       - name: Clean builds folder
@@ -44,10 +47,19 @@ jobs:
           --app-version 1.0.0 \
           --main-jar $(basename "${{ steps.jar.outputs.jar }}") \
           --main-class com.example.grupp2_system.App.Launcher \
-          --type dmg \
+          --type app-image \
           --icon icons/icon.icns \
-          --mac-package-name MarsTravelsBooking \
-          --mac-package-identifier com.marstravels.booking \
+          --mac-package-name MarsTravel \
+          --mac-package-identifier com.marstravels.booking
+
+          jpackage \
+          --input builds \
+          --dest builds \
+          --name MarsTravelsBooking \
+          --app-version 1.0.0 \
+          --type dmg
+
+          xattr -cr builds
 
       - name: Upload DMG
         uses: actions/upload-artifact@v4
@@ -62,6 +74,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Make mvnw executable
+        run: chmod +x mvnw
+
       - uses: actions/setup-java@v4
         with:
           distribution: corretto
@@ -75,7 +90,7 @@ jobs:
         id: jar
         shell: bash
         run: |
-          JAR=$(ls target/*.jar | head -n 1)
+          JAR=$(find target -name "*.jar" | head -n 1)
           echo "jar=$JAR" >> $GITHUB_OUTPUT
 
       - name: Clean builds folder
