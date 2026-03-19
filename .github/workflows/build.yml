@@ -55,6 +55,7 @@ jobs:
 
   build-windows:
     runs-on: windows-latest
+    needs: build-mac
 
     steps:
       - uses: actions/checkout@v4
@@ -92,7 +93,7 @@ jobs:
           --main-jar $(basename "${{ steps.jar.outputs.jar }}") \
           --main-class com.example.grupp2_system.App.Launcher \
           --type exe \
-          --icon icons/icon.ico \
+--icon icons/icon.ico \
           --win-menu \
           --win-shortcut \
           --win-dir-chooser
@@ -119,10 +120,17 @@ jobs:
           name: windows-build
           path: builds/*
 
+      - name: Download Mac artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: mac-build
+          path: builds
+
       - name: Create Release (Windows)
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v1.0.${{ github.run_number }}
+          name: MarsTravelsBooking v1.0.${{ github.run_number }}
           files: builds/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
