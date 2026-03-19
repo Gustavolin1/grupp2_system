@@ -7,13 +7,22 @@ set FINAL_NAME=%APP_NAME%-%VERSION%
 set ICON=icons\icon.ico
 
 set INPUT=target
-for %%f in (target\*.jar) do set JAR=%%~nxf
 set MAIN_CLASS=com.example.grupp2_system.App.Launcher
 
 set DEST=builds
 
 REM Build JAR using Maven wrapper
 call mvnw.cmd clean package
+
+REM Find built JAR
+for %%f in (target\*.jar) do set JAR=%%~nxf
+
+if "%JAR%"=="" (
+  echo ERROR: No JAR found in target\
+  exit /b 1
+)
+
+echo Using JAR: %JAR%
 
 echo Cleaning old builds...
 if exist %DEST%\*.exe del /q %DEST%\*.exe

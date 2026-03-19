@@ -16,119 +16,43 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-java@v4
-        with:
-          distribution: corretto
-          java-version: 21
+      - name: Create builds folder
+        run: rm -rf builds && mkdir builds
 
       - name: Build JAR
-        run: ./mvnw clean package
-
-      - name: Find JAR
-        id: jar
         run: |
-          JAR=$(ls target/*.jar | head -n 1)
-          echo "jar=$JAR" >> $GITHUB_OUTPUT
-
-      - name: Clean builds folder
-        run: |
-          rm -rf builds
-          mkdir builds
+          chmod +x mvnw
+          ./mvnw clean package
 
       - name: Build DMG
         run: |
+          JAR=$(ls target/*.jar | grep -v "original" | head -n 1)
+          JAR_NAME=$(basename "$JAR")
+
           jpackage \
-          --input target \
-          --dest builds \
-          --name MarsTravelsBooking \
-          --app-version 1.0.0 \
-          --main-jar $(basename "${{ steps.jar.outputs.jar }}") \
-          --main-class com.example.grupp2_system.App.Launcher \
-          --type dmg \
-          --icon icons/icon.icns \
-          --mac-package-name MarsTravelsBooking \
-          --mac-package-identifier com.marstravels.booking \
+            --input target \
+            --dest builds \
+            --name MarsTravelsBooking \
+            --app-version 1.0.0 \
+            --main-jar "$JAR_NAME" \
+            --main-class com.example.grupp2_system.App.Launcher \
+            --type dmg \
+            --icon icons/icon.icns
+
+          xattr -cr builds
 
       - name: Upload DMG
         uses: actions/upload-artifact@v4
         with:
           name: mac-build
-          path: builds/MarsTravelsBooking*.dmg
+          path: builds/*.dmg
 
-  build-windows:
-    runs-on: windows-latest
-    needs: build-mac
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-java@v4
-        with:
-          distribution: corretto
-          java-version: 21
-
-      - name: Build JAR
-        shell: bash
-        run: ./mvnw clean package
-
-      - name: Find JAR
-        id: jar
-        shell: bash
+      - name: Copy JAR to builds
         run: |
-          JAR=$(ls target/*.jar | head -n 1)
-          echo "jar=$JAR" >> $GITHUB_OUTPUT
+          JAR=$(ls target/*.jar | grep -v "original" | head -n 1)
+          cp "$JAR" builds/
 
-      - name: Clean builds folder
-        shell: bash
-        run: |
-          rm -rf builds
-          mkdir builds
-
-      - name: Build EXE
-        shell: bash
-        run: |
-          jpackage \
-          --input target \
-          --dest builds \
-          --name MarsTravelsBooking \
-          --app-version 1.0.0 \
-          --main-jar $(basename "${{ steps.jar.outputs.jar }}") \
-          --main-class com.example.grupp2_system.App.Launcher \
-          --type exe \
-          --icon icons/icon.ico \
-          --win-menu \
-          --win-shortcut \
-          --win-dir-chooser
-
-      - name: Build MSI
-        shell: bash
-        run: |
-          jpackage \
-          --input target \
-          --dest builds \
-          --name MarsTravelsBooking \
-          --app-version 1.0.0 \
-          --main-jar $(basename "${{ steps.jar.outputs.jar }}") \
-          --main-class com.example.grupp2_system.App.Launcher \
-          --type msi \
-          --icon icons/icon.ico \
-          --win-menu \
-          --win-shortcut \
-          --win-dir-chooser
-
-      - name: Upload EXE
-        uses: actions/upload-artifact@v4
-        with:
-          name: windows-build
-          path: builds/*
-
-      - name: Download Mac artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: mac-build
-          path: builds
-
-      - name: Create Release (Windows)
+      - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v1.0.${{ github.run_number }}
