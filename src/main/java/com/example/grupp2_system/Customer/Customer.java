@@ -47,7 +47,7 @@ public class Customer {
         this.email = email;
     }
 
-    public void setCustomerID(String customerID) {this.customerID = this.customerID;}
+    public void setCustomerID(String customerID) { this.customerID = customerID; }
 
     public String getCustomerID() {
         return customerID;
