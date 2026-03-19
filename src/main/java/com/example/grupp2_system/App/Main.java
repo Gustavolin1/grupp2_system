@@ -20,6 +20,7 @@ public class Main extends Application {
         stage.setTitle("Bokningssystem");
         stage.show();
 
+
     }
 
     public static void main(String[] args) {
