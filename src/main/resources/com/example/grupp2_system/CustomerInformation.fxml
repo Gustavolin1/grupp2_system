@@ -8,26 +8,26 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="chkboxHälsoförsäkring" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.CustomerInformationController">
+<AnchorPane fx:id="chkboxHälsoförsäkring" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.CustomerInformationController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8dbbe6" height="55.0" stroke="BLACK" strokeType="INSIDE" width="604.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#78addd" height="55.0" layoutY="345.0" stroke="BLACK" strokeType="INSIDE" width="604.0" />
-      <Button fx:id="btnnext" layoutX="515.0" layoutY="360.0" mnemonicParsing="false" onAction="#next" prefHeight="25.0" prefWidth="60.0" text="Spara" />
-      <Button fx:id="btnBack" layoutX="24.0" layoutY="359.0" mnemonicParsing="false" onAction="#openHomeScene" text="Gå tillbaka" />
-      <Label layoutX="24.0" layoutY="13.0" text="Kundinformation">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8dbbe6" height="116.0" stroke="BLACK" strokeType="INSIDE" width="819.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#78addd" height="124.0" layoutX="-4.0" layoutY="479.0" stroke="BLACK" strokeType="INSIDE" width="823.0" />
+      <Button fx:id="btnnext" layoutX="624.0" layoutY="519.0" mnemonicParsing="false" onAction="#next" prefHeight="50.0" prefWidth="106.0" text="Spara" />
+      <Button fx:id="btnBack" layoutX="50.0" layoutY="522.0" mnemonicParsing="false" onAction="#openHomeScene" prefHeight="50.0" prefWidth="106.0" text="Gå tillbaka" />
+      <Label layoutX="308.0" layoutY="39.0" text="Kundinformation">
          <font>
-            <Font name="System Italic" size="18.0" />
+            <Font name="System Italic" size="25.0" />
          </font>
       </Label>
-      <TextField fx:id="txtfName" layoutX="150.0" layoutY="116.0" />
-      <TextField fx:id="txtfPersnumber" layoutX="150.0" layoutY="192.0" />
-      <TextField fx:id="txtfTel" layoutX="150.0" layoutY="155.0" />
-      <TextField fx:id="txtfMail" layoutX="150.0" layoutY="232.0" />
-      <Label layoutX="43.0" layoutY="120.0" text="Fullständigt namn" />
-      <Label layoutX="43.0" layoutY="196.0" text="Personummer" />
-      <Label layoutX="43.0" layoutY="159.0" text="Telefonummer" />
-      <Label layoutX="43.0" layoutY="236.0" text="E-post" />
-      <CheckBox fx:id="chkHälsoförsäkring" layoutX="41.0" layoutY="281.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="258.0" text="Hälsoförsäkring 50 000 kr">
+      <TextField fx:id="txtfName" layoutX="213.0" layoutY="188.0" />
+      <TextField fx:id="txtfPersnumber" layoutX="213.0" layoutY="264.0" />
+      <TextField fx:id="txtfTel" layoutX="213.0" layoutY="227.0" />
+      <TextField fx:id="txtfMail" layoutX="213.0" layoutY="304.0" />
+      <Label layoutX="106.0" layoutY="192.0" text="Fullständigt namn" />
+      <Label layoutX="106.0" layoutY="268.0" text="Personummer" />
+      <Label layoutX="106.0" layoutY="231.0" text="Telefonummer" />
+      <Label layoutX="106.0" layoutY="308.0" text="E-post" />
+      <CheckBox fx:id="chkHälsoförsäkring" layoutX="104.0" layoutY="353.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="258.0" text="Hälsoförsäkring 50 000 kr">
          <font>
             <Font size="16.0" />
          </font>
