@@ -17,9 +17,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Create builds folder
-        run: |
-          rm -rf builds
-          mkdir builds
+        run: rm -rf builds && mkdir builds
 
       - name: Build DMG
         run: |
@@ -57,9 +55,7 @@ jobs:
 
       - name: Create builds folder
         shell: bash
-        run: |
-          rm -rf builds
-          mkdir builds
+        run: rm -rf builds && mkdir builds
 
       - name: Build EXE
         shell: bash
@@ -75,6 +71,7 @@ jobs:
             --add-modules javafx.controls,javafx.fxml \
             --type exe \
             --icon icons/icon.ico \
+            --win-console \
             --win-menu \
             --win-shortcut
 
@@ -100,7 +97,7 @@ jobs:
         run: |
           cp out/artifacts/grupp2_system_jar/grupp2_system.jar builds/
 
-      - name: Upload
+      - name: Upload Windows build
         uses: actions/upload-artifact@v4
         with:
           name: windows-build
