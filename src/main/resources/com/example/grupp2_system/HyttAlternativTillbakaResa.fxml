@@ -11,9 +11,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffe0e0;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.HyttAlternativTillbakaController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #d2a2a2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.HyttAlternativTillbakaController">
     <children>
-        <Button fx:id="btnSave" layoutX="651.0" layoutY="520.0" mnemonicParsing="false" onAction="#next" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #b03f3c;" text="Gå vidare" textFill="WHITE">
+        <Button fx:id="btnSave" layoutX="651.0" layoutY="520.0" mnemonicParsing="false" onAction="#next" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #a65d5d;" text="Gå vidare" textFill="WHITE">
             <font>
                 <Font size="14.0" />
             </font>
@@ -23,8 +23,8 @@
                 <Font size="31.0" />
             </font>
         </Label>
-        <Button fx:id="btnBack" layoutX="80.0" layoutY="520.0" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #b03f3c;" text="Gå tillbaka" textFill="WHITE" />
-        <Button fx:id="btninfo" layoutX="367.0" layoutY="520.0" mnemonicParsing="false" onAction="#info" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #b03f3c;" text="Mer info..." textFill="WHITE" />
+        <Button fx:id="btnBack" layoutX="80.0" layoutY="520.0" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #a65d5d;" text="Gå tillbaka" textFill="WHITE" />
+        <Button fx:id="btninfo" layoutX="367.0" layoutY="520.0" mnemonicParsing="false" onAction="#info" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #a65d5d;" text="Mer info..." textFill="WHITE" />
         <RadioButton layoutX="31.0" layoutY="202.0" mnemonicParsing="false" text="Economy" textFill="#b03f3c">
             <toggleGroup>
                 <ToggleGroup fx:id="grpOption" />
@@ -49,7 +49,7 @@
             <font>
                 <Font size="17.0" />
             </font></RadioButton>
-        <Button fx:id="btnCancel" layoutX="40.0" layoutY="33.0" mnemonicParsing="false" onAction="#cancelBooking" style="-fx-background-color: #b03f3c;" text="Avbryt bokning" textFill="WHITE">
+        <Button fx:id="btnCancel" layoutX="40.0" layoutY="33.0" mnemonicParsing="false" onAction="#cancelBooking" style="-fx-background-color: #a65d5d;" text="Avbryt bokning" textFill="WHITE">
             <font>
                 <Font size="17.0" />
             </font></Button>

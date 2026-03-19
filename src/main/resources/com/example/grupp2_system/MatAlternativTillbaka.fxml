@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFEBEB;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.MatbokningFrånController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #d2a2a2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.MatbokningFrånController">
 
     <!-- Define the ToggleGroup separately -->
     <fx:define>
@@ -17,7 +17,7 @@
 
     <children>
         <!-- Header Text -->
-        <Text fx:id="txtEvenemangInfo" fill="#b82727" layoutX="232.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Val av mat på resan från Mars">
+        <Text fx:id="txtEvenemangInfo" fill="#a65d5d" layoutX="232.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Val av mat på resan från Mars">
             <font>
                 <Font size="28.0" />
             </font>
@@ -76,25 +76,25 @@
         <!-- Buttons -->
 
         <!-- Back button -->
-        <Button fx:id="btnBackaMatBokning" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #FF6F6F;" text="Tillbaka" textFill="WHITE">
+        <Button fx:id="btnBackaMatBokning" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #a65d5d;" text="Tillbaka" textFill="WHITE">
             <font>
                 <Font size="16.0" />
             </font>
         </Button>
 
         <!-- Next button -->
-        <Button fx:id="btnNästaMatpaket" layoutX="600.0" layoutY="480.0" mnemonicParsing="false" onAction="#next" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #FF6F6F;" text="Nästa" textFill="WHITE">
+        <Button fx:id="btnNästaMatpaket" layoutX="600.0" layoutY="480.0" mnemonicParsing="false" onAction="#next" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #a65d5d;" text="Nästa" textFill="WHITE">
             <font>
                 <Font size="20.0" />
             </font>
         </Button>
 
-        <Button fx:id="btnMatpaketInfo" layoutX="301.0" layoutY="480.0" onAction="#openInformation" prefHeight="37.0" prefWidth="224.0" style="-fx-background-color: #FF6F6F;" text="Matpaketinformation" textFill="WHITE">
+        <Button fx:id="btnMatpaketInfo" layoutX="301.0" layoutY="480.0" onAction="#openInformation" prefHeight="37.0" prefWidth="224.0" style="-fx-background-color: #a65d5d;" text="Matpaketinformation" textFill="WHITE">
             <font>
                 <Font size="20.0" />
             </font>
         </Button>
-      <Button fx:id="btnMeny" layoutX="58.0" layoutY="29.0" mnemonicParsing="false" onAction="#meny" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #FF6F6F;" text="Meny" textFill="WHITE">
+      <Button fx:id="btnMeny" layoutX="58.0" layoutY="29.0" mnemonicParsing="false" onAction="#meny" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #a65d5d;" text="Meny" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
