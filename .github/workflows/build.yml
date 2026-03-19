@@ -28,10 +28,13 @@ jobs:
         run: ./mvnw clean package
 
       - name: Clean builds folder
-        run: rm -rf builds && mkdir builds
+        run: |
+          rm -rf builds
+          mkdir builds
 
-      - name: Build DMG (safe)
-        run: JAR=$(ls target/*.jar | grep -v "original" | head -n 1) && JAR_NAME=$(basename "$JAR") && echo "Using JAR: $JAR_NAME" && jpackage --input target --dest builds --name MarsTravelsBooking --app-version 1.0.0 --main-jar "$JAR_NAME" --main-class com.example.grupp2_system.App.Launcher --type app-image --icon icons/icon.icns --mac-package-name MarsTravel --mac-package-identifier com.marstravels.booking && jpackage --input builds --dest builds --name MarsTravelsBooking --app-version 1.0.0 --type dmg && xattr -cr builds
+      - name: Build DMG
+        shell: bash
+        run: "JAR=$(find target -name '*.jar' ! -name '*original*' | head -n 1) && if [ -z \"$JAR\" ]; then echo 'ERROR: No JAR found!'; exit 1; fi && JAR_NAME=$(basename \"$JAR\") && echo Using JAR: $JAR_NAME && jpackage --input target --dest builds --name MarsTravelsBooking --app-version 1.0.0 --main-jar \"$JAR_NAME\" --main-class com.example.grupp2_system.App.Launcher --type app-image --icon icons/icon.icns --mac-package-name MarsTravel --mac-package-identifier com.marstravels.booking && jpackage --input builds --dest builds --name MarsTravelsBooking --app-version 1.0.0 --type dmg && xattr -cr builds"
 
       - name: Upload DMG
         uses: actions/upload-artifact@v4
@@ -46,6 +49,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Make mvnw executable
+        run: chmod +x mvnw
+
       - uses: actions/setup-java@v4
         with:
           distribution: corretto
@@ -57,12 +63,35 @@ jobs:
 
       - name: Clean builds folder
         shell: bash
-        run: rm -rf builds && mkdir builds
+        run: |
+          rm -rf builds
+          mkdir builds
 
       - name: Build EXE
         shell: bash
-        run: JAR=$(ls target/*.jar | grep -v "original" | head -n 1) && JAR_NAME=$(basename "$JAR") && echo "Using JAR: $JAR_NAME" && jpackage --input target --dest builds --name MarsTravelsBooking --app-version 1.0.0 --main-jar "$JAR_NAME" --main-class com.example.grupp2_system.App.Launcher --type exe --icon icons/icon.ico --win-menu --win-shortcut --win-dir-chooser
+        run: "JAR=$(find target -name '*.jar' ! -name '*original*' | head -n 1) && if [ -z \"$JAR\" ]; then echo 'ERROR: No JAR found!'; exit 1; fi && JAR_NAME=$(basename \"$JAR\") && echo Using JAR: $JAR_NAME && jpackage --input target --dest builds --name MarsTravelsBooking --app-version 1.0.0 --main-jar \"$JAR_NAME\" --main-class com.example.grupp2_system.App.Launcher --type exe --icon icons/icon.ico --win-menu --win-shortcut --win-dir-chooser"
 
       - name: Build MSI
         shell: bash
-        run: JAR=$(ls target/*.jar
+        run: "JAR=$(find target -name '*.jar' ! -name '*original*' | head -n 1) && if [ -z \"$JAR\" ]; then echo 'ERROR: No JAR found!'; exit 1; fi && JAR_NAME=$(basename \"$JAR\") && echo Using JAR: $JAR_NAME && jpackage --input target --dest builds --name MarsTravelsBooking --app-version 1.0.0 --main-jar \"$JAR_NAME\" --main-class com.example.grupp2_system.App.Launcher --type msi --icon icons/icon.ico --win-menu --win-shortcut --win-dir-chooser"
+
+      - name: Upload EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-build
+          path: builds/*
+
+      - name: Download Mac artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: mac-build
+          path: builds
+
+      - name: Create Release (Windows)
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.${{ github.run_number }}
+          name: MarsTravelsBooking v1.0.${{ github.run_number }}
+          files: builds/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
