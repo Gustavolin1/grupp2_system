@@ -44,17 +44,7 @@ jobs:
           JAR_NAME=$(basename "$JAR")
           echo "Using JAR: $JAR_NAME"
 
-          jpackage \
-          --input target \
-          --dest builds \
-          --name MarsTravelsBooking \
-          --app-version 1.0.0 \
-          --main-jar "$JAR_NAME" \
-          --main-class com.example.grupp2_system.App.Launcher \
-          --type app-image \
-          --icon icons/icon.icns \
-          --mac-package-name MarsTravel \
-          --mac-package-identifier com.marstravels.booking
+          jpackage --input target --dest builds --name MarsTravelsBooking --app-version 1.0.0 --main-jar "$JAR_NAME" --main-class com.example.grupp2_system.App.Launcher --type app-image --icon icons/icon.icns --mac-package-name MarsTravel --mac-package-identifier com.marstravels.booking
 
           jpackage \
           --input builds \
