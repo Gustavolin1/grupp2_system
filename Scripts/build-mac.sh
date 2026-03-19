@@ -23,30 +23,18 @@ chmod +x mvnw
 ./mvnw clean package
 
 JAR=$(find target -name "*.jar" | head -n 1)
+if [ -z "$JAR" ]; then
+  echo "ERROR: No JAR found in target/"
+  exit 1
+fi
 
 #  STEG 1: Bygg app-image (stabilt)
 echo "Building .app..."
-$JPACKAGE \
---input "$INPUT" \
---dest "$DEST" \
---name "$FINAL_NAME" \
---app-version "$VERSION" \
---main-jar "$(basename "$JAR")" \
---main-class "$MAIN_CLASS" \
---icon "$ICON" \
---mac-package-name "MarsTravel" \
---mac-package-identifier "com.marstravels.booking" \
---type app-image
+$JPACKAGE --input "$INPUT" --dest "$DEST" --name "$FINAL_NAME" --app-version "$VERSION" --main-jar "$(basename "$JAR")" --main-class "$MAIN_CLASS" --icon "$ICON" --mac-package-name "MarsTravel" --mac-package-identifier "com.marstravels.booking" --type app-image
 
 #  STEG 2: Bygg dmg från app-image
 echo "Building .dmg..."
-$JPACKAGE \
---input "$DEST" \
---dest "$DEST" \
---name "$FINAL_NAME" \
---app-version "$VERSION" \
---type dmg \
---icon "$ICON"
+$JPACKAGE --input "$DEST" --dest "$DEST" --name "$FINAL_NAME" --app-version "$VERSION" --type dmg --icon "$ICON"
 
 #  STEG 3: FIXA macOS metadata (VIKTIGT)
 echo "Fixing macOS metadata..."

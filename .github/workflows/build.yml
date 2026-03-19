@@ -27,12 +27,6 @@ jobs:
       - name: Build JAR
         run: ./mvnw clean package
 
-      - name: Find JAR
-        id: jar
-        run: |
-          JAR=$(find target -name "*.jar" | head -n 1)
-          echo "jar=$JAR" >> $GITHUB_OUTPUT
-
       - name: Clean builds folder
         run: |
           rm -rf builds
@@ -46,12 +40,7 @@ jobs:
 
           jpackage --input target --dest builds --name MarsTravelsBooking --app-version 1.0.0 --main-jar "$JAR_NAME" --main-class com.example.grupp2_system.App.Launcher --type app-image --icon icons/icon.icns --mac-package-name MarsTravel --mac-package-identifier com.marstravels.booking
 
-          jpackage \
-          --input builds \
-          --dest builds \
-          --name MarsTravelsBooking \
-          --app-version 1.0.0 \
-          --type dmg
+          jpackage --input builds --dest builds --name MarsTravelsBooking --app-version 1.0.0 --type dmg
 
           xattr -cr builds
 
@@ -80,13 +69,6 @@ jobs:
         shell: bash
         run: ./mvnw clean package
 
-      - name: Find JAR
-        id: jar
-        shell: bash
-        run: |
-          JAR=$(find target -name "*.jar" | head -n 1)
-          echo "jar=$JAR" >> $GITHUB_OUTPUT
-
       - name: Clean builds folder
         shell: bash
         run: |
@@ -100,18 +82,7 @@ jobs:
           JAR_NAME=$(basename "$JAR")
           echo "Using JAR: $JAR_NAME"
 
-          jpackage \
-          --input target \
-          --dest builds \
-          --name MarsTravelsBooking \
-          --app-version 1.0.0 \
-          --main-jar "$JAR_NAME" \
-          --main-class com.example.grupp2_system.App.Launcher \
-          --type exe \
-          --icon icons/icon.ico \
-          --win-menu \
-          --win-shortcut \
-          --win-dir-chooser
+          jpackage --input target --dest builds --name MarsTravelsBooking --app-version 1.0.0 --main-jar "$JAR_NAME" --main-class com.example.grupp2_system.App.Launcher --type exe --icon icons/icon.ico --win-menu --win-shortcut --win-dir-chooser
 
       - name: Build MSI
         shell: bash
@@ -120,18 +91,7 @@ jobs:
           JAR_NAME=$(basename "$JAR")
           echo "Using JAR: $JAR_NAME"
 
-          jpackage \
-          --input target \
-          --dest builds \
-          --name MarsTravelsBooking \
-          --app-version 1.0.0 \
-          --main-jar "$JAR_NAME" \
-          --main-class com.example.grupp2_system.App.Launcher \
-          --type msi \
-          --icon icons/icon.ico \
-          --win-menu \
-          --win-shortcut \
-          --win-dir-chooser
+          jpackage --input target --dest builds --name MarsTravelsBooking --app-version 1.0.0 --main-jar "$JAR_NAME" --main-class com.example.grupp2_system.App.Launcher --type msi --icon icons/icon.ico --win-menu --win-shortcut --win-dir-chooser
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
