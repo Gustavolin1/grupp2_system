@@ -41,7 +41,7 @@
                       <Font size="17.0" />
                   </font>
               </Button>
-            <Label alignment="CENTER" layoutX="197.0" layoutY="14.0" prefHeight="106.0" prefWidth="406.0" text="Vilka evenemang vill du delta på?" textFill="#2685b9" textOverrun="CLIP" AnchorPane.leftAnchor="197.0" AnchorPane.topAnchor="14.0">
+            <Label alignment="CENTER" layoutX="197.0" layoutY="14.0" prefHeight="106.0" prefWidth="406.0" text="Välja antal evenmangsbiljetter" textFill="#2685b9" textOverrun="CLIP" AnchorPane.leftAnchor="197.0" AnchorPane.topAnchor="14.0">
                <font>
                   <Font size="27.0" />
                </font>
