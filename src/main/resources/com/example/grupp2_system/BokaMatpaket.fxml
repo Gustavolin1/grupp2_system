@@ -29,46 +29,46 @@
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#076fa699" height="304.0" layoutX="568.0" layoutY="148.0" stroke="#0a4e73" strokeType="INSIDE" width="207.0" AnchorPane.topAnchor="148.0" />
 
         <!-- Radio Buttons - Bronz -->
-        <RadioButton layoutX="78.0" layoutY="182.0" prefHeight="52.0" prefWidth="147.2" text="Budget 1&#10;27 000 kr/pers" textFill="WHITE" AnchorPane.leftAnchor="78.0" AnchorPane.topAnchor="180.0">
+        <RadioButton layoutX="78.0" layoutY="182.0" prefHeight="52.0" prefWidth="147.2" text="Budget 1" textFill="WHITE" AnchorPane.leftAnchor="78.0" AnchorPane.topAnchor="180.0">
          <toggleGroup>
             <ToggleGroup fx:id="grpFood" />
          </toggleGroup>
          <font>
             <Font name="System Bold" size="17.0" />
          </font></RadioButton>
-        <RadioButton layoutX="78.0" layoutY="285.0" text="Budget 2&#10;40 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood" AnchorPane.leftAnchor="78.0" AnchorPane.topAnchor="280.0">
+        <RadioButton layoutX="78.0" layoutY="285.0" text="Budget 2" textFill="WHITE" toggleGroup="$grpFood" AnchorPane.leftAnchor="78.0" AnchorPane.topAnchor="280.0">
          <font>
             <Font name="System Bold" size="17.0" />
          </font></RadioButton>
-        <RadioButton layoutX="81.0" layoutY="371.0" text="Budget 3&#10;54 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood" AnchorPane.leftAnchor="78.0" AnchorPane.topAnchor="370.0">
+        <RadioButton layoutX="81.0" layoutY="371.0" text="Budget 3" textFill="WHITE" toggleGroup="$grpFood" AnchorPane.leftAnchor="78.0" AnchorPane.topAnchor="370.0">
          <font>
             <Font name="System Bold" size="17.0" />
          </font></RadioButton>
 
         <!-- Radio Buttons - Silver -->
-        <RadioButton layoutX="344.0" layoutY="188.0" text="Mellan 1&#10;76 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood" AnchorPane.rightAnchor="310.0" AnchorPane.topAnchor="180.0">
+        <RadioButton layoutX="350.0" layoutY="193.0" text="Mellan 1" textFill="WHITE" toggleGroup="$grpFood" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="193.0">
          <font>
             <Font name="System Bold" size="17.0" />
          </font></RadioButton>
-        <RadioButton layoutX="344.0" layoutY="285.0" text="Mellan 2&#10;90 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood" AnchorPane.rightAnchor="310.0" AnchorPane.topAnchor="280.0">
+        <RadioButton layoutX="353.0" layoutY="280.0" text="Mellan 2" textFill="WHITE" toggleGroup="$grpFood" AnchorPane.rightAnchor="347.0" AnchorPane.topAnchor="280.0">
          <font>
             <Font name="System Bold" size="17.0" />
          </font></RadioButton>
-        <RadioButton layoutX="344.0" layoutY="371.0" text="Mellan 3&#10;100 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood" AnchorPane.rightAnchor="310.0">
+        <RadioButton layoutX="350.0" layoutY="370.0" text="Mellan 3" textFill="WHITE" toggleGroup="$grpFood" AnchorPane.rightAnchor="350.0">
          <font>
             <Font name="System Bold" size="17.0" />
          </font></RadioButton>
 
         <!-- Radio Buttons - Guld -->
-        <RadioButton layoutX="602.0" layoutY="188.0" text="Lyx 1&#10;120 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="180.0">
+        <RadioButton layoutX="626.0" layoutY="193.0" text="Lyx 1" textFill="WHITE" toggleGroup="$grpFood" AnchorPane.rightAnchor="101.33333333333337" AnchorPane.topAnchor="193.0">
          <font>
             <Font name="System Bold" size="17.0" />
          </font></RadioButton>
-        <RadioButton layoutX="602.0" layoutY="285.0" text="Lyx 2&#10;150 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="280.0">
+        <RadioButton layoutX="626.0" layoutY="280.0" text="Lyx 2" textFill="WHITE" toggleGroup="$grpFood" AnchorPane.rightAnchor="101.33333333333337" AnchorPane.topAnchor="280.0">
          <font>
             <Font name="System Bold" size="17.0" />
          </font></RadioButton>
-        <RadioButton layoutX="602.0" layoutY="371.0" text="Lyx 3&#10;200 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood" AnchorPane.rightAnchor="60.0">
+        <RadioButton layoutX="626.0" layoutY="370.0" text="Lyx 3" textFill="WHITE" toggleGroup="$grpFood" AnchorPane.rightAnchor="101.33333333333337">
          <font>
             <Font name="System Bold" size="17.0" />
          </font></RadioButton>

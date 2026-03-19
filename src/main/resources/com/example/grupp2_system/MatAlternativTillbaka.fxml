@@ -25,44 +25,44 @@
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bc394d80" height="304.0" layoutX="313.0" layoutY="100.0" stroke="#b83f27" strokeType="INSIDE" width="207.0" AnchorPane.topAnchor="148.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b9282899" height="304.0" layoutX="568.0" layoutY="100.0" stroke="#b83f27" strokeType="INSIDE" width="207.0" AnchorPane.topAnchor="148.0" />
 
-        <RadioButton layoutX="87.0" layoutY="195.0" prefHeight="52.0" prefWidth="147.2" text="Budget 1&#10;27 000 kr/pers" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="78.0" AnchorPane.topAnchor="180.0">
+        <RadioButton layoutX="87.0" layoutY="195.0" prefHeight="52.0" prefWidth="147.2" text="Budget 1" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="78.0" AnchorPane.topAnchor="180.0">
             <toggleGroup>
                 <ToggleGroup fx:id="grpFood" />
             </toggleGroup>
             <font>
                 <Font name="System Bold" size="17.0" />
             </font></RadioButton>
-        <RadioButton layoutX="87.0" layoutY="292.0" prefHeight="52.0" prefWidth="147.2" text="Budget 2&#10;40 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.leftAnchor="78.0" AnchorPane.topAnchor="280.0">
+        <RadioButton layoutX="87.0" layoutY="292.0" prefHeight="52.0" prefWidth="147.2" text="Budget 2" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.leftAnchor="78.0" AnchorPane.topAnchor="280.0">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font></RadioButton>
-        <RadioButton layoutX="90.0" layoutY="378.0" prefHeight="52.0" prefWidth="147.2" text="Budget 3&#10;54 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.leftAnchor="78.0" AnchorPane.topAnchor="370.0">
-            <font>
-                <Font name="System Bold" size="17.0" />
-            </font></RadioButton>
-
-        <RadioButton layoutX="353.0" layoutY="195.0" prefHeight="52.0" prefWidth="147.2" text="Mellan 1&#10;76 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="310.0" AnchorPane.topAnchor="180.0">
-            <font>
-                <Font name="System Bold" size="17.0" />
-            </font></RadioButton>
-        <RadioButton layoutX="353.0" layoutY="292.0" prefHeight="52.0" prefWidth="147.2" text="Mellan 2&#10;90 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="310.0" AnchorPane.topAnchor="280.0">
-            <font>
-                <Font name="System Bold" size="17.0" />
-            </font></RadioButton>
-        <RadioButton layoutX="353.0" layoutY="378.0" prefHeight="52.0" prefWidth="156.8" text="Mellan 3&#10;100 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="310.0" AnchorPane.topAnchor="370.0">
+        <RadioButton layoutX="90.0" layoutY="378.0" prefHeight="52.0" prefWidth="147.2" text="Budget 3" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.leftAnchor="78.0" AnchorPane.topAnchor="370.0">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font></RadioButton>
 
-        <RadioButton layoutX="611.0" layoutY="195.0" prefHeight="52.0" prefWidth="156.0" text="Lyx 1&#10;120 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="180.0">
+        <RadioButton layoutX="353.0" layoutY="195.0" prefHeight="52.0" prefWidth="147.2" text="Mellan 1" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="310.0" AnchorPane.topAnchor="180.0">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font></RadioButton>
-        <RadioButton layoutX="611.0" layoutY="292.0" prefHeight="52.0" prefWidth="156.0" text="Lyx 2&#10;150 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="280.0">
+        <RadioButton layoutX="353.0" layoutY="292.0" prefHeight="52.0" prefWidth="147.2" text="Mellan 2" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="310.0" AnchorPane.topAnchor="280.0">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font></RadioButton>
-        <RadioButton layoutX="611.0" layoutY="378.0" prefHeight="52.0" prefWidth="156.0" text="Lyx 3&#10;200 000 kr/pers" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="370.0">
+        <RadioButton layoutX="353.0" layoutY="378.0" prefHeight="52.0" prefWidth="156.8" text="Mellan 3" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="310.0" AnchorPane.topAnchor="370.0">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font></RadioButton>
+
+        <RadioButton layoutX="611.0" layoutY="195.0" prefHeight="52.0" prefWidth="156.0" text="Lyx 1" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="180.0">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font></RadioButton>
+        <RadioButton layoutX="611.0" layoutY="292.0" prefHeight="52.0" prefWidth="156.0" text="Lyx 2" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="280.0">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font></RadioButton>
+        <RadioButton layoutX="611.0" layoutY="378.0" prefHeight="52.0" prefWidth="156.0" text="Lyx 3" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="370.0">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font></RadioButton>

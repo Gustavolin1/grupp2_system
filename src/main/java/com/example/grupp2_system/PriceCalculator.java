@@ -10,16 +10,27 @@ public class PriceCalculator {
         double total = 0;
 
         total += calculateCabinPrice(booking.getCabinThere());
+        System.out.println("Pris efter hytt dit: " + total);
         total += calculateCabinPrice(booking.getCabinHome());
+        System.out.println("Pris efter hytt hem: " + total);
 
         total += calculateFoodPrice(booking.getFoodThere());
+        System.out.println("Pris efter mat dit: " + total);
         total += calculateFoodPrice(booking.getFoodHome());
+        System.out.println("Pris efter mat hem: " + total);
 
-        total += calculateEventPrice(booking);
         total += calculateInsurancePrice(booking);
+        System.out.println("Pris efter försäkring: " + total);
+
+        calculateMonthsOnMars(booking);
+        System.out.println(booking.getMonthsOnMars());
 
         total += calculateHotelPrice(booking);
+        System.out.println("Pris efter hotell: " + total);
         total += booking.getCardAmount();
+        System.out.println("Pris efter ladda kortet " + total);
+
+
 
         return total;
     }
@@ -46,7 +57,7 @@ public class PriceCalculator {
 
         switch (cabin) {
             case "Svit": return 1200000;
-            case "Spaceside": return 700000;
+            case "SpaceSide": return 700000;
             case "Inside": return 300000;
             case "Economy": return 180000;
             case "Sömnkapsel": return 2500000;
@@ -71,18 +82,22 @@ public class PriceCalculator {
         }
     }
 
-    private static int calculateEventPrice(Booking booking) {
-
-        int total = 0;
-                                            //Fyll i kostnad för event-biljetterna
-        total += booking.getMovieTicket() * 15000;
-        total += booking.getConcertTicket() * 22000;
-        total += booking.getTheatreTicket() * 18000;
-
-        return total;
-    }
-
     private static int calculateInsurancePrice(Booking booking) {
         return booking.hasTravelInsurance() ? 50000 : 0;
+    }
+
+    public static void calculateMonthsOnMars(Booking booking) {
+        int startMonth = booking.getMonthThere().getValue(); // 1–12
+        int startYear = booking.getYearThere().getValue();
+
+        int endMonth = booking.getMonthHome().getValue(); // 1–12
+        int endYear = booking.getYearHome().getValue();
+
+        int startTotal = startYear * 12 + (startMonth - 1);
+        int endTotal = endYear * 12 + (endMonth - 1);
+
+        int monthsOnMars = endTotal - startTotal;
+
+        booking.setMonthsOnMars(monthsOnMars);
     }
 }
