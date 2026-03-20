@@ -7,6 +7,10 @@ DISPLAY_VERSION="0.1.0"
 
 FINAL_NAME="$APP_NAME-$DISPLAY_VERSION"
 ICON="icons/icon.icns"
+if [ ! -f "$ICON" ]; then
+  echo "WARNING: Icon not found at $ICON, proceeding without custom icon..."
+  ICON=""
+fi
 
 JPACKAGE="jpackage"
 INPUT="target"
@@ -18,23 +22,33 @@ rm -rf "$DEST"
 mkdir -p "$DEST"
 xattr -cr .
 
-echo "Building JAR..."
-chmod +x mvnw
-./mvnw clean package
+echo "Skipping build step (no Maven/Gradle)... assuming JAR already exists in target/"
 
-JAR=$(find target -name "*.jar" | head -n 1)
+JAR=$(find "$INPUT" -name "*.jar" | head -n 1)
 if [ -z "$JAR" ]; then
-  echo "ERROR: No JAR found in target/"
+  echo "ERROR: No JAR found in $INPUT/"
   exit 1
 fi
+echo "Using JAR: $JAR"
 
 #  STEG 1: Bygg app-image (stabilt)
 echo "Building .app..."
-$JPACKAGE --input "$INPUT" --dest "$DEST" --name "$FINAL_NAME" --app-version "$VERSION" --main-jar "$(basename "$JAR")" --main-class "$MAIN_CLASS" --icon "$ICON" --mac-package-name "MarsTravel" --mac-package-identifier "com.marstravels.booking" --type app-image
+$JPACKAGE --input "$INPUT" --dest "$DEST" --name "$FINAL_NAME" --app-version "$VERSION" --main-jar "$(basename "$JAR")" --main-class "$MAIN_CLASS" ${ICON:+--icon "$ICON"} --mac-package-name "MarsTravel" --mac-package-identifier "com.marstravels.booking" --type app-image
 
 #  STEG 2: Bygg dmg från app-image
 echo "Building .dmg..."
-$JPACKAGE --input "$DEST" --dest "$DEST" --name "$FINAL_NAME" --app-version "$VERSION" --type dmg --icon "$ICON"
+APP_IMAGE="$DEST/$FINAL_NAME.app"
+if [ ! -d "$APP_IMAGE" ]; then
+  echo "ERROR: App image not found at $APP_IMAGE"
+  exit 1
+fi
+
+$JPACKAGE --dest "$DEST" \
+  --name "$FINAL_NAME" \
+  --app-version "$VERSION" \
+  --type dmg \
+  ${ICON:+--icon "$ICON"} \
+  --app-image "$APP_IMAGE"
 
 #  STEG 3: FIXA macOS metadata (VIKTIGT)
 echo "Fixing macOS metadata..."

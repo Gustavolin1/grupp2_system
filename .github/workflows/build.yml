@@ -19,15 +19,14 @@ jobs:
       - name: Create builds folder
         run: rm -rf builds && mkdir builds
 
-      - name: Build JAR
-        run: |
-          chmod +x mvnw
-          ./mvnw clean package
+      - name: Skip build (use existing JAR)
+        run: echo "Using prebuilt JAR from target/"
 
       - name: Build DMG
         run: |
-          JAR=$(ls target/*.jar | grep -v "original" | head -n 1)
+          JAR=$(ls target/*.jar | head -n 1)
           JAR_NAME=$(basename "$JAR")
+          echo "Using JAR: $JAR_NAME"
 
           jpackage \
             --input target \
