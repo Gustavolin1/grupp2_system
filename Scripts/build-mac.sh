@@ -22,18 +22,26 @@ rm -rf "$DEST"
 mkdir -p "$DEST"
 xattr -cr .
 
-echo "Skipping build step (no Maven/Gradle)... assuming JAR already exists in target/"
+echo "Building project with Maven..."
+mvn clean package
 
-JAR=$(find "$INPUT" -name "*.jar" | head -n 1)
+echo "Listing target directory..."
+ls -l target
+
+JAR=$(ls target/*.jar | grep -v original | head -n 1)
 if [ -z "$JAR" ]; then
   echo "ERROR: No JAR found in $INPUT/"
   exit 1
 fi
 echo "Using JAR: $JAR"
+if [ ! -f "$JAR" ]; then
+  echo "ERROR: Selected JAR does not exist"
+  exit 1
+fi
 
 #  STEG 1: Bygg app-image (stabilt)
 echo "Building .app..."
-$JPACKAGE --input "$INPUT" --dest "$DEST" --name "$FINAL_NAME" --app-version "$VERSION" --main-jar "$(basename "$JAR")" --main-class "$MAIN_CLASS" ${ICON:+--icon "$ICON"} --mac-package-name "MarsTravel" --mac-package-identifier "com.marstravels.booking" --type app-image
+$JPACKAGE --input "$INPUT" --dest "$DEST" --name "$FINAL_NAME" --app-version "$VERSION" --main-jar "$(basename "$JAR")" --main-class "$MAIN_CLASS" ${ICON:+--icon "$ICON"} --mac-package-name "MarsTravel" --mac-package-identifier "com.marstravels.booking" --type app-image --verbose
 
 #  STEG 2: Bygg dmg från app-image
 echo "Building .dmg..."
@@ -54,4 +62,5 @@ $JPACKAGE --dest "$DEST" \
 echo "Fixing macOS metadata..."
 xattr -cr "$DEST"
 
-echo "DONE! Check /builds"
+echo "DONE! Build contents:"
+ls -l "$DEST"
