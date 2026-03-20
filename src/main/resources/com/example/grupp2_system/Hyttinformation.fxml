@@ -13,7 +13,7 @@
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.HyttInformationController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5c96c6" height="131.0" stroke="BLACK" strokeType="INSIDE" width="800.0" AnchorPane.bottomAnchor="469.20000000000005" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Label fx:id="title" alignment="CENTER" layoutX="270.0" layoutY="47.0" prefHeight="35.0" prefWidth="267.0" text="HYTTINFORMATION" textAlignment="CENTER" textFill="#cdeaf8" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="262.40000000000003" AnchorPane.topAnchor="47.0">
+      <Label fx:id="title" alignment="CENTER" layoutX="270.0" layoutY="47.0" prefHeight="35.0" prefWidth="267.0" text="HYTTINFORMATION" textAlignment="CENTER" textFill="#cdeaf8" AnchorPane.leftAnchor="266.0" AnchorPane.topAnchor="47.0">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>

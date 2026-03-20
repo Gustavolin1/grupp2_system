@@ -14,17 +14,17 @@
         <AnchorPane layoutY="-18.0" prefWidth="800.0" AnchorPane.topAnchor="0.0">
             <children>
 
-                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7baddb" height="240.0" layoutX="-2.0" layoutY="169.0" stroke="BLACK" strokeType="INSIDE" width="800.0" AnchorPane.rightAnchor="0.0" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7baddb" height="240.0" layoutX="-2.0" layoutY="169.0" stroke="BLACK" strokeType="INSIDE" width="800.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="169.0" />
 
-                <Label layoutX="51.0" layoutY="203.0" text="Välj evenemang" textFill="WHITE">
+                <Label layoutX="51.0" layoutY="203.0" text="Välj evenemang" textFill="WHITE" AnchorPane.leftAnchor="48.0" AnchorPane.topAnchor="210.0">
                     <font>
                         <Font name="System Bold Italic" size="18.0" />
                     </font>
                 </Label>
-            <Spinner fx:id="spTea" layoutX="48.0" layoutY="293.0" prefWidth="187.0" AnchorPane.topAnchor="293.0" />
+            <Spinner fx:id="spTea" layoutX="48.0" layoutY="293.0" prefWidth="187.0" AnchorPane.rightAnchor="564.8" AnchorPane.topAnchor="293.0" />
             <Spinner fx:id="spMov" layoutX="306.0" layoutY="293.0" prefHeight="26.0" prefWidth="187.0" AnchorPane.topAnchor="293.0" />
             <Spinner fx:id="spKon" layoutX="548.0" layoutY="293.0" prefWidth="187.0" AnchorPane.topAnchor="293.0" />
-            <Label layoutX="48.0" layoutY="247.0" text="Teater - Antal biljetter: " textFill="WHITE" AnchorPane.topAnchor="254.0">
+            <Label layoutX="48.0" layoutY="247.0" text="Teater - Antal biljetter: " textFill="WHITE" AnchorPane.leftAnchor="48.0" AnchorPane.topAnchor="254.0">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font></Label>

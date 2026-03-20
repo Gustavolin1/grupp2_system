@@ -10,93 +10,84 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #d2a2a2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.MatbokningFrånController">
 
-    <!-- Define the ToggleGroup separately -->
     <fx:define>
         <ToggleGroup fx:id="grpFood" />
     </fx:define>
 
     <children>
-        <!-- Header Text -->
-        <Text fx:id="txtEvenemangInfo" fill="#a65d5d" layoutX="232.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Val av mat på resan från Mars">
+        <Text fx:id="txtEvenemangInfo" fill="#a65d5d" layoutX="232.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vilket matpaket vill du ha?" textAlignment="CENTER" AnchorPane.leftAnchor="243.0" AnchorPane.topAnchor="47.8642578125">
             <font>
-                <Font size="28.0" />
+                <Font size="27.0" />
             </font>
         </Text>
 
-        <!-- Visual Panels -->
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a6272733" height="304.0" layoutX="47.0" layoutY="100.0" stroke="#2685b9" strokeType="INSIDE" width="207.0" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a63e4d80" height="304.0" layoutX="309.0" layoutY="100.0" stroke="#2685b9" strokeType="INSIDE" width="207.0" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c71a1a99" height="304.0" layoutX="564.0" layoutY="100.0" stroke="#2685b9" strokeType="INSIDE" width="207.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a6272733" height="304.0" layoutX="47.0" layoutY="100.0" stroke="#b83f27" strokeType="INSIDE" width="207.0" AnchorPane.leftAnchor="51.0" AnchorPane.topAnchor="148.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bc394d80" height="304.0" layoutX="313.0" layoutY="100.0" stroke="#b83f27" strokeType="INSIDE" width="207.0" AnchorPane.topAnchor="148.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b9282899" height="304.0" layoutX="568.0" layoutY="100.0" stroke="#b83f27" strokeType="INSIDE" width="207.0" AnchorPane.topAnchor="148.0" />
 
-        <!-- Radio Buttons - Bronz -->
-        <RadioButton layoutX="74.0" layoutY="140.0" text="Budget 1" textFill="WHITE">
+        <RadioButton layoutX="87.0" layoutY="195.0" prefHeight="52.0" prefWidth="147.2" text="Budget 1" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="78.0" AnchorPane.topAnchor="180.0">
             <toggleGroup>
                 <ToggleGroup fx:id="grpFood" />
             </toggleGroup>
             <font>
-                <Font size="18.0" />
+                <Font name="System Bold" size="17.0" />
             </font></RadioButton>
-        <RadioButton layoutX="74.0" layoutY="237.0" text="Budget 2" textFill="WHITE" toggleGroup="$grpFood">
+        <RadioButton layoutX="87.0" layoutY="292.0" prefHeight="52.0" prefWidth="147.2" text="Budget 2" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.leftAnchor="78.0" AnchorPane.topAnchor="280.0">
             <font>
-                <Font size="18.0" />
+                <Font name="System Bold" size="17.0" />
             </font></RadioButton>
-        <RadioButton layoutX="77.0" layoutY="323.0" text="Budget 3" textFill="WHITE" toggleGroup="$grpFood">
+        <RadioButton layoutX="90.0" layoutY="378.0" prefHeight="52.0" prefWidth="147.2" text="Budget 3" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.leftAnchor="78.0" AnchorPane.topAnchor="370.0">
             <font>
-                <Font size="18.0" />
-            </font></RadioButton>
-
-        <!-- Radio Buttons - Silver -->
-        <RadioButton layoutX="340.0" layoutY="140.0" text="Mellan 1" textFill="WHITE" toggleGroup="$grpFood">
-            <font>
-                <Font size="18.0" />
-            </font></RadioButton>
-        <RadioButton layoutX="340.0" layoutY="237.0" text="Mellan 2" textFill="WHITE" toggleGroup="$grpFood">
-            <font>
-                <Font size="18.0" />
-            </font></RadioButton>
-        <RadioButton layoutX="340.0" layoutY="323.0" text="Mellan 3" textFill="WHITE" toggleGroup="$grpFood">
-            <font>
-                <Font size="18.0" />
+                <Font name="System Bold" size="17.0" />
             </font></RadioButton>
 
-        <!-- Radio Buttons - Guld -->
-        <RadioButton layoutX="598.0" layoutY="140.0" text="Lyx 1" textFill="WHITE" toggleGroup="$grpFood">
+        <RadioButton layoutX="353.0" layoutY="195.0" prefHeight="52.0" prefWidth="147.2" text="Mellan 1" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="310.0" AnchorPane.topAnchor="180.0">
             <font>
-                <Font size="18.0" />
+                <Font name="System Bold" size="17.0" />
             </font></RadioButton>
-        <RadioButton layoutX="598.0" layoutY="237.0" text="Lyx 2" textFill="WHITE" toggleGroup="$grpFood">
+        <RadioButton layoutX="353.0" layoutY="292.0" prefHeight="52.0" prefWidth="147.2" text="Mellan 2" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="310.0" AnchorPane.topAnchor="280.0">
             <font>
-                <Font size="18.0" />
+                <Font name="System Bold" size="17.0" />
             </font></RadioButton>
-        <RadioButton layoutX="598.0" layoutY="323.0" text="Lyx 3" textFill="WHITE" toggleGroup="$grpFood">
+        <RadioButton layoutX="353.0" layoutY="378.0" prefHeight="52.0" prefWidth="156.8" text="Mellan 3" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="310.0" AnchorPane.topAnchor="370.0">
             <font>
-                <Font size="18.0" />
+                <Font name="System Bold" size="17.0" />
             </font></RadioButton>
 
-        <!-- Buttons -->
-
-        <!-- Back button -->
-        <Button fx:id="btnBackaMatBokning" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #a65d5d;" text="Tillbaka" textFill="WHITE">
+        <RadioButton layoutX="611.0" layoutY="195.0" prefHeight="52.0" prefWidth="156.0" text="Lyx 1" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="180.0">
             <font>
-                <Font size="16.0" />
+                <Font name="System Bold" size="17.0" />
+            </font></RadioButton>
+        <RadioButton layoutX="611.0" layoutY="292.0" prefHeight="52.0" prefWidth="156.0" text="Lyx 2" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="280.0">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font></RadioButton>
+        <RadioButton layoutX="611.0" layoutY="378.0" prefHeight="52.0" prefWidth="156.0" text="Lyx 3" textFill="WHITE" toggleGroup="$grpFood" wrapText="true" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="370.0">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font></RadioButton>
+
+
+        <Button fx:id="btnBackaMatBokning" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#back" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #a65d5d;" text="Tillbaka" textFill="WHITE" AnchorPane.bottomAnchor="42.6" AnchorPane.leftAnchor="70.0">
+            <font>
+                <Font size="17.0" />
             </font>
         </Button>
 
-        <!-- Next button -->
-        <Button fx:id="btnNästaMatpaket" layoutX="600.0" layoutY="480.0" mnemonicParsing="false" onAction="#next" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #a65d5d;" text="Nästa" textFill="WHITE">
+        <Button fx:id="btnNästaMatpaket" layoutX="600.0" layoutY="480.0" mnemonicParsing="false" onAction="#next" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #a65d5d;" text="Nästa" textFill="WHITE" AnchorPane.bottomAnchor="42.6" AnchorPane.rightAnchor="70.0">
             <font>
-                <Font size="20.0" />
+                <Font size="17.0" />
             </font>
         </Button>
 
-        <Button fx:id="btnMatpaketInfo" layoutX="301.0" layoutY="480.0" onAction="#openInformation" prefHeight="37.0" prefWidth="224.0" style="-fx-background-color: #a65d5d;" text="Matpaketinformation" textFill="WHITE">
+        <Button fx:id="btnMatpaketInfo" layoutX="301.0" layoutY="480.0" onAction="#openInformation" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #a65d5d;" text="Info" textFill="WHITE" AnchorPane.bottomAnchor="42.6" AnchorPane.leftAnchor="349.0">
             <font>
-                <Font size="20.0" />
+                <Font size="17.0" />
             </font>
         </Button>
-      <Button fx:id="btnMeny" layoutX="58.0" layoutY="29.0" mnemonicParsing="false" onAction="#meny" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #a65d5d;" text="Meny" textFill="WHITE">
+      <Button fx:id="btnMeny" layoutX="58.0" layoutY="29.0" mnemonicParsing="false" onAction="#meny" prefHeight="38.0" prefWidth="94.0" style="-fx-background-color: #a65d5d;" text="Meny" textFill="WHITE" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="48.0">
          <font>
-            <Font size="16.0" />
+            <Font size="17.0" />
          </font>
       </Button>
     </children>

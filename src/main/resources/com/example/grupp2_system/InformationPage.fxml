@@ -6,13 +6,20 @@
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #cdeaf8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.InformationPageController">
    <children>
-      <Button fx:id="BtnBack" layoutX="618.0" layoutY="480.0" mnemonicParsing="false" onAction="#backPage" prefHeight="57.0" prefWidth="126.0" style="-fx-background-radius: 100; -fx-background-color: #5c96c6;" text="Tillbaka" textFill="WHITE">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5c96c6" height="131.0" layoutX="7.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdeaf8" height="471.0" layoutX="7.0" layoutY="140.0" stroke="BLACK" strokeType="INSIDE" width="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+      <Button fx:id="BtnBack" layoutX="618.0" layoutY="480.0" mnemonicParsing="false" onAction="#backPage" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #2685b9;" text="Tillbaka" textFill="WHITE" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="70.0">
          <font>
-            <Font name="Hannotate SC Bold" size="25.0" />
+            <Font size="17.0" />
+         </font></Button>
+      <Button fx:id="btnMat" layoutX="122.0" layoutY="277.0" mnemonicParsing="false" onAction="#openFoodInfo" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #2685b9;" text="Mat" textFill="WHITE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="220.0">
+         <font>
+            <Font size="25.0" />
          </font>
          <effect>
             <InnerShadow>
@@ -21,20 +28,9 @@
                </color>
             </InnerShadow>
          </effect></Button>
-      <Button fx:id="btnMat" layoutX="14.0" layoutY="212.0" mnemonicParsing="false" onAction="#openFoodInfo" prefHeight="67.0" prefWidth="220.0" style="-fx-background-radius: 100; -fx-background-color: #5c96c6;" text="Mat" textFill="WHITE" underline="true">
+      <Button fx:id="btnHytt" layoutX="546.0" layoutY="411.0" mnemonicParsing="false" onAction="#cabinInfo" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #2685b9;" text="Hytt" textFill="#f5f5f5" AnchorPane.bottomAnchor="150.0" AnchorPane.rightAnchor="140.0">
          <font>
-            <Font name="Hannotate SC Bold" size="25.0" />
-         </font>
-         <effect>
-            <InnerShadow>
-               <color>
-                  <Color red="0.07450980693101883" green="0.3764705955982208" blue="0.48627451062202454" />
-               </color>
-            </InnerShadow>
-         </effect></Button>
-      <Button fx:id="btnHytt" layoutX="290.0" layoutY="212.0" mnemonicParsing="false" onAction="#cabinInfo" prefHeight="67.0" prefWidth="220.0" style="-fx-background-radius: 100; -fx-background-color: #5c96c6;" text="Hytt" textFill="#f5f5f5" underline="true">
-         <font>
-            <Font name="Hannotate SC Bold" size="25.0" />
+            <Font size="25.0" />
          </font>
          <cursor>
             <Cursor fx:constant="DEFAULT" />
@@ -46,9 +42,9 @@
                </color>
             </InnerShadow>
          </effect></Button>
-      <Button fx:id="BtnEvent" layoutX="566.0" layoutY="212.0" mnemonicParsing="false" onAction="#openEvent" prefHeight="67.0" prefWidth="220.0" style="-fx-background-radius: 100; -fx-background-color: #5c96c6;" text="Event" textFill="WHITE" underline="true">
+      <Button fx:id="BtnEvent" layoutX="546.0" layoutY="274.0" mnemonicParsing="false" onAction="#openEvent" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #2685b9;" text="Event" textFill="WHITE" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="220.0">
          <font>
-            <Font name="Hannotate SC Bold" size="25.0" />
+            <Font size="25.0" />
          </font>
          <effect>
             <InnerShadow>
@@ -57,14 +53,29 @@
                </color>
             </InnerShadow>
          </effect></Button>
-      <Label layoutX="249.0" layoutY="59.0" text="INFORMATION" textFill="#5c96c6">
+      <Label layoutX="292.0" layoutY="43.0" text="INFORMATION" textFill="#cdeaf8" AnchorPane.leftAnchor="292.0" AnchorPane.topAnchor="43.0">
          <font>
-            <Font name="Hannotate SC Bold" size="47.0" />
+            <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Button fx:id="btnHotell" layoutX="290.0" layoutY="311.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="220.0" style="-fx-background-radius: 100; -fx-background-color: #5c96c6;" text="Hotell" textFill="#f5f5f5" underline="true">
+      <Button fx:id="btnHotell" layoutX="122.0" layoutY="385.0" mnemonicParsing="false" onAction="#hotelInfo" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #2685b9;" text="Hotell" textFill="#f5f5f5" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="140.0">
          <font>
-            <Font name="Hannotate SC Bold" size="25.0" />
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.07450980693101883" green="0.3764705955982208" blue="0.48627451062202454" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Button>
+      <Button fx:id="btnAvgangar" layoutX="321.0" layoutY="338.0" mnemonicParsing="false" onAction="#departureinfo" prefHeight="52.0" prefWidth="158.0" style="-fx-background-color: #2685b9;" text="Avgångar" textFill="#f5f5f5" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="320.0" AnchorPane.topAnchor="310.0">
+         <font>
+            <Font size="25.0" />
          </font>
          <cursor>
             <Cursor fx:constant="DEFAULT" />

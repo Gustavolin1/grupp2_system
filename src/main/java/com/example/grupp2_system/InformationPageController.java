@@ -17,6 +17,9 @@ public class InformationPageController {
     private Button BtnEvent;
 
     @FXML
+    private Button btnAvgangar;
+
+    @FXML
     private Button btnHytt;
 
     @FXML
@@ -42,7 +45,13 @@ public class InformationPageController {
     @FXML
     public void hotelInfo(ActionEvent event)throws IOException
     {
-        SceneManager.switchScene("HotelInformation.fxml");
+        SceneManager.switchScene("Hotellinformation.fxml");
+    }
+
+    @FXML
+    public void departureinfo(ActionEvent event)throws IOException
+    {
+        SceneManager.switchScene("DepartureView.fxml");
     }
 
     @FXML

@@ -6,67 +6,94 @@
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.MarsHotellController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdeaf8" height="60.0" layoutX="-23.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="834.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdeaf8" height="66.0" layoutX="-15.0" layoutY="461.0" stroke="BLACK" strokeType="INSIDE" width="819.0" AnchorPane.bottomAnchor="10.0" />
-      <Button fx:id="btnCancel" layoutX="16.0" layoutY="23.0" mnemonicParsing="false" onAction="#Menu" style="-fx-background-color: #5c96c6;" text="Meny" />
-      <Label fx:id="lblmain" layoutX="319.0" layoutY="104.0" text="Hotell på Mars">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdeaf8" height="120.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdeaf8" height="120.0" layoutY="461.0" stroke="BLACK" strokeType="INSIDE" width="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+      <Button fx:id="btnCancel" layoutX="16.0" layoutY="23.0" mnemonicParsing="false" onAction="#Menu" prefHeight="38.0" prefWidth="94.0" style="-fx-background-color: #2685b9;" text="Meny" textFill="WHITE" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="48.0">
          <font>
-            <Font name="American Typewriter" size="23.0" />
+            <Font size="17.0" />
+         </font></Button>
+      <Label fx:id="lblmain" layoutX="314.0" layoutY="47.0" text="Hotell på Mars" textFill="#2685b9" AnchorPane.topAnchor="47.0">
+         <font>
+            <Font size="27.0" />
          </font>
       </Label>
-      <Pane id="#cdeaf8" layoutX="19.0" layoutY="141.0" prefHeight="200.0" prefWidth="765.0" style="-fx-background-color: #ebebeb;">
+      <Button fx:id="btninfo" layoutX="391.0" layoutY="495.0" mnemonicParsing="false" onAction="#info" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #2685b9;" text="Info" textFill="WHITE" AnchorPane.bottomAnchor="42.6" AnchorPane.leftAnchor="349.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnback" layoutX="104.0" layoutY="500.0" mnemonicParsing="false" onAction="#back" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #2685b9;" text="Tillbaka" textFill="WHITE" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="70.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnforward" layoutX="634.0" layoutY="537.0" mnemonicParsing="false" onAction="#next" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #2685b9;" text="Nästa" textFill="WHITE" AnchorPane.bottomAnchor="42.6" AnchorPane.rightAnchor="70.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Pane id="#cdeaf8" layoutX="19.0" layoutY="141.0" prefHeight="200.0" prefWidth="778.0" style="-fx-background-color: #cdeaf8;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="170.0">
          <children>
             <RadioButton layoutX="532.0" layoutY="145.0" mnemonicParsing="false" text="Svit">
                <toggleGroup>
                   <ToggleGroup fx:id="grpChoice" />
                </toggleGroup>
-            </RadioButton>
-            <RadioButton layoutX="532.0" layoutY="73.0" mnemonicParsing="false" text="Enkel Lyx" toggleGroup="$grpChoice" />
-            <RadioButton layoutX="61.0" layoutY="79.0" mnemonicParsing="false" text="Polar Lansdorp" toggleGroup="$grpChoice" />
-            <RadioButton layoutX="304.0" layoutY="80.0" mnemonicParsing="false" text="Enkelrum" toggleGroup="$grpChoice" />
-            <RadioButton layoutX="61.0" layoutY="108.0" mnemonicParsing="false" text="Polar Wielders" toggleGroup="$grpChoice" />
-            <RadioButton layoutX="304.0" layoutY="108.0" mnemonicParsing="false" text="Dubbelrum" toggleGroup="$grpChoice" />
-            <RadioButton layoutX="532.0" layoutY="108.0" mnemonicParsing="false" text="Dubbel Lyx" toggleGroup="$grpChoice" />
-            <Label fx:id="lblright" layoutX="539.0" layoutY="43.0" prefHeight="20.0" prefWidth="162.0" style="-fx-background-color: #acacac;" text="Royal City" underline="true">
                <font>
                   <Font size="14.0" />
                </font>
-            </Label>
-            <Label fx:id="lblmid" layoutX="305.0" layoutY="45.0" prefHeight="20.0" prefWidth="162.0" style="-fx-background-color: #acacac;" text="Hotell Phobos  &amp; Deimos" underline="true">
+            </RadioButton>
+            <RadioButton layoutX="532.0" layoutY="73.0" mnemonicParsing="false" text="Enkel Lyx" toggleGroup="$grpChoice">
                <font>
-                  <Font name="American Typewriter" size="14.0" />
+                  <Font size="14.0" />
+               </font></RadioButton>
+            <RadioButton layoutX="59.0" layoutY="73.0" mnemonicParsing="false" text="Polar Lansdorp" toggleGroup="$grpChoice">
+               <font>
+                  <Font size="14.0" />
+               </font></RadioButton>
+            <RadioButton layoutX="304.0" layoutY="73.0" mnemonicParsing="false" text="Enkelrum" toggleGroup="$grpChoice">
+               <font>
+                  <Font size="14.0" />
+               </font></RadioButton>
+            <RadioButton layoutX="61.0" layoutY="108.0" mnemonicParsing="false" text="Polar Wielders" toggleGroup="$grpChoice">
+               <font>
+                  <Font size="14.0" />
+               </font></RadioButton>
+            <RadioButton layoutX="304.0" layoutY="108.0" mnemonicParsing="false" text="Dubbelrum" toggleGroup="$grpChoice">
+               <font>
+                  <Font size="14.0" />
+               </font></RadioButton>
+            <RadioButton layoutX="532.0" layoutY="108.0" mnemonicParsing="false" text="Dubbel Lyx" toggleGroup="$grpChoice">
+               <font>
+                  <Font size="14.0" />
+               </font></RadioButton>
+            <Label fx:id="lblright" layoutX="539.0" layoutY="36.0" prefHeight="20.0" prefWidth="162.0" text="Royal City" textFill="#2685b9">
+               <font>
+                  <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="lblleft" layoutX="65.0" layoutY="43.0" prefHeight="20.0" prefWidth="162.0" style="-fx-background-color: #acacac;" text="Polar" underline="true">
+            <Label fx:id="lblmid" layoutX="272.0" layoutY="36.0" prefHeight="27.0" prefWidth="222.0" text="Hotell Phobos &amp; Deimos" textFill="#2685b9">
                <font>
-                  <Font name="American Typewriter" size="14.0" />
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblleft" layoutX="65.0" layoutY="36.0" prefHeight="20.0" prefWidth="162.0" text="Polar" textFill="#2685b9">
+               <font>
+                  <Font name="System Bold" size="17.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <BorderPane layoutY="512.0" prefHeight="88.0" prefWidth="800.0">
-         <left>
-            <Button fx:id="btnback" layoutX="50.0" mnemonicParsing="false" onAction="#back" prefHeight="32.0" prefWidth="66.0" style="-fx-background-color: #5c96c6;" text="TIllbaka" BorderPane.alignment="CENTER" />
-         </left>
-         <center>
-            <Button fx:id="btninfo" mnemonicParsing="false" onAction="#info" prefHeight="43.0" prefWidth="133.0" style="-fx-background-color: #5c96c6;" text="Information" BorderPane.alignment="CENTER" />
-         </center>
-         <right>
-            <Button fx:id="btnforward" mnemonicParsing="false" onAction="#next" prefHeight="32.0" prefWidth="66.0" style="-fx-background-color: #5c96c6;" text="Gå vidare" BorderPane.alignment="CENTER" />
-         </right>
-      </BorderPane>
-      <Spinner fx:id="spMonth" layoutX="320.0" layoutY="434.0" />
-      <Label layoutX="349.0" layoutY="406.0" text="Antal månader:">
+      <Label layoutX="335.0" layoutY="390.0" text="Antal månader:" textFill="#2685b9">
          <font>
-            <Font name="American Typewriter" size="14.0" />
+            <Font name="System Italic" size="18.0" />
          </font>
       </Label>
+      <Spinner fx:id="spMonth" layoutX="293.0" layoutY="424.0" prefHeight="26.0" prefWidth="214.0" />
    </children>
 </AnchorPane>

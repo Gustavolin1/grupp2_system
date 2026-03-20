@@ -10,11 +10,6 @@
 <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #cdeaf8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grupp2_system.loadcashcardcontroller">
 
     <children>
-        <!-- Close Button -->
-        <Button fx:id="btnClose" layoutX="740.0" layoutY="20.0" prefWidth="40.0" prefHeight="40.0"
-                text="X"
-                style="-fx-background-color: #dd6738; -fx-text-fill: white; -fx-font-weight: bold;"
-                onAction="#handleClose"/>
 
         <!-- Title -->
         <Label layoutX="213.0" layoutY="35.0" prefHeight="79.0" prefWidth="373.0" text="Ladda ditt betalkort inför resan" textFill="#2685b9">
@@ -37,16 +32,16 @@
         <TextField fx:id="txtfieldsum" layoutX="285.0" layoutY="230.0" prefHeight="36.0" prefWidth="230.0" style="-fx-background-color: #2685b9; -fx-text-fill: white;" />
 
         <!-- Back button -->
-        <Button fx:id="btnback" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#btnback" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #2685b9;" text="Tillbaka" textFill="WHITE">
+        <Button fx:id="btnback" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#btnback" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #2685b9;" text="Tillbaka" textFill="WHITE" AnchorPane.bottomAnchor="42.6" AnchorPane.leftAnchor="70.0">
             <font>
-                <Font size="16.0" />
+                <Font size="17.0" />
             </font>
         </Button>
 
         <!-- Next button -->
-        <Button fx:id="btnnext" layoutX="600.0" layoutY="480.0" mnemonicParsing="false" onAction="#btnnext" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #2685b9;" text="Nästa" textFill="WHITE">
+        <Button fx:id="btnnext" layoutX="600.0" layoutY="480.0" mnemonicParsing="false" onAction="#btnnext" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #2685b9;" text="Nästa" textFill="WHITE" AnchorPane.bottomAnchor="42.6" AnchorPane.rightAnchor="70.0">
             <font>
-                <Font size="20.0" />
+                <Font size="17.0" />
             </font>
         </Button>
 
