@@ -57,7 +57,7 @@ jobs:
           echo "Build result:"
           ls -l builds
 
-          xattr -cr builds
+          xattr -cr builds/*.dmg || true
 
       - name: Upload DMG
         uses: actions/upload-artifact@v4
