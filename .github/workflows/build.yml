@@ -19,17 +19,17 @@ jobs:
       - name: Create builds folder
         run: rm -rf builds && mkdir builds
 
-      - name: Skip build (use existing JAR)
-        run: echo "Using prebuilt JAR from target/"
+      - name: Use JAR from app bundle
+        run: echo "Using JAR from grupp2System.app"
 
       - name: Build DMG
         run: |
-          JAR=$(ls target/*.jar | head -n 1)
+          JAR=$(ls grupp2System.app/Contents/app/*.jar | head -n 1)
           JAR_NAME=$(basename "$JAR")
           echo "Using JAR: $JAR_NAME"
 
           jpackage \
-            --input target \
+            --input grupp2System.app/Contents/app \
             --dest builds \
             --name MarsTravelsBooking \
             --app-version 1.0.0 \
@@ -48,7 +48,7 @@ jobs:
 
       - name: Copy JAR to builds
         run: |
-          JAR=$(ls target/*.jar | grep -v "original" | head -n 1)
+          JAR=$(ls grupp2System.app/Contents/app/*.jar | head -n 1)
           cp "$JAR" builds/
 
       - name: Create Release
