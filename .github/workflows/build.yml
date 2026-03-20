@@ -16,20 +16,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Build with Maven
+        run: mvn clean package
+
       - name: Create builds folder
         run: rm -rf builds && mkdir builds
 
-      - name: Use JAR from app bundle
-        run: echo "Using JAR from grupp2System.app"
 
       - name: Build DMG
         run: |
-          JAR=$(ls grupp2System.app/Contents/app/*.jar | head -n 1)
+          JAR=$(ls target/*.jar | head -n 1)
           JAR_NAME=$(basename "$JAR")
           echo "Using JAR: $JAR_NAME"
 
           jpackage \
-            --input grupp2System.app/Contents/app \
+            --input target \
             --dest builds \
             --name MarsTravelsBooking \
             --app-version 1.0.0 \
@@ -46,10 +47,6 @@ jobs:
           name: mac-build
           path: builds/*.dmg
 
-      - name: Copy JAR to builds
-        run: |
-          JAR=$(ls grupp2System.app/Contents/app/*.jar | head -n 1)
-          cp "$JAR" builds/
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
